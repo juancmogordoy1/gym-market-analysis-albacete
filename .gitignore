@@ -1,0 +1,23 @@
+# API keys / variables sensibles
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Modelos guardados
+*.pkl
+*.joblib
+
+logs/

@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_180b8514e6b18478bc1c118bb5bc8c7c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_180b8514e6b18478bc1c118bb5bc8c7c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_180b8514e6b18478bc1c118bb5bc8c7c = L.map(
+                "map_180b8514e6b18478bc1c118bb5bc8c7c",
+                {
+                    center: [38.9944, -1.8602],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5e1643b9175df1fe8b05a79bc555c893 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5e1643b9175df1fe8b05a79bc555c893.addTo(map_180b8514e6b18478bc1c118bb5bc8c7c);
+        
+    
+            var marker_cluster_e277ab94070cb8336008bcb0e530e07d = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_23bd967bf5fa840c02e4d8c07caca5d6 = L.circleMarker(
+                [39.2105049, -1.5414436],
+                {"bubblingMouseEvents": true, "color": "#feb14bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feb14bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.03765, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_6b84b9ccac949bb959bbe0c1bde61b57 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a7892f1c65a7b9bbbe9b4ac158c4ad7a = $(`<div id="html_a7892f1c65a7b9bbbe9b4ac158c4ad7a" style="width: 100.0%; height: 100.0%;">     <b>Abengibre</b><br>     Población: 753<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 27838<br>     Distancia Albacete: 36.5 km<br>     Opportunity score: 1159.9     </div>`)[0];
+                popup_6b84b9ccac949bb959bbe0c1bde61b57.setContent(html_a7892f1c65a7b9bbbe9b4ac158c4ad7a);
+            
+        
+
+        circle_marker_23bd967bf5fa840c02e4d8c07caca5d6.bindPopup(popup_6b84b9ccac949bb959bbe0c1bde61b57)
+        ;
+
+        
+    
+    
+            var circle_marker_50f79f7726b7238b3993e3c5f4fc336c = L.circleMarker(
+                [39.0950499, -1.3619952],
+                {"bubblingMouseEvents": true, "color": "#feaf4aff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feaf4aff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0252, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_e75d8a5c0b34e83ffd5516caef9f6161 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4d99bee3b5066ae5ef34545127d0522f = $(`<div id="html_4d99bee3b5066ae5ef34545127d0522f" style="width: 100.0%; height: 100.0%;">     <b>Alatoz</b><br>     Población: 504<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 16360<br>     Distancia Albacete: 44.5 km<br>     Opportunity score: 1168.6     </div>`)[0];
+                popup_e75d8a5c0b34e83ffd5516caef9f6161.setContent(html_4d99bee3b5066ae5ef34545127d0522f);
+            
+        
+
+        circle_marker_50f79f7726b7238b3993e3c5f4fc336c.bindPopup(popup_e75d8a5c0b34e83ffd5516caef9f6161)
+        ;
+
+        
+    
+    
+            var circle_marker_1011b8850808fa52a67889312f62f6bc = L.circleMarker(
+                [38.9943983, -1.860173],
+                {"bubblingMouseEvents": true, "color": "#800026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.77, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_2884b966d7b4213f994f718307c2ffa7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e4940f22ca178913848a008211960b9c = $(`<div id="html_e4940f22ca178913848a008211960b9c" style="width: 100.0%; height: 100.0%;">     <b>Albacete</b><br>     Población: 175400<br>     Gimnasios: 78.0<br>     Fitness density: 4.45<br>     Catchment 25km: 188399<br>     Distancia Albacete: 0.0 km<br>     Opportunity score: 2093.3     </div>`)[0];
+                popup_2884b966d7b4213f994f718307c2ffa7.setContent(html_e4940f22ca178913848a008211960b9c);
+            
+        
+
+        circle_marker_1011b8850808fa52a67889312f62f6bc.bindPopup(popup_2884b966d7b4213f994f718307c2ffa7)
+        ;
+
+        
+    
+    
+            var circle_marker_26ef4c1d92488c2f60978b29c1aa03bd = L.circleMarker(
+                [38.5719998, -1.5205598],
+                {"bubblingMouseEvents": true, "color": "#dc151dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#dc151dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0322, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_db347e7651fae69a73735a21e5c137dc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8a1321da51c99c6aba1d2ca13b91ff2e = $(`<div id="html_8a1321da51c99c6aba1d2ca13b91ff2e" style="width: 100.0%; height: 100.0%;">     <b>Albatana</b><br>     Población: 644<br>     Gimnasios: 1.0<br>     Fitness density: 15.53<br>     Catchment 25km: 43803<br>     Distancia Albacete: 55.4 km<br>     Opportunity score: 1752.1     </div>`)[0];
+                popup_db347e7651fae69a73735a21e5c137dc.setContent(html_8a1321da51c99c6aba1d2ca13b91ff2e);
+            
+        
+
+        circle_marker_26ef4c1d92488c2f60978b29c1aa03bd.bindPopup(popup_db347e7651fae69a73735a21e5c137dc)
+        ;
+
+        
+    
+    
+            var circle_marker_d0bff9b500ae804ededa51d53556de7d = L.circleMarker(
+                [39.279205, -1.3957728],
+                {"bubblingMouseEvents": true, "color": "#feca66ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feca66ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0336, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_b82cd961641b1a0f30092274b795a45c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1e5074c626cd09022bd0d6b88653154e = $(`<div id="html_1e5074c626cd09022bd0d6b88653154e" style="width: 100.0%; height: 100.0%;">     <b>Alborea</b><br>     Población: 672<br>     Gimnasios: 1.0<br>     Fitness density: 14.88<br>     Catchment 25km: 18660<br>     Distancia Albacete: 51.1 km<br>     Opportunity score: 1036.7     </div>`)[0];
+                popup_b82cd961641b1a0f30092274b795a45c.setContent(html_1e5074c626cd09022bd0d6b88653154e);
+            
+        
+
+        circle_marker_d0bff9b500ae804ededa51d53556de7d.bindPopup(popup_b82cd961641b1a0f30092274b795a45c)
+        ;
+
+        
+    
+    
+            var circle_marker_c559e9a53a073d2da805b946622ea996 = L.circleMarker(
+                [38.6490183, -1.9807161],
+                {"bubblingMouseEvents": true, "color": "#ffdc7cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffdc7cff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.03175, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_1524fed7a4deaf6e4fa002ba2b27d01f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c963913732711417e1e5c8593d84fa79 = $(`<div id="html_c963913732711417e1e5c8593d84fa79" style="width: 100.0%; height: 100.0%;">     <b>Alcadozo</b><br>     Población: 635<br>     Gimnasios: 1.0<br>     Fitness density: 15.75<br>     Catchment 25km: 11236<br>     Distancia Albacete: 39.8 km<br>     Opportunity score: 936.3     </div>`)[0];
+                popup_1524fed7a4deaf6e4fa002ba2b27d01f.setContent(html_c963913732711417e1e5c8593d84fa79);
+            
+        
+
+        circle_marker_c559e9a53a073d2da805b946622ea996.bindPopup(popup_1524fed7a4deaf6e4fa002ba2b27d01f)
+        ;
+
+        
+    
+    
+            var circle_marker_00b244e55f785b31ecc355b942dba3bd = L.circleMarker(
+                [39.1917781, -1.4295714],
+                {"bubblingMouseEvents": true, "color": "#fecb67ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fecb67ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0565, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_e10cd50446c9dd90aa07d55893984a71 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e1eed886b97f2158245cf130916030d0 = $(`<div id="html_e1eed886b97f2158245cf130916030d0" style="width: 100.0%; height: 100.0%;">     <b>Alcalá del Júcar</b><br>     Población: 1130<br>     Gimnasios: 1.0<br>     Fitness density: 8.85<br>     Catchment 25km: 20630<br>     Distancia Albacete: 43.2 km<br>     Opportunity score: 1031.5     </div>`)[0];
+                popup_e10cd50446c9dd90aa07d55893984a71.setContent(html_e1eed886b97f2158245cf130916030d0);
+            
+        
+
+        circle_marker_00b244e55f785b31ecc355b942dba3bd.bindPopup(popup_e10cd50446c9dd90aa07d55893984a71)
+        ;
+
+        
+    
+    
+            var circle_marker_33c3ab7c504187d82b8d605e9c72c424 = L.circleMarker(
+                [38.6665292, -2.4907128],
+                {"bubblingMouseEvents": true, "color": "#fea546ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fea546ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.06415, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_b68a1173bc23ff1fd43d01b7e1590d26 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_05467f278e4b752b6a81fd955c1d5ef3 = $(`<div id="html_05467f278e4b752b6a81fd955c1d5ef3" style="width: 100.0%; height: 100.0%;">     <b>Alcaraz</b><br>     Población: 1283<br>     Gimnasios: 1.0<br>     Fitness density: 7.79<br>     Catchment 25km: 7330<br>     Distancia Albacete: 65.7 km<br>     Opportunity score: 1221.7     </div>`)[0];
+                popup_b68a1173bc23ff1fd43d01b7e1590d26.setContent(html_05467f278e4b752b6a81fd955c1d5ef3);
+            
+        
+
+        circle_marker_33c3ab7c504187d82b8d605e9c72c424.bindPopup(popup_b68a1173bc23ff1fd43d01b7e1590d26)
+        ;
+
+        
+    
+    
+            var circle_marker_751964e0a81ce42cb89ee46b24d5b055 = L.circleMarker(
+                [38.8702789, -1.0993366],
+                {"bubblingMouseEvents": true, "color": "#feb24cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feb24cff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.2307500000000005, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_5e1a558d77b6b587aa93e6c57051079d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dc192ee012cc301b390ac0a19a43d582 = $(`<div id="html_dc192ee012cc301b390ac0a19a43d582" style="width: 100.0%; height: 100.0%;">     <b>Almansa</b><br>     Población: 24615<br>     Gimnasios: 20.0<br>     Fitness density: 8.13<br>     Catchment 25km: 40333<br>     Distancia Albacete: 67.2 km<br>     Opportunity score: 1152.4     </div>`)[0];
+                popup_5e1a558d77b6b587aa93e6c57051079d.setContent(html_dc192ee012cc301b390ac0a19a43d582);
+            
+        
+
+        circle_marker_751964e0a81ce42cb89ee46b24d5b055.bindPopup(popup_5e1a558d77b6b587aa93e6c57051079d)
+        ;
+
+        
+    
+    
+            var circle_marker_7cd5ea336a46ef78c1b17bc4c2876491 = L.circleMarker(
+                [38.95904489999999, -1.2301597],
+                {"bubblingMouseEvents": true, "color": "#fec25dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec25dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.1139, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_3b3621e5753af2bc43c81564bc80b9ff = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_907c5ba8129f46c35d679ae43ac99296 = $(`<div id="html_907c5ba8129f46c35d679ae43ac99296" style="width: 100.0%; height: 100.0%;">     <b>Alpera</b><br>     Población: 2278<br>     Gimnasios: 1.0<br>     Fitness density: 4.39<br>     Catchment 25km: 32317<br>     Distancia Albacete: 54.6 km<br>     Opportunity score: 1077.2     </div>`)[0];
+                popup_3b3621e5753af2bc43c81564bc80b9ff.setContent(html_907c5ba8129f46c35d679ae43ac99296);
+            
+        
+
+        circle_marker_7cd5ea336a46ef78c1b17bc4c2876491.bindPopup(popup_3b3621e5753af2bc43c81564bc80b9ff)
+        ;
+
+        
+    
+    
+            var circle_marker_32e1a4c9c8b6244e0b10a45c90d59bdd = L.circleMarker(
+                [38.5537339, -2.0717287],
+                {"bubblingMouseEvents": true, "color": "#ffe998ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe998ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.02885, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_52ad966993e8ff66504ce3da7050c17c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9352e1344b5371fc5daacfc4d429047f = $(`<div id="html_9352e1344b5371fc5daacfc4d429047f" style="width: 100.0%; height: 100.0%;">     <b>Ayna</b><br>     Población: 577<br>     Gimnasios: 1.0<br>     Fitness density: 17.33<br>     Catchment 25km: 12223<br>     Distancia Albacete: 52.3 km<br>     Opportunity score: 814.9     </div>`)[0];
+                popup_52ad966993e8ff66504ce3da7050c17c.setContent(html_9352e1344b5371fc5daacfc4d429047f);
+            
+        
+
+        circle_marker_32e1a4c9c8b6244e0b10a45c90d59bdd.bindPopup(popup_52ad966993e8ff66504ce3da7050c17c)
+        ;
+
+        
+    
+    
+            var circle_marker_9d84c559308db295fc61e875626f6f91 = L.circleMarker(
+                [38.884867, -2.1522868],
+                {"bubblingMouseEvents": true, "color": "#fecb67ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fecb67ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.1178, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_7681de0a809531e4147695593a26cea8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_afe785692ad7d33341d11f713c9575a9 = $(`<div id="html_afe785692ad7d33341d11f713c9575a9" style="width: 100.0%; height: 100.0%;">     <b>Balazote</b><br>     Población: 2356<br>     Gimnasios: 2.0<br>     Fitness density: 8.49<br>     Catchment 25km: 9296<br>     Distancia Albacete: 28.0 km<br>     Opportunity score: 1032.9     </div>`)[0];
+                popup_7681de0a809531e4147695593a26cea8.setContent(html_afe785692ad7d33341d11f713c9575a9);
+            
+        
+
+        circle_marker_9d84c559308db295fc61e875626f6f91.bindPopup(popup_7681de0a809531e4147695593a26cea8)
+        ;
+
+        
+    
+    
+            var circle_marker_03acb3e809cbce9a331518d72861e913 = L.circleMarker(
+                [38.8412412, -2.4548517],
+                {"bubblingMouseEvents": true, "color": "#fd8c3bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8c3bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.02055, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_3eeb97880a0c4c6cd8b5d79017740977 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_40a3032ce72fccbaac901db82f1439cd = $(`<div id="html_40a3032ce72fccbaac901db82f1439cd" style="width: 100.0%; height: 100.0%;">     <b>Ballestero, El</b><br>     Población: 411<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 10764<br>     Distancia Albacete: 54.2 km<br>     Opportunity score: 1345.5     </div>`)[0];
+                popup_3eeb97880a0c4c6cd8b5d79017740977.setContent(html_40a3032ce72fccbaac901db82f1439cd);
+            
+        
+
+        circle_marker_03acb3e809cbce9a331518d72861e913.bindPopup(popup_3eeb97880a0c4c6cd8b5d79017740977)
+        ;
+
+        
+    
+    
+            var circle_marker_f83c118d80f66ff5b42338c27aa260fc = L.circleMarker(
+                [39.2645443, -1.1961571],
+                {"bubblingMouseEvents": true, "color": "#fecd68ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fecd68ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.00605, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_86e571e348114e1c18191ade93471959 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6d15c96bb7e38e737a1276962eabc7dd = $(`<div id="html_6d15c96bb7e38e737a1276962eabc7dd" style="width: 100.0%; height: 100.0%;">     <b>Balsa de Ves</b><br>     Población: 121<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 8210<br>     Distancia Albacete: 64.7 km<br>     Opportunity score: 1026.2     </div>`)[0];
+                popup_86e571e348114e1c18191ade93471959.setContent(html_6d15c96bb7e38e737a1276962eabc7dd);
+            
+        
+
+        circle_marker_f83c118d80f66ff5b42338c27aa260fc.bindPopup(popup_86e571e348114e1c18191ade93471959)
+        ;
+
+        
+    
+    
+            var circle_marker_a5a75447b2f567c77b1e82c921611a73 = L.circleMarker(
+                [39.0445824, -2.2014625],
+                {"bubblingMouseEvents": true, "color": "#fece6aff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fece6aff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0919, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_2bd9bb37b8021065a4ebc68b42fa4108 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_76949e2b51c180a8e2824d419851a945 = $(`<div id="html_76949e2b51c180a8e2824d419851a945" style="width: 100.0%; height: 100.0%;">     <b>Barrax</b><br>     Población: 1838<br>     Gimnasios: 2.0<br>     Fitness density: 10.88<br>     Catchment 25km: 27507<br>     Distancia Albacete: 30.0 km<br>     Opportunity score: 1018.8     </div>`)[0];
+                popup_2bd9bb37b8021065a4ebc68b42fa4108.setContent(html_76949e2b51c180a8e2824d419851a945);
+            
+        
+
+        circle_marker_a5a75447b2f567c77b1e82c921611a73.bindPopup(popup_2bd9bb37b8021065a4ebc68b42fa4108)
+        ;
+
+        
+    
+    
+            var circle_marker_7395333855dd8cd9cbc85901386f1bda = L.circleMarker(
+                [38.517072, -2.6108647],
+                {"bubblingMouseEvents": true, "color": "#fed470ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed470ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0274, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_047b854c4966857bf225cf1ed7381447 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d7a835a9da095db3e0b640bcc33cdb45 = $(`<div id="html_d7a835a9da095db3e0b640bcc33cdb45" style="width: 100.0%; height: 100.0%;">     <b>Bienservida</b><br>     Población: 548<br>     Gimnasios: 1.0<br>     Fitness density: 18.25<br>     Catchment 25km: 5952<br>     Distancia Albacete: 84.0 km<br>     Opportunity score: 992.0     </div>`)[0];
+                popup_047b854c4966857bf225cf1ed7381447.setContent(html_d7a835a9da095db3e0b640bcc33cdb45);
+            
+        
+
+        circle_marker_7395333855dd8cd9cbc85901386f1bda.bindPopup(popup_047b854c4966857bf225cf1ed7381447)
+        ;
+
+        
+    
+    
+            var circle_marker_45f02c9ee1eac63ab729496e645a5ace = L.circleMarker(
+                [38.5816548, -2.2132142],
+                {"bubblingMouseEvents": true, "color": "#ffe895ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe895ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.03635, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_29ad17780f3cbc01d9b0ce207a38a28c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5185ffc678af303561c98a78c86861b1 = $(`<div id="html_5185ffc678af303561c98a78c86861b1" style="width: 100.0%; height: 100.0%;">     <b>Bogarra</b><br>     Población: 727<br>     Gimnasios: 1.0<br>     Fitness density: 13.76<br>     Catchment 25km: 12407<br>     Distancia Albacete: 55.2 km<br>     Opportunity score: 827.1     </div>`)[0];
+                popup_29ad17780f3cbc01d9b0ce207a38a28c.setContent(html_5185ffc678af303561c98a78c86861b1);
+            
+        
+
+        circle_marker_45f02c9ee1eac63ab729496e645a5ace.bindPopup(popup_29ad17780f3cbc01d9b0ce207a38a28c)
+        ;
+
+        
+    
+    
+            var circle_marker_32e95f14839f15d19350bd6ab2b52e7b = L.circleMarker(
+                [38.87160069999999, -1.3481301],
+                {"bubblingMouseEvents": true, "color": "#fec964ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec964ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0475, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_5e271648dbb7f0611403328375d7149e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5efebd63579aa166323abc23db62e5c5 = $(`<div id="html_5efebd63579aa166323abc23db62e5c5" style="width: 100.0%; height: 100.0%;">     <b>Bonete</b><br>     Población: 950<br>     Gimnasios: 1.0<br>     Fitness density: 10.53<br>     Catchment 25km: 35498<br>     Distancia Albacete: 46.3 km<br>     Opportunity score: 1044.1     </div>`)[0];
+                popup_5e271648dbb7f0611403328375d7149e.setContent(html_5efebd63579aa166323abc23db62e5c5);
+            
+        
+
+        circle_marker_32e95f14839f15d19350bd6ab2b52e7b.bindPopup(popup_5e271648dbb7f0611403328375d7149e)
+        ;
+
+        
+    
+    
+            var circle_marker_d08c965a5424ecec1489c68f6973d0ca = L.circleMarker(
+                [38.9510438, -2.5383647],
+                {"bubblingMouseEvents": true, "color": "#ffda76ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffda76ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.13225, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_376b4dd783ec2486c0cc07bca9ba6687 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_034d5b80b901c4cd1f36a74935f2e578 = $(`<div id="html_034d5b80b901c4cd1f36a74935f2e578" style="width: 100.0%; height: 100.0%;">     <b>Bonillo, El</b><br>     Población: 2645<br>     Gimnasios: 3.0<br>     Fitness density: 11.34<br>     Catchment 25km: 10596<br>     Distancia Albacete: 58.8 km<br>     Opportunity score: 963.3     </div>`)[0];
+                popup_376b4dd783ec2486c0cc07bca9ba6687.setContent(html_034d5b80b901c4cd1f36a74935f2e578);
+            
+        
+
+        circle_marker_d08c965a5424ecec1489c68f6973d0ca.bindPopup(popup_376b4dd783ec2486c0cc07bca9ba6687)
+        ;
+
+        
+    
+    
+            var circle_marker_d95e77793b3569633a73089a8804d963 = L.circleMarker(
+                [39.1021624, -1.3089706],
+                {"bubblingMouseEvents": true, "color": "#fd8b3bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8b3bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.02415, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_b5c848770eb88d67502e1a4620ccf6cc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dc97248f731b1c92f07817d7a7853a6a = $(`<div id="html_dc97248f731b1c92f07817d7a7853a6a" style="width: 100.0%; height: 100.0%;">     <b>Carcelén</b><br>     Población: 483<br>     Gimnasios: 1.0<br>     Fitness density: 20.7<br>     Catchment 25km: 14828<br>     Distancia Albacete: 49.1 km<br>     Opportunity score: 1348.0     </div>`)[0];
+                popup_b5c848770eb88d67502e1a4620ccf6cc.setContent(html_dc97248f731b1c92f07817d7a7853a6a);
+            
+        
+
+        circle_marker_d95e77793b3569633a73089a8804d963.bindPopup(popup_b5c848770eb88d67502e1a4620ccf6cc)
+        ;
+
+        
+    
+    
+            var circle_marker_30c79400718bedd0a87d1afdb59fc4c9 = L.circleMarker(
+                [39.100201, -1.5578697],
+                {"bubblingMouseEvents": true, "color": "#fec25dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec25dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.07045, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_204073f8db1ececf88a9ff84710078c3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f39fd550ab761defcbe2011ebdf25eec = $(`<div id="html_f39fd550ab761defcbe2011ebdf25eec" style="width: 100.0%; height: 100.0%;">     <b>Casas de Juan Núñez</b><br>     Población: 1409<br>     Gimnasios: 1.0<br>     Fitness density: 7.1<br>     Catchment 25km: 24730<br>     Distancia Albacete: 28.6 km<br>     Opportunity score: 1075.2     </div>`)[0];
+                popup_204073f8db1ececf88a9ff84710078c3.setContent(html_f39fd550ab761defcbe2011ebdf25eec);
+            
+        
+
+        circle_marker_30c79400718bedd0a87d1afdb59fc4c9.bindPopup(popup_204073f8db1ececf88a9ff84710078c3)
+        ;
+
+        
+    
+    
+            var circle_marker_7844843a346a3c77469ce50faf0a9e4e = L.circleMarker(
+                [38.7710402, -2.2402728],
+                {"bubblingMouseEvents": true, "color": "#fea647ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fea647ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0149, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_dac0b9c6947f84fe5d3ae1c7c630c85e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d2a2ef4643d539583472a35d287adad8 = $(`<div id="html_d2a2ef4643d539583472a35d287adad8" style="width: 100.0%; height: 100.0%;">     <b>Casas de Lázaro</b><br>     Población: 298<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 10918<br>     Distancia Albacete: 41.2 km<br>     Opportunity score: 1213.1     </div>`)[0];
+                popup_dac0b9c6947f84fe5d3ae1c7c630c85e.setContent(html_d2a2ef4643d539583472a35d287adad8);
+            
+        
+
+        circle_marker_7844843a346a3c77469ce50faf0a9e4e.bindPopup(popup_dac0b9c6947f84fe5d3ae1c7c630c85e)
+        ;
+
+        
+    
+    
+            var circle_marker_dc8c1de5c2f38cef956000559367aa78 = L.circleMarker(
+                [39.2578708, -1.3330645],
+                {"bubblingMouseEvents": true, "color": "#fec863ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec863ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.02595, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_27c4d6ff172117a35b61ef664834a8d7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_29022611d90e0ddf7952fbae0d0e069b = $(`<div id="html_29022611d90e0ddf7952fbae0d0e069b" style="width: 100.0%; height: 100.0%;">     <b>Casas de Ves</b><br>     Población: 519<br>     Gimnasios: 1.0<br>     Fitness density: 19.27<br>     Catchment 25km: 11528<br>     Distancia Albacete: 54.1 km<br>     Opportunity score: 1048.0     </div>`)[0];
+                popup_27c4d6ff172117a35b61ef664834a8d7.setContent(html_29022611d90e0ddf7952fbae0d0e069b);
+            
+        
+
+        circle_marker_dc8c1de5c2f38cef956000559367aa78.bindPopup(popup_27c4d6ff172117a35b61ef664834a8d7)
+        ;
+
+        
+    
+    
+            var circle_marker_b5f1591ba3c2da92222789742dd2f1ed = L.circleMarker(
+                [39.286714, -1.4712661],
+                {"bubblingMouseEvents": true, "color": "#feb751ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feb751ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.2308, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_dcf06cb9a9d32313a94526a356c1b9a3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_665eedd44f59fd085b0a872755b2533b = $(`<div id="html_665eedd44f59fd085b0a872755b2533b" style="width: 100.0%; height: 100.0%;">     <b>Casas-Ibáñez</b><br>     Población: 4616<br>     Gimnasios: 2.0<br>     Fitness density: 4.33<br>     Catchment 25km: 22616<br>     Distancia Albacete: 46.7 km<br>     Opportunity score: 1130.8     </div>`)[0];
+                popup_dcf06cb9a9d32313a94526a356c1b9a3.setContent(html_665eedd44f59fd085b0a872755b2533b);
+            
+        
+
+        circle_marker_b5f1591ba3c2da92222789742dd2f1ed.bindPopup(popup_dcf06cb9a9d32313a94526a356c1b9a3)
+        ;
+
+        
+    
+    
+            var circle_marker_2f7d3dbd4cdf1b81a781807acaabe4bf = L.circleMarker(
+                [38.7046615, -0.9870381],
+                {"bubblingMouseEvents": true, "color": "#fea747ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fea747ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.52195, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_330b7cdd085526290cb6aa32d3904811 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_54b53cf6ad2ccda27ca29c28001f9ca7 = $(`<div id="html_54b53cf6ad2ccda27ca29c28001f9ca7" style="width: 100.0%; height: 100.0%;">     <b>Caudete</b><br>     Población: 10439<br>     Gimnasios: 8.0<br>     Fitness density: 7.66<br>     Catchment 25km: 35054<br>     Distancia Albacete: 82.2 km<br>     Opportunity score: 1208.8     </div>`)[0];
+                popup_330b7cdd085526290cb6aa32d3904811.setContent(html_54b53cf6ad2ccda27ca29c28001f9ca7);
+            
+        
+
+        circle_marker_2f7d3dbd4cdf1b81a781807acaabe4bf.bindPopup(popup_330b7cdd085526290cb6aa32d3904811)
+        ;
+
+        
+    
+    
+            var circle_marker_e1c05d3fd054932805119eb8f1a2eb99 = L.circleMarker(
+                [39.3023107, -1.6627091],
+                {"bubblingMouseEvents": true, "color": "#fecd69ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fecd69ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.05815, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_4446aa934671bf2c00af9b20b49251d9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_594ef17a3c55d81ec5ea2cee20411f5c = $(`<div id="html_594ef17a3c55d81ec5ea2cee20411f5c" style="width: 100.0%; height: 100.0%;">     <b>Cenizate</b><br>     Población: 1163<br>     Gimnasios: 2.0<br>     Fitness density: 17.2<br>     Catchment 25km: 31679<br>     Distancia Albacete: 38.2 km<br>     Opportunity score: 1021.9     </div>`)[0];
+                popup_4446aa934671bf2c00af9b20b49251d9.setContent(html_594ef17a3c55d81ec5ea2cee20411f5c);
+            
+        
+
+        circle_marker_e1c05d3fd054932805119eb8f1a2eb99.bindPopup(popup_4446aa934671bf2c00af9b20b49251d9)
+        ;
+
+        
+    
+    
+            var circle_marker_664d13cf46b765c22d7c844c238b24a6 = L.circleMarker(
+                [38.9195312, -1.7252937],
+                {"bubblingMouseEvents": true, "color": "#950026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#950026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.2307, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_bc270fa8d52d942ac11e8f48272afd01 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_440c3acb76f374fc25bb341bdd9a0368 = $(`<div id="html_440c3acb76f374fc25bb341bdd9a0368" style="width: 100.0%; height: 100.0%;">     <b>Chinchilla de Monte-Aragón</b><br>     Población: 4614<br>     Gimnasios: 5.0<br>     Fitness density: 10.84<br>     Catchment 25km: 188775<br>     Distancia Albacete: 14.3 km<br>     Opportunity score: 2029.8     </div>`)[0];
+                popup_bc270fa8d52d942ac11e8f48272afd01.setContent(html_440c3acb76f374fc25bb341bdd9a0368);
+            
+        
+
+        circle_marker_664d13cf46b765c22d7c844c238b24a6.bindPopup(popup_bc270fa8d52d942ac11e8f48272afd01)
+        ;
+
+        
+    
+    
+            var circle_marker_bd55fadaf2a71463f977479a61d4508c = L.circleMarker(
+                [38.8343358, -1.4597825],
+                {"bubblingMouseEvents": true, "color": "#ffdd7dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffdd7dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.01515, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_90b1d9be9e7ba31bafd2c029368d616f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d48c5e14c2a9b30710fe8a5f2384d97b = $(`<div id="html_d48c5e14c2a9b30710fe8a5f2384d97b" style="width: 100.0%; height: 100.0%;">     <b>Corral-Rubio</b><br>     Población: 303<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 19592<br>     Distancia Albacete: 38.9 km<br>     Opportunity score: 933.0     </div>`)[0];
+                popup_90b1d9be9e7ba31bafd2c029368d616f.setContent(html_d48c5e14c2a9b30710fe8a5f2384d97b);
+            
+        
+
+        circle_marker_bd55fadaf2a71463f977479a61d4508c.bindPopup(popup_90b1d9be9e7ba31bafd2c029368d616f)
+        ;
+
+        
+    
+    
+            var circle_marker_a69f686fdb77264502d89f211e88c904 = L.circleMarker(
+                [38.4310256, -2.5058695],
+                {"bubblingMouseEvents": true, "color": "#ffeb9bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffeb9bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.00615, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_5f212cfc43029e65feb2040e04097719 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8e66e74f43f51513df90869de7aa3be2 = $(`<div id="html_8e66e74f43f51513df90869de7aa3be2" style="width: 100.0%; height: 100.0%;">     <b>Cotillas</b><br>     Población: 123<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 7191<br>     Distancia Albacete: 84.0 km<br>     Opportunity score: 799.0     </div>`)[0];
+                popup_5f212cfc43029e65feb2040e04097719.setContent(html_8e66e74f43f51513df90869de7aa3be2);
+            
+        
+
+        circle_marker_a69f686fdb77264502d89f211e88c904.bindPopup(popup_5f212cfc43029e65feb2040e04097719)
+        ;
+
+        
+    
+    
+            var circle_marker_a0e27566a917b4ebf2e7e4db9bb376cd = L.circleMarker(
+                [38.4500743, -2.0481401],
+                {"bubblingMouseEvents": true, "color": "#ffea99ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffea99ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.18015, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_93de24af0c872d3ad7ad1f6bb66529cf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_021e3fa442656818bdeaf1293801c39b = $(`<div id="html_021e3fa442656818bdeaf1293801c39b" style="width: 100.0%; height: 100.0%;">     <b>Elche de la Sierra</b><br>     Población: 3603<br>     Gimnasios: 2.0<br>     Fitness density: 5.55<br>     Catchment 25km: 10506<br>     Distancia Albacete: 62.7 km<br>     Opportunity score: 808.2     </div>`)[0];
+                popup_93de24af0c872d3ad7ad1f6bb66529cf.setContent(html_021e3fa442656818bdeaf1293801c39b);
+            
+        
+
+        circle_marker_a0e27566a917b4ebf2e7e4db9bb376cd.bindPopup(popup_93de24af0c872d3ad7ad1f6bb66529cf)
+        ;
+
+        
+    
+    
+            var circle_marker_fe67f7227a29dc0c44b84710bec6d97a = L.circleMarker(
+                [39.2451555, -2.0690225],
+                {"bubblingMouseEvents": true, "color": "#ffe287ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe287ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0141, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_3279b3cafb8597993d2dbcff2fa9246f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3914074f3c67699aafba1c76e35fed1a = $(`<div id="html_3914074f3c67699aafba1c76e35fed1a" style="width: 100.0%; height: 100.0%;">     <b>Fuensanta</b><br>     Población: 282<br>     Gimnasios: 1.0<br>     Fitness density: 35.46<br>     Catchment 25km: 31965<br>     Distancia Albacete: 33.2 km<br>     Opportunity score: 887.9     </div>`)[0];
+                popup_3279b3cafb8597993d2dbcff2fa9246f.setContent(html_3914074f3c67699aafba1c76e35fed1a);
+            
+        
+
+        circle_marker_fe67f7227a29dc0c44b84710bec6d97a.bindPopup(popup_3279b3cafb8597993d2dbcff2fa9246f)
+        ;
+
+        
+    
+    
+            var circle_marker_e7c9f60c043f1e99f5a6b4cbe0df6971 = L.circleMarker(
+                [38.6927241, -1.4325968],
+                {"bubblingMouseEvents": true, "color": "#ffea98ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffea98ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.1211, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_f8c3f250855eb4e12e0d0158d316afc3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_936c63557eb095cb71ad2b37de39a4b4 = $(`<div id="html_936c63557eb095cb71ad2b37de39a4b4" style="width: 100.0%; height: 100.0%;">     <b>Fuente-Álamo</b><br>     Población: 2422<br>     Gimnasios: 2.0<br>     Fitness density: 8.26<br>     Catchment 25km: 8925<br>     Distancia Albacete: 50.0 km<br>     Opportunity score: 811.4     </div>`)[0];
+                popup_f8c3f250855eb4e12e0d0158d316afc3.setContent(html_936c63557eb095cb71ad2b37de39a4b4);
+            
+        
+
+        circle_marker_e7c9f60c043f1e99f5a6b4cbe0df6971.bindPopup(popup_f8c3f250855eb4e12e0d0158d316afc3)
+        ;
+
+        
+    
+    
+            var circle_marker_8012ca877f8d0bfa4db0dba5f693f842 = L.circleMarker(
+                [39.2675127, -1.5511323],
+                {"bubblingMouseEvents": true, "color": "#feb04bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feb04bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0902, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_3e3c55d4e2e53deb1412fbaa7ff6135c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_864cb1b3d798fb6b9a02feab210c6e52 = $(`<div id="html_864cb1b3d798fb6b9a02feab210c6e52" style="width: 100.0%; height: 100.0%;">     <b>Fuentealbilla</b><br>     Población: 1804<br>     Gimnasios: 3.0<br>     Fitness density: 16.63<br>     Catchment 25km: 26800<br>     Distancia Albacete: 40.4 km<br>     Opportunity score: 1165.2     </div>`)[0];
+                popup_3e3c55d4e2e53deb1412fbaa7ff6135c.setContent(html_864cb1b3d798fb6b9a02feab210c6e52);
+            
+        
+
+        circle_marker_8012ca877f8d0bfa4db0dba5f693f842.bindPopup(popup_3e3c55d4e2e53deb1412fbaa7ff6135c)
+        ;
+
+        
+    
+    
+            var circle_marker_e9e232f712592d2fe5199a458821d70d = L.circleMarker(
+                [38.3555477, -2.0084208],
+                {"bubblingMouseEvents": true, "color": "#ffe894ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe894ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0302, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_6c6902a70be38e6544befbbb54275d60 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_259fd9829a384a32d5a79552b29622a0 = $(`<div id="html_259fd9829a384a32d5a79552b29622a0" style="width: 100.0%; height: 100.0%;">     <b>Férez</b><br>     Población: 604<br>     Gimnasios: 1.0<br>     Fitness density: 16.56<br>     Catchment 25km: 9144<br>     Distancia Albacete: 72.2 km<br>     Opportunity score: 831.3     </div>`)[0];
+                popup_6c6902a70be38e6544befbbb54275d60.setContent(html_259fd9829a384a32d5a79552b29622a0);
+            
+        
+
+        circle_marker_e9e232f712592d2fe5199a458821d70d.bindPopup(popup_6c6902a70be38e6544befbbb54275d60)
+        ;
+
+        
+    
+    
+            var circle_marker_c85d33a93f0e9a87b961dcf638844e99 = L.circleMarker(
+                [39.1132781, -1.9961056],
+                {"bubblingMouseEvents": true, "color": "#d30e20ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d30e20ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.1328, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_04c6e2a9d4329b876f5f5f833a2ce3a8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_08af6de6c33827d4821ddb6e76026dca = $(`<div id="html_08af6de6c33827d4821ddb6e76026dca" style="width: 100.0%; height: 100.0%;">     <b>Gineta, La</b><br>     Población: 2656<br>     Gimnasios: 2.0<br>     Fitness density: 7.53<br>     Catchment 25km: 208803<br>     Distancia Albacete: 17.7 km<br>     Opportunity score: 1800.0     </div>`)[0];
+                popup_04c6e2a9d4329b876f5f5f833a2ce3a8.setContent(html_08af6de6c33827d4821ddb6e76026dca);
+            
+        
+
+        circle_marker_c85d33a93f0e9a87b961dcf638844e99.bindPopup(popup_04c6e2a9d4329b876f5f5f833a2ce3a8)
+        ;
+
+        
+    
+    
+            var circle_marker_2b78693093a965dc591309b877dd719e = L.circleMarker(
+                [39.2394219, -1.635698],
+                {"bubblingMouseEvents": true, "color": "#feca65ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feca65ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.00395, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_4aa71c7e78419fe94a1b6935a224a1ef = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0a5a098415ba18ed3b3f445b0f4ea1d0 = $(`<div id="html_0a5a098415ba18ed3b3f445b0f4ea1d0" style="width: 100.0%; height: 100.0%;">     <b>Golosalvo</b><br>     Población: 79<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 32267<br>     Distancia Albacete: 33.4 km<br>     Opportunity score: 1040.9     </div>`)[0];
+                popup_4aa71c7e78419fe94a1b6935a224a1ef.setContent(html_0a5a098415ba18ed3b3f445b0f4ea1d0);
+            
+        
+
+        circle_marker_2b78693093a965dc591309b877dd719e.bindPopup(popup_4aa71c7e78419fe94a1b6935a224a1ef)
+        ;
+
+        
+    
+    
+            var circle_marker_b991f604a4c2ce90e347fd9a02541d0e = L.circleMarker(
+                [38.5081949, -1.6983239],
+                {"bubblingMouseEvents": true, "color": "#e61f1dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e61f1dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5418, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_5cc53e8b73cc50e2684b2d63c48e29d4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a8ee45037871f90103398c0bb0526c13 = $(`<div id="html_a8ee45037871f90103398c0bb0526c13" style="width: 100.0%; height: 100.0%;">     <b>Hellín</b><br>     Población: 30836<br>     Gimnasios: 15.0<br>     Fitness density: 4.86<br>     Catchment 25km: 42433<br>     Distancia Albacete: 55.9 km<br>     Opportunity score: 1697.3     </div>`)[0];
+                popup_5cc53e8b73cc50e2684b2d63c48e29d4.setContent(html_a8ee45037871f90103398c0bb0526c13);
+            
+        
+
+        circle_marker_b991f604a4c2ce90e347fd9a02541d0e.bindPopup(popup_5cc53e8b73cc50e2684b2d63c48e29d4)
+        ;
+
+        
+    
+    
+            var circle_marker_4f582560d233f5b07d47eaead6da40a8 = L.circleMarker(
+                [38.9622956, -2.1263536],
+                {"bubblingMouseEvents": true, "color": "#ad0026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ad0026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0154, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_200bf800cfc3fc786ce055dea0c99249 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c836bc7790737b6b574eff23f4d17bd9 = $(`<div id="html_c836bc7790737b6b574eff23f4d17bd9" style="width: 100.0%; height: 100.0%;">     <b>Herrera, La</b><br>     Población: 308<br>     Gimnasios: 1.0<br>     Fitness density: 32.47<br>     Catchment 25km: 201464<br>     Distancia Albacete: 23.3 km<br>     Opportunity score: 1956.0     </div>`)[0];
+                popup_200bf800cfc3fc786ce055dea0c99249.setContent(html_c836bc7790737b6b574eff23f4d17bd9);
+            
+        
+
+        circle_marker_4f582560d233f5b07d47eaead6da40a8.bindPopup(popup_200bf800cfc3fc786ce055dea0c99249)
+        ;
+
+        
+    
+    
+            var circle_marker_29dfc24e8ea2078e0eaf937994f3a057 = L.circleMarker(
+                [38.9618433, -1.4422609],
+                {"bubblingMouseEvents": true, "color": "#ffe690ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe690ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.05665, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_6115e5b15411d4560815fda38740d63f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_76bed2175ff87f84b90a5b9195b86557 = $(`<div id="html_76bed2175ff87f84b90a5b9195b86557" style="width: 100.0%; height: 100.0%;">     <b>Higueruela</b><br>     Población: 1133<br>     Gimnasios: 2.0<br>     Fitness density: 17.65<br>     Catchment 25km: 16126<br>     Distancia Albacete: 36.3 km<br>     Opportunity score: 848.7     </div>`)[0];
+                popup_6115e5b15411d4560815fda38740d63f.setContent(html_76bed2175ff87f84b90a5b9195b86557);
+            
+        
+
+        circle_marker_29dfc24e8ea2078e0eaf937994f3a057.bindPopup(popup_6115e5b15411d4560815fda38740d63f)
+        ;
+
+        
+    
+    
+            var circle_marker_271c4d5a001e6c2253717139d37b69d3 = L.circleMarker(
+                [38.9584238, -1.5565831],
+                {"bubblingMouseEvents": true, "color": "#fed26eff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed26eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0291, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_e41b1f256470427a9b4fe9cad061f4c1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0d7941eb1020f276d4296d61ecd93dc1 = $(`<div id="html_0d7941eb1020f276d4296d61ecd93dc1" style="width: 100.0%; height: 100.0%;">     <b>Hoya-Gonzalo</b><br>     Población: 582<br>     Gimnasios: 2.0<br>     Fitness density: 34.36<br>     Catchment 25km: 15988<br>     Distancia Albacete: 26.5 km<br>     Opportunity score: 999.2     </div>`)[0];
+                popup_e41b1f256470427a9b4fe9cad061f4c1.setContent(html_0d7941eb1020f276d4296d61ecd93dc1);
+            
+        
+
+        circle_marker_271c4d5a001e6c2253717139d37b69d3.bindPopup(popup_e41b1f256470427a9b4fe9cad061f4c1)
+        ;
+
+        
+    
+    
+            var circle_marker_5c93ae37a257428441dd1058ce1b99aa = L.circleMarker(
+                [39.17503019999999, -1.5214676],
+                {"bubblingMouseEvents": true, "color": "#fec662ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec662ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0178, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_ea7e503d11aa69509f4a7871f5c83186 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e521301869348b2df9ccdfdd9f1b159d = $(`<div id="html_e521301869348b2df9ccdfdd9f1b159d" style="width: 100.0%; height: 100.0%;">     <b>Jorquera</b><br>     Población: 356<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 29553<br>     Distancia Albacete: 35.5 km<br>     Opportunity score: 1055.5     </div>`)[0];
+                popup_ea7e503d11aa69509f4a7871f5c83186.setContent(html_e521301869348b2df9ccdfdd9f1b159d);
+            
+        
+
+        circle_marker_5c93ae37a257428441dd1058ce1b99aa.bindPopup(popup_ea7e503d11aa69509f4a7871f5c83186)
+        ;
+
+        
+    
+    
+            var circle_marker_ad52e32ce963f16bd7140d66ee92a08d = L.circleMarker(
+                [38.3656079, -2.1020248],
+                {"bubblingMouseEvents": true, "color": "#ffe894ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe894ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.04555, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_f5bdf6ce26f45a9ed0bc4ef615455587 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_99325ffe24185e723e920bcf99e54182 = $(`<div id="html_99325ffe24185e723e920bcf99e54182" style="width: 100.0%; height: 100.0%;">     <b>Letur</b><br>     Población: 911<br>     Gimnasios: 2.0<br>     Fitness density: 21.95<br>     Catchment 25km: 11615<br>     Distancia Albacete: 73.0 km<br>     Opportunity score: 829.6     </div>`)[0];
+                popup_f5bdf6ce26f45a9ed0bc4ef615455587.setContent(html_99325ffe24185e723e920bcf99e54182);
+            
+        
+
+        circle_marker_ad52e32ce963f16bd7140d66ee92a08d.bindPopup(popup_f5bdf6ce26f45a9ed0bc4ef615455587)
+        ;
+
+        
+    
+    
+            var circle_marker_1586bf71e8c9b7d0a287210d8e320bef = L.circleMarker(
+                [38.9496492, -2.3554527],
+                {"bubblingMouseEvents": true, "color": "#fec35eff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec35eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.06405, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_93e8af7dc453184d850b30423f894445 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f35208b0a74c07a940f3fdaa511dd339 = $(`<div id="html_f35208b0a74c07a940f3fdaa511dd339" style="width: 100.0%; height: 100.0%;">     <b>Lezuza</b><br>     Población: 1281<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 12870<br>     Distancia Albacete: 43.1 km<br>     Opportunity score: 1072.5     </div>`)[0];
+                popup_93e8af7dc453184d850b30423f894445.setContent(html_f35208b0a74c07a940f3fdaa511dd339);
+            
+        
+
+        circle_marker_1586bf71e8c9b7d0a287210d8e320bef.bindPopup(popup_93e8af7dc453184d850b30423f894445)
+        ;
+
+        
+    
+    
+            var circle_marker_53385c2aa20bd8db017cb6788d11bf69 = L.circleMarker(
+                [38.54165450000001, -1.9532994],
+                {"bubblingMouseEvents": true, "color": "#fd602fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd602fff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0526, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_20fdaf796869db5dac3b3cafc793e5bf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1ca694255ca3e8245326812121752c0f = $(`<div id="html_1ca694255ca3e8245326812121752c0f" style="width: 100.0%; height: 100.0%;">     <b>Liétor</b><br>     Población: 1052<br>     Gimnasios: 2.0<br>     Fitness density: 19.01<br>     Catchment 25km: 51626<br>     Distancia Albacete: 51.0 km<br>     Opportunity score: 1475.0     </div>`)[0];
+                popup_20fdaf796869db5dac3b3cafc793e5bf.setContent(html_1ca694255ca3e8245326812121752c0f);
+            
+        
+
+        circle_marker_53385c2aa20bd8db017cb6788d11bf69.bindPopup(popup_20fdaf796869db5dac3b3cafc793e5bf)
+        ;
+
+        
+    
+    
+            var circle_marker_8fd044798dcf8a0cd47122816446b815 = L.circleMarker(
+                [39.23668079999999, -1.8001488],
+                {"bubblingMouseEvents": true, "color": "#ffdd7eff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffdd7eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.2335, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_a4610c189826964bc24930675c2d2ab1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_94cbaeab62ecf76fa60930f5125fd8e3 = $(`<div id="html_94cbaeab62ecf76fa60930f5125fd8e3" style="width: 100.0%; height: 100.0%;">     <b>Madrigueras</b><br>     Población: 4670<br>     Gimnasios: 4.0<br>     Fitness density: 8.57<br>     Catchment 25km: 27808<br>     Distancia Albacete: 27.4 km<br>     Opportunity score: 926.9     </div>`)[0];
+                popup_a4610c189826964bc24930675c2d2ab1.setContent(html_94cbaeab62ecf76fa60930f5125fd8e3);
+            
+        
+
+        circle_marker_8fd044798dcf8a0cd47122816446b815.bindPopup(popup_a4610c189826964bc24930675c2d2ab1)
+        ;
+
+        
+    
+    
+            var circle_marker_2814074695fe346b881bd28a0c6e30d3 = L.circleMarker(
+                [39.2131243, -1.7259018],
+                {"bubblingMouseEvents": true, "color": "#fec863ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec863ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.07325, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_cf56918c7b3d06c682aef6a83b99e6cb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_00b1347f9b8ac29322a33337d6a73f3c = $(`<div id="html_00b1347f9b8ac29322a33337d6a73f3c" style="width: 100.0%; height: 100.0%;">     <b>Mahora</b><br>     Población: 1465<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 30465<br>     Distancia Albacete: 26.9 km<br>     Opportunity score: 1050.5     </div>`)[0];
+                popup_cf56918c7b3d06c682aef6a83b99e6cb.setContent(html_00b1347f9b8ac29322a33337d6a73f3c);
+            
+        
+
+        circle_marker_2814074695fe346b881bd28a0c6e30d3.bindPopup(popup_cf56918c7b3d06c682aef6a83b99e6cb)
+        ;
+
+        
+    
+    
+            var circle_marker_0ceab186dc9ed48b5b25303457b4e518 = L.circleMarker(
+                [38.7182149, -2.3163081],
+                {"bubblingMouseEvents": true, "color": "#fa4a29ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fa4a29ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.00585, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_437f485dd9240de0a7dc466801b2989a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3e3db1635da8776d45dc39544875a44c = $(`<div id="html_3e3db1635da8776d45dc39544875a44c" style="width: 100.0%; height: 100.0%;">     <b>Masegoso</b><br>     Población: 117<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 9267<br>     Distancia Albacete: 50.0 km<br>     Opportunity score: 1544.5     </div>`)[0];
+                popup_437f485dd9240de0a7dc466801b2989a.setContent(html_3e3db1635da8776d45dc39544875a44c);
+            
+        
+
+        circle_marker_0ceab186dc9ed48b5b25303457b4e518.bindPopup(popup_437f485dd9240de0a7dc466801b2989a)
+        ;
+
+        
+    
+    
+            var circle_marker_e8e02393de4a074330bccea344c24193 = L.circleMarker(
+                [39.2710162, -2.3209341],
+                {"bubblingMouseEvents": true, "color": "#febe58ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#febe58ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.06905, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_1081846b5f1799d9ae97d594265b984c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3061eb617a298820ac82e3b765fc9c71 = $(`<div id="html_3061eb617a298820ac82e3b765fc9c71" style="width: 100.0%; height: 100.0%;">     <b>Minaya</b><br>     Población: 1381<br>     Gimnasios: 1.0<br>     Fitness density: 7.24<br>     Catchment 25km: 43865<br>     Distancia Albacete: 50.3 km<br>     Opportunity score: 1096.6     </div>`)[0];
+                popup_1081846b5f1799d9ae97d594265b984c.setContent(html_3061eb617a298820ac82e3b765fc9c71);
+            
+        
+
+        circle_marker_e8e02393de4a074330bccea344c24193.bindPopup(popup_1081846b5f1799d9ae97d594265b984c)
+        ;
+
+        
+    
+    
+            var circle_marker_1fb1622dee2b6478559b9fcab1bbef64 = L.circleMarker(
+                [38.4663699, -2.2405913],
+                {"bubblingMouseEvents": true, "color": "#ffed9eff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffed9eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0377, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_cc9c78ac2f60a9caa734d5299669e161 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9d5e3f8c5ce47828f2199291bb669c89 = $(`<div id="html_9d5e3f8c5ce47828f2199291bb669c89" style="width: 100.0%; height: 100.0%;">     <b>Molinicos</b><br>     Población: 754<br>     Gimnasios: 1.0<br>     Fitness density: 13.26<br>     Catchment 25km: 11767<br>     Distancia Albacete: 67.4 km<br>     Opportunity score: 784.5     </div>`)[0];
+                popup_cc9c78ac2f60a9caa734d5299669e161.setContent(html_9d5e3f8c5ce47828f2199291bb669c89);
+            
+        
+
+        circle_marker_1fb1622dee2b6478559b9fcab1bbef64.bindPopup(popup_cc9c78ac2f60a9caa734d5299669e161)
+        ;
+
+        
+    
+    
+            var circle_marker_88817b9f0d8d0d08e8c7ddfcc5e9dba8 = L.circleMarker(
+                [39.1657264, -2.0276251],
+                {"bubblingMouseEvents": true, "color": "#d30e20ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d30e20ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0037, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_c6490b8f58dd73e4466ab931b43d5942 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5730e56e6bf7408dcf5da375301f47d5 = $(`<div id="html_5730e56e6bf7408dcf5da375301f47d5" style="width: 100.0%; height: 100.0%;">     <b>Montalvos</b><br>     Población: 74<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 208803<br>     Distancia Albacete: 23.9 km<br>     Opportunity score: 1800.0     </div>`)[0];
+                popup_c6490b8f58dd73e4466ab931b43d5942.setContent(html_5730e56e6bf7408dcf5da375301f47d5);
+            
+        
+
+        circle_marker_88817b9f0d8d0d08e8c7ddfcc5e9dba8.bindPopup(popup_c6490b8f58dd73e4466ab931b43d5942)
+        ;
+
+        
+    
+    
+            var circle_marker_3247a1df2ed6b4ca3123ff349496ab16 = L.circleMarker(
+                [38.7888493, -1.3270397],
+                {"bubblingMouseEvents": true, "color": "#febd58ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#febd58ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.10255, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_6f9b2783a45e89d6fb535a27084ac0a3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fdc6257999a721958ac008d9c889178d = $(`<div id="html_fdc6257999a721958ac008d9c889178d" style="width: 100.0%; height: 100.0%;">     <b>Montealegre del Castillo</b><br>     Población: 2051<br>     Gimnasios: 4.0<br>     Fitness density: 19.5<br>     Catchment 25km: 36307<br>     Distancia Albacete: 51.5 km<br>     Opportunity score: 1100.2     </div>`)[0];
+                popup_6f9b2783a45e89d6fb535a27084ac0a3.setContent(html_fdc6257999a721958ac008d9c889178d);
+            
+        
+
+        circle_marker_3247a1df2ed6b4ca3123ff349496ab16.bindPopup(popup_6f9b2783a45e89d6fb535a27084ac0a3)
+        ;
+
+        
+    
+    
+            var circle_marker_090d3eb2004d06a77a8273befbbfc384 = L.circleMarker(
+                [39.1803118, -1.7910132],
+                {"bubblingMouseEvents": true, "color": "#b40026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b40026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.03365, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_5c4d931fc5f788ff2be52911bef1f859 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5bb28e87cf98eebc14fe5cd00ec08ced = $(`<div id="html_5bb28e87cf98eebc14fe5cd00ec08ced" style="width: 100.0%; height: 100.0%;">     <b>Motilleja</b><br>     Población: 673<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 199093<br>     Distancia Albacete: 21.5 km<br>     Opportunity score: 1932.9     </div>`)[0];
+                popup_5c4d931fc5f788ff2be52911bef1f859.setContent(html_5bb28e87cf98eebc14fe5cd00ec08ced);
+            
+        
+
+        circle_marker_090d3eb2004d06a77a8273befbbfc384.bindPopup(popup_5c4d931fc5f788ff2be52911bef1f859)
+        ;
+
+        
+    
+    
+            var circle_marker_fe1aea156dd0015459f07934b0da7b7c = L.circleMarker(
+                [39.0424927, -2.4783117],
+                {"bubblingMouseEvents": true, "color": "#ffe083ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe083ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.16755, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_a35de2cfea7c423036469365df9ad039 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9f4fef8df7a5748981d1ff4e64a7d475 = $(`<div id="html_9f4fef8df7a5748981d1ff4e64a7d475" style="width: 100.0%; height: 100.0%;">     <b>Munera</b><br>     Población: 3351<br>     Gimnasios: 3.0<br>     Fitness density: 8.95<br>     Catchment 25km: 11759<br>     Distancia Albacete: 53.7 km<br>     Opportunity score: 904.5     </div>`)[0];
+                popup_a35de2cfea7c423036469365df9ad039.setContent(html_9f4fef8df7a5748981d1ff4e64a7d475);
+            
+        
+
+        circle_marker_fe1aea156dd0015459f07934b0da7b7c.bindPopup(popup_a35de2cfea7c423036469365df9ad039)
+        ;
+
+        
+    
+    
+            var circle_marker_d4411aff47a330d98da4074dfff36ba9 = L.circleMarker(
+                [39.2800859, -1.7192136],
+                {"bubblingMouseEvents": true, "color": "#fecd69ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fecd69ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.02605, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_04dc2351d9b0b88a5946e76f471c0616 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dd7f20f499a9651aa10552232128182d = $(`<div id="html_dd7f20f499a9651aa10552232128182d" style="width: 100.0%; height: 100.0%;">     <b>Navas de Jorquera</b><br>     Población: 521<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 29662<br>     Distancia Albacete: 34.0 km<br>     Opportunity score: 1022.8     </div>`)[0];
+                popup_04dc2351d9b0b88a5946e76f471c0616.setContent(html_dd7f20f499a9651aa10552232128182d);
+            
+        
+
+        circle_marker_d4411aff47a330d98da4074dfff36ba9.bindPopup(popup_04dc2351d9b0b88a5946e76f471c0616)
+        ;
+
+        
+    
+    
+            var circle_marker_9f01d22cee1969496d9197ea79d25dbe = L.circleMarker(
+                [38.1477676, -2.2987502],
+                {"bubblingMouseEvents": true, "color": "#fffec9ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fffec9ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0568, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_3899ce0bc9605f16543881ec84fd873b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d107b351866f5eafc9802dac8b16dd51 = $(`<div id="html_d107b351866f5eafc9802dac8b16dd51" style="width: 100.0%; height: 100.0%;">     <b>Nerpio</b><br>     Población: 1136<br>     Gimnasios: 2.0<br>     Fitness density: 17.61<br>     Catchment 25km: 3607<br>     Distancia Albacete: 101.6 km<br>     Opportunity score: 601.2     </div>`)[0];
+                popup_3899ce0bc9605f16543881ec84fd873b.setContent(html_d107b351866f5eafc9802dac8b16dd51);
+            
+        
+
+        circle_marker_9f01d22cee1969496d9197ea79d25dbe.bindPopup(popup_3899ce0bc9605f16543881ec84fd873b)
+        ;
+
+        
+    
+    
+            var circle_marker_a36861f65ab001caf192ad8e7a4bc197 = L.circleMarker(
+                [38.6159034, -1.4978716],
+                {"bubblingMouseEvents": true, "color": "#f84527ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f84527ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.09475, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_88f4740a3025839301b4b59380d75c9c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ef059b6eecee9643f0d29958cc7bc714 = $(`<div id="html_ef059b6eecee9643f0d29958cc7bc714" style="width: 100.0%; height: 100.0%;">     <b>Ontur</b><br>     Población: 1895<br>     Gimnasios: 1.0<br>     Fitness density: 5.28<br>     Catchment 25km: 46817<br>     Distancia Albacete: 52.5 km<br>     Opportunity score: 1560.6     </div>`)[0];
+                popup_88f4740a3025839301b4b59380d75c9c.setContent(html_ef059b6eecee9643f0d29958cc7bc714);
+            
+        
+
+        circle_marker_a36861f65ab001caf192ad8e7a4bc197.bindPopup(popup_88f4740a3025839301b4b59380d75c9c)
+        ;
+
+        
+    
+    
+            var circle_marker_e7557c99f8f6bb50f6528af562ff6d5f = L.circleMarker(
+                [38.9645905, -2.7468737],
+                {"bubblingMouseEvents": true, "color": "#fff0a7ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff0a7ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.11165, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_86ae82bca6a9e2e9a03c984ea01e9fdd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e7d00499ca79af9d7e8416f062dadd76 = $(`<div id="html_e7d00499ca79af9d7e8416f062dadd76" style="width: 100.0%; height: 100.0%;">     <b>Ossa de Montiel</b><br>     Población: 2233<br>     Gimnasios: 4.0<br>     Fitness density: 17.91<br>     Catchment 25km: 8229<br>     Distancia Albacete: 76.7 km<br>     Opportunity score: 748.1     </div>`)[0];
+                popup_86ae82bca6a9e2e9a03c984ea01e9fdd.setContent(html_e7d00499ca79af9d7e8416f062dadd76);
+            
+        
+
+        circle_marker_e7557c99f8f6bb50f6528af562ff6d5f.bindPopup(popup_86ae82bca6a9e2e9a03c984ea01e9fdd)
+        ;
+
+        
+    
+    
+            var circle_marker_2a816e38dfa4b12db94a012a4b143994 = L.circleMarker(
+                [38.5973796, -2.3458767],
+                {"bubblingMouseEvents": true, "color": "#ffe38aff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe38aff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0164, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_240d1ef5d406774d5a3cedf691cb039e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_591b3343d13b1a95ddcc36988b076745 = $(`<div id="html_591b3343d13b1a95ddcc36988b076745" style="width: 100.0%; height: 100.0%;">     <b>Paterna del Madera</b><br>     Población: 328<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 7894<br>     Distancia Albacete: 61.0 km<br>     Opportunity score: 877.1     </div>`)[0];
+                popup_240d1ef5d406774d5a3cedf691cb039e.setContent(html_591b3343d13b1a95ddcc36988b076745);
+            
+        
+
+        circle_marker_2a816e38dfa4b12db94a012a4b143994.bindPopup(popup_240d1ef5d406774d5a3cedf691cb039e)
+        ;
+
+        
+    
+    
+            var circle_marker_4f80e02e262884e0405bf27d31c7d6c3 = L.circleMarker(
+                [38.7256513, -2.0010004],
+                {"bubblingMouseEvents": true, "color": "#fed26eff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed26eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0744, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_355e7fc4d11eb4f637b64682f59d86e6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2bf679749b98df79b56d1c556817a3df = $(`<div id="html_2bf679749b98df79b56d1c556817a3df" style="width: 100.0%; height: 100.0%;">     <b>Peñas de San Pedro</b><br>     Población: 1488<br>     Gimnasios: 2.0<br>     Fitness density: 13.44<br>     Catchment 25km: 12991<br>     Distancia Albacete: 32.3 km<br>     Opportunity score: 999.3     </div>`)[0];
+                popup_355e7fc4d11eb4f637b64682f59d86e6.setContent(html_2bf679749b98df79b56d1c556817a3df);
+            
+        
+
+        circle_marker_4f80e02e262884e0405bf27d31c7d6c3.bindPopup(popup_355e7fc4d11eb4f637b64682f59d86e6)
+        ;
+
+        
+    
+    
+            var circle_marker_e2d99d3581b69bb2dbf1dde133733e54 = L.circleMarker(
+                [38.6716596, -2.4104201],
+                {"bubblingMouseEvents": true, "color": "#febb55ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#febb55ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.01645, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_0b5fb04bf55f6bb55713c30c2dc58e67 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_744027f06451225898da564f8d8eef8b = $(`<div id="html_744027f06451225898da564f8d8eef8b" style="width: 100.0%; height: 100.0%;">     <b>Peñascosa</b><br>     Población: 329<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 8887<br>     Distancia Albacete: 59.7 km<br>     Opportunity score: 1110.9     </div>`)[0];
+                popup_0b5fb04bf55f6bb55713c30c2dc58e67.setContent(html_744027f06451225898da564f8d8eef8b);
+            
+        
+
+        circle_marker_e2d99d3581b69bb2dbf1dde133733e54.bindPopup(popup_0b5fb04bf55f6bb55713c30c2dc58e67)
+        ;
+
+        
+    
+    
+            var circle_marker_18e3b22fa54fb5321fdad2fb1889900b = L.circleMarker(
+                [38.7007435, -2.6034236],
+                {"bubblingMouseEvents": true, "color": "#e9241fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e9241fff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0187, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_a0e5ad736970b1a907923dd9da41c994 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_aa0c335b23cc4d1edbdbc4bbda750a96 = $(`<div id="html_aa0c335b23cc4d1edbdbc4bbda750a96" style="width: 100.0%; height: 100.0%;">     <b>Povedilla</b><br>     Población: 374<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 5035<br>     Distancia Albacete: 72.2 km<br>     Opportunity score: 1678.3     </div>`)[0];
+                popup_a0e5ad736970b1a907923dd9da41c994.setContent(html_aa0c335b23cc4d1edbdbc4bbda750a96);
+            
+        
+
+        circle_marker_18e3b22fa54fb5321fdad2fb1889900b.bindPopup(popup_a0e5ad736970b1a907923dd9da41c994)
+        ;
+
+        
+    
+    
+            var circle_marker_88060c53494fe9991f8d966d9267142b = L.circleMarker(
+                [38.8029833, -1.7322065],
+                {"bubblingMouseEvents": true, "color": "#930026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#930026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.1352, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_32ebe88671906ae76920393f5ed846c8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_19291ba5550812c6a60e61e6da764402 = $(`<div id="html_19291ba5550812c6a60e61e6da764402" style="width: 100.0%; height: 100.0%;">     <b>Pozo Cañada</b><br>     Población: 2704<br>     Gimnasios: 1.0<br>     Fitness density: 3.7<br>     Catchment 25km: 195301<br>     Distancia Albacete: 24.0 km<br>     Opportunity score: 2034.4     </div>`)[0];
+                popup_32ebe88671906ae76920393f5ed846c8.setContent(html_19291ba5550812c6a60e61e6da764402);
+            
+        
+
+        circle_marker_88060c53494fe9991f8d966d9267142b.bindPopup(popup_32ebe88671906ae76920393f5ed846c8)
+        ;
+
+        
+    
+    
+            var circle_marker_9aa09a90451a3d5ca0284306deba49b3 = L.circleMarker(
+                [39.076351, -1.5069455],
+                {"bubblingMouseEvents": true, "color": "#febb55ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#febb55ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0199, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_864b50a5fc103de46f3c3ccd272cac03 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1eea8f698022f6d85496f784389ef01f = $(`<div id="html_1eea8f698022f6d85496f784389ef01f" style="width: 100.0%; height: 100.0%;">     <b>Pozo-Lorente</b><br>     Población: 398<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 17759<br>     Distancia Albacete: 31.8 km<br>     Opportunity score: 1109.9     </div>`)[0];
+                popup_864b50a5fc103de46f3c3ccd272cac03.setContent(html_1eea8f698022f6d85496f784389ef01f);
+            
+        
+
+        circle_marker_9aa09a90451a3d5ca0284306deba49b3.bindPopup(popup_864b50a5fc103de46f3c3ccd272cac03)
+        ;
+
+        
+    
+    
+            var circle_marker_3ca3b2ea0b02970449b5bb7b94c1b096 = L.circleMarker(
+                [38.7199503, -1.9111451],
+                {"bubblingMouseEvents": true, "color": "#feae4aff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feae4aff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0772, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_1b3ec76248eef0c700b7d6ba5c564370 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2eb9d24bc33daa70f3e484b0c40ab815 = $(`<div id="html_2eb9d24bc33daa70f3e484b0c40ab815" style="width: 100.0%; height: 100.0%;">     <b>Pozohondo</b><br>     Población: 1544<br>     Gimnasios: 1.0<br>     Fitness density: 6.48<br>     Catchment 25km: 17616<br>     Distancia Albacete: 30.8 km<br>     Opportunity score: 1174.4     </div>`)[0];
+                popup_1b3ec76248eef0c700b7d6ba5c564370.setContent(html_2eb9d24bc33daa70f3e484b0c40ab815);
+            
+        
+
+        circle_marker_3ca3b2ea0b02970449b5bb7b94c1b096.bindPopup(popup_1b3ec76248eef0c700b7d6ba5c564370)
+        ;
+
+        
+    
+    
+            var circle_marker_483a62a0904d8cc8cc311c3e9fe9a51c = L.circleMarker(
+                [38.8089093, -2.1014619],
+                {"bubblingMouseEvents": true, "color": "#ffdd7eff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffdd7eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.02275, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_25c271ef54c5c8af373a7062ec5fb412 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5cdd701a646e26a3e1242d3c18e123a1 = $(`<div id="html_5cdd701a646e26a3e1242d3c18e123a1" style="width: 100.0%; height: 100.0%;">     <b>Pozuelo</b><br>     Población: 455<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 8356<br>     Distancia Albacete: 29.3 km<br>     Opportunity score: 928.4     </div>`)[0];
+                popup_25c271ef54c5c8af373a7062ec5fb412.setContent(html_5cdd701a646e26a3e1242d3c18e123a1);
+            
+        
+
+        circle_marker_483a62a0904d8cc8cc311c3e9fe9a51c.bindPopup(popup_25c271ef54c5c8af373a7062ec5fb412)
+        ;
+
+        
+    
+    
+            var circle_marker_467fba966bc0ae636271abe104bce0ed = L.circleMarker(
+                [38.8272179, -1.5559775],
+                {"bubblingMouseEvents": true, "color": "#ffe48cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe48cff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.033, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_71e461cb5124d342ad3055db6adcb111 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dbdfb647ebf07f0d6cd1412e0f6a5535 = $(`<div id="html_dbdfb647ebf07f0d6cd1412e0f6a5535" style="width: 100.0%; height: 100.0%;">     <b>Pétrola</b><br>     Población: 660<br>     Gimnasios: 1.0<br>     Fitness density: 15.15<br>     Catchment 25km: 17314<br>     Distancia Albacete: 32.2 km<br>     Opportunity score: 865.7     </div>`)[0];
+                popup_71e461cb5124d342ad3055db6adcb111.setContent(html_dbdfb647ebf07f0d6cd1412e0f6a5535);
+            
+        
+
+        circle_marker_467fba966bc0ae636271abe104bce0ed.bindPopup(popup_71e461cb5124d342ad3055db6adcb111)
+        ;
+
+        
+    
+    
+            var circle_marker_f8a49471b0684806a2397bf7415ce1e1 = L.circleMarker(
+                [39.1607676, -1.4676394],
+                {"bubblingMouseEvents": true, "color": "#fed672ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed672ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.01075, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_4c33ec13a481510d1ed6a45c5392b230 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b24dc309d4658fbfb1b25710f858b071 = $(`<div id="html_b24dc309d4658fbfb1b25710f858b071" style="width: 100.0%; height: 100.0%;">     <b>Recueja, La</b><br>     Población: 215<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 19606<br>     Distancia Albacete: 38.6 km<br>     Opportunity score: 980.3     </div>`)[0];
+                popup_4c33ec13a481510d1ed6a45c5392b230.setContent(html_b24dc309d4658fbfb1b25710f858b071);
+            
+        
+
+        circle_marker_f8a49471b0684806a2397bf7415ce1e1.bindPopup(popup_4c33ec13a481510d1ed6a45c5392b230)
+        ;
+
+        
+    
+    
+            var circle_marker_add4025c5bde822f7a4fcb2fe3b9f97a = L.circleMarker(
+                [38.4982409, -2.4171658],
+                {"bubblingMouseEvents": true, "color": "#ffe48cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe48cff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0672, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_d3170f63869d6a95e8b656daa8d0b55c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bb511f6e178c4e4ada5d310cf2839cc4 = $(`<div id="html_bb511f6e178c4e4ada5d310cf2839cc4" style="width: 100.0%; height: 100.0%;">     <b>Riópar</b><br>     Población: 1344<br>     Gimnasios: 3.0<br>     Fitness density: 22.32<br>     Catchment 25km: 9530<br>     Distancia Albacete: 73.3 km<br>     Opportunity score: 866.4     </div>`)[0];
+                popup_d3170f63869d6a95e8b656daa8d0b55c.setContent(html_bb511f6e178c4e4ada5d310cf2839cc4);
+            
+        
+
+        circle_marker_add4025c5bde822f7a4fcb2fe3b9f97a.bindPopup(popup_d3170f63869d6a95e8b656daa8d0b55c)
+        ;
+
+        
+    
+    
+            var circle_marker_73f14483715fae212a893f8e7afd19ed = L.circleMarker(
+                [38.774234, -2.4406387],
+                {"bubblingMouseEvents": true, "color": "#f23824ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f23824ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0191, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_e8449f346deb085e90755235a75bf0a8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a3900363b91a98d12f8f05e71dd3ce99 = $(`<div id="html_a3900363b91a98d12f8f05e71dd3ce99" style="width: 100.0%; height: 100.0%;">     <b>Robledo</b><br>     Población: 382<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 9655<br>     Distancia Albacete: 55.9 km<br>     Opportunity score: 1609.2     </div>`)[0];
+                popup_e8449f346deb085e90755235a75bf0a8.setContent(html_a3900363b91a98d12f8f05e71dd3ce99);
+            
+        
+
+        circle_marker_73f14483715fae212a893f8e7afd19ed.bindPopup(popup_e8449f346deb085e90755235a75bf0a8)
+        ;
+
+        
+    
+    
+            var circle_marker_ca2f3e796bb26eeb8b33230e3bc90415 = L.circleMarker(
+                [39.1755765, -2.1843285],
+                {"bubblingMouseEvents": true, "color": "#ffdd7dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffdd7dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.78215, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_8e744a1beb59b922ad327057e2bc982f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_608031fae73afb0e9f9468428f5bd8f0 = $(`<div id="html_608031fae73afb0e9f9468428f5bd8f0" style="width: 100.0%; height: 100.0%;">     <b>Roda, La</b><br>     Población: 15643<br>     Gimnasios: 16.0<br>     Fitness density: 10.23<br>     Catchment 25km: 23341<br>     Distancia Albacete: 34.5 km<br>     Opportunity score: 933.6     </div>`)[0];
+                popup_8e744a1beb59b922ad327057e2bc982f.setContent(html_608031fae73afb0e9f9468428f5bd8f0);
+            
+        
+
+        circle_marker_ca2f3e796bb26eeb8b33230e3bc90415.bindPopup(popup_8e744a1beb59b922ad327057e2bc982f)
+        ;
+
+        
+    
+    
+            var circle_marker_80f0072fd9c1f168c0a814709af41089 = L.circleMarker(
+                [38.5928606, -2.5498208],
+                {"bubblingMouseEvents": true, "color": "#feb852ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feb852ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0221, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_757a66973f120133809849695f5f3a1d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_acb18a5062a96bdb4f66aa3f0f30c6a6 = $(`<div id="html_acb18a5062a96bdb4f66aa3f0f30c6a6" style="width: 100.0%; height: 100.0%;">     <b>Salobre</b><br>     Población: 442<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 6744<br>     Distancia Albacete: 74.6 km<br>     Opportunity score: 1124.0     </div>`)[0];
+                popup_757a66973f120133809849695f5f3a1d.setContent(html_acb18a5062a96bdb4f66aa3f0f30c6a6);
+            
+        
+
+        circle_marker_80f0072fd9c1f168c0a814709af41089.bindPopup(popup_757a66973f120133809849695f5f3a1d)
+        ;
+
+        
+    
+    
+            var circle_marker_e3842a256c121f8d8f77a9ec3af97db2 = L.circleMarker(
+                [38.779652, -2.1646722],
+                {"bubblingMouseEvents": true, "color": "#fed673ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed673ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.05775, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_ceff4e638ffebb8835c3680bab46554e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_01f7d9dbf7d1c4c480880d7fa68be886 = $(`<div id="html_01f7d9dbf7d1c4c480880d7fa68be886" style="width: 100.0%; height: 100.0%;">     <b>San Pedro</b><br>     Población: 1155<br>     Gimnasios: 1.0<br>     Fitness density: 8.66<br>     Catchment 25km: 9794<br>     Distancia Albacete: 35.6 km<br>     Opportunity score: 979.4     </div>`)[0];
+                popup_ceff4e638ffebb8835c3680bab46554e.setContent(html_01f7d9dbf7d1c4c480880d7fa68be886);
+            
+        
+
+        circle_marker_e3842a256c121f8d8f77a9ec3af97db2.bindPopup(popup_ceff4e638ffebb8835c3680bab46554e)
+        ;
+
+        
+    
+    
+            var circle_marker_0cb6dc99964821ee4f5713c14f568780 = L.circleMarker(
+                [38.3327757, -1.9844827],
+                {"bubblingMouseEvents": true, "color": "#ffe48cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe48cff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.08215, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_1e55dd28483ad6bfcea87d8fea3682f5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_06de6dd2f0d6130dce2393944147b565 = $(`<div id="html_06de6dd2f0d6130dce2393944147b565" style="width: 100.0%; height: 100.0%;">     <b>Socovos</b><br>     Población: 1643<br>     Gimnasios: 1.0<br>     Fitness density: 6.09<br>     Catchment 25km: 7813<br>     Distancia Albacete: 74.4 km<br>     Opportunity score: 868.1     </div>`)[0];
+                popup_1e55dd28483ad6bfcea87d8fea3682f5.setContent(html_06de6dd2f0d6130dce2393944147b565);
+            
+        
+
+        circle_marker_0cb6dc99964821ee4f5713c14f568780.bindPopup(popup_1e55dd28483ad6bfcea87d8fea3682f5)
+        ;
+
+        
+    
+    
+            var circle_marker_e5acd45131c6a887e0e6bda82da9c9fa = L.circleMarker(
+                [39.2651188, -1.912995],
+                {"bubblingMouseEvents": true, "color": "#ffe083ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe083ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.305, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_7d32fb375ea60ec5ada02af70a7c6523 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5b18b34cc8f95c298154bca6ae92bffc = $(`<div id="html_5b18b34cc8f95c298154bca6ae92bffc" style="width: 100.0%; height: 100.0%;">     <b>Tarazona de la Mancha</b><br>     Población: 6100<br>     Gimnasios: 10.0<br>     Fitness density: 16.39<br>     Catchment 25km: 20812<br>     Distancia Albacete: 30.4 km<br>     Opportunity score: 904.9     </div>`)[0];
+                popup_7d32fb375ea60ec5ada02af70a7c6523.setContent(html_5b18b34cc8f95c298154bca6ae92bffc);
+            
+        
+
+        circle_marker_e5acd45131c6a887e0e6bda82da9c9fa.bindPopup(popup_7d32fb375ea60ec5ada02af70a7c6523)
+        ;
+
+        
+    
+    
+            var circle_marker_a1ecd5a8c932ef707835cc949415e3b9 = L.circleMarker(
+                [38.5909581, -1.6930787],
+                {"bubblingMouseEvents": true, "color": "#e1181cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e1181cff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.4003, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_4e2911e10c5285a93ab68cec428ae86e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6542817e0a065ae619ee385b067ae2d5 = $(`<div id="html_6542817e0a065ae619ee385b067ae2d5" style="width: 100.0%; height: 100.0%;">     <b>Tobarra</b><br>     Población: 8006<br>     Gimnasios: 5.0<br>     Fitness density: 6.25<br>     Catchment 25km: 46681<br>     Distancia Albacete: 47.1 km<br>     Opportunity score: 1728.9     </div>`)[0];
+                popup_4e2911e10c5285a93ab68cec428ae86e.setContent(html_6542817e0a065ae619ee385b067ae2d5);
+            
+        
+
+        circle_marker_a1ecd5a8c932ef707835cc949415e3b9.bindPopup(popup_4e2911e10c5285a93ab68cec428ae86e)
+        ;
+
+        
+    
+    
+            var circle_marker_55aa2ecb6d364c2510264a683deaa661 = L.circleMarker(
+                [39.1358432, -1.6772838],
+                {"bubblingMouseEvents": true, "color": "#c30424ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c30424ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0985, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_3d98ce392283617dc560835f7f9f6c2c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f1205879cc1362d9a19615bc1933c9d9 = $(`<div id="html_f1205879cc1362d9a19615bc1933c9d9" style="width: 100.0%; height: 100.0%;">     <b>Valdeganga</b><br>     Población: 1970<br>     Gimnasios: 2.0<br>     Fitness density: 10.15<br>     Catchment 25km: 208108<br>     Distancia Albacete: 22.3 km<br>     Opportunity score: 1874.8     </div>`)[0];
+                popup_3d98ce392283617dc560835f7f9f6c2c.setContent(html_f1205879cc1362d9a19615bc1933c9d9);
+            
+        
+
+        circle_marker_55aa2ecb6d364c2510264a683deaa661.bindPopup(popup_3d98ce392283617dc560835f7f9f6c2c)
+        ;
+
+        
+    
+    
+            var circle_marker_dcd6b84235418ee93193813f921b29fa = L.circleMarker(
+                [38.5947041, -2.5098914],
+                {"bubblingMouseEvents": true, "color": "#feb852ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feb852ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.01585, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_21b3560949c5fa3edd516aa0d9066933 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fedadad34b76b0fb92fae9a36b92a64f = $(`<div id="html_fedadad34b76b0fb92fae9a36b92a64f" style="width: 100.0%; height: 100.0%;">     <b>Vianos</b><br>     Población: 317<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 6744<br>     Distancia Albacete: 71.7 km<br>     Opportunity score: 1124.0     </div>`)[0];
+                popup_21b3560949c5fa3edd516aa0d9066933.setContent(html_fedadad34b76b0fb92fae9a36b92a64f);
+            
+        
+
+        circle_marker_dcd6b84235418ee93193813f921b29fa.bindPopup(popup_21b3560949c5fa3edd516aa0d9066933)
+        ;
+
+        
+    
+    
+            var circle_marker_90af260179809dade0f559d0e43b3acb = L.circleMarker(
+                [39.2226519, -1.2593206],
+                {"bubblingMouseEvents": true, "color": "#fea646ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fea646ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.00255, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_04ee17c869af7a55c04b615b8d2b0bcd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2fa5b139e89e5d7e49ad01bfa70f9946 = $(`<div id="html_2fa5b139e89e5d7e49ad01bfa70f9946" style="width: 100.0%; height: 100.0%;">     <b>Villa de Ves</b><br>     Población: 51<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 9724<br>     Distancia Albacete: 57.7 km<br>     Opportunity score: 1215.5     </div>`)[0];
+                popup_04ee17c869af7a55c04b615b8d2b0bcd.setContent(html_2fa5b139e89e5d7e49ad01bfa70f9946);
+            
+        
+
+        circle_marker_90af260179809dade0f559d0e43b3acb.bindPopup(popup_04ee17c869af7a55c04b615b8d2b0bcd)
+        ;
+
+        
+    
+    
+            var circle_marker_663a1ff24effd19bf530b3268f50991c = L.circleMarker(
+                [39.2964074, -2.0622166],
+                {"bubblingMouseEvents": true, "color": "#ffe287ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe287ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.05795, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_b749f0bbe5598481871b4a08f3ddffb8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_63f69adb90daca24c2f958616aa4240f = $(`<div id="html_63f69adb90daca24c2f958616aa4240f" style="width: 100.0%; height: 100.0%;">     <b>Villalgordo del Júcar</b><br>     Población: 1159<br>     Gimnasios: 1.0<br>     Fitness density: 8.63<br>     Catchment 25km: 31965<br>     Distancia Albacete: 37.8 km<br>     Opportunity score: 887.9     </div>`)[0];
+                popup_b749f0bbe5598481871b4a08f3ddffb8.setContent(html_63f69adb90daca24c2f958616aa4240f);
+            
+        
+
+        circle_marker_663a1ff24effd19bf530b3268f50991c.bindPopup(popup_b749f0bbe5598481871b4a08f3ddffb8)
+        ;
+
+        
+    
+    
+            var circle_marker_8dba0f6becef104759a4ccfc88ab3a9e = L.circleMarker(
+                [39.3628674, -1.5971834],
+                {"bubblingMouseEvents": true, "color": "#feb751ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feb751ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.20415, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_71b942f5de31797a7e6fdd25e8e0ac08 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6db99a384c15758b1d1aa11a6d5a4479 = $(`<div id="html_6db99a384c15758b1d1aa11a6d5a4479" style="width: 100.0%; height: 100.0%;">     <b>Villamalea</b><br>     Población: 4083<br>     Gimnasios: 4.0<br>     Fitness density: 9.8<br>     Catchment 25km: 21426<br>     Distancia Albacete: 46.8 km<br>     Opportunity score: 1127.7     </div>`)[0];
+                popup_71b942f5de31797a7e6fdd25e8e0ac08.setContent(html_6db99a384c15758b1d1aa11a6d5a4479);
+            
+        
+
+        circle_marker_8dba0f6becef104759a4ccfc88ab3a9e.bindPopup(popup_71b942f5de31797a7e6fdd25e8e0ac08)
+        ;
+
+        
+    
+    
+            var circle_marker_f3f8b3ff44036c93e4c397c605a362e5 = L.circleMarker(
+                [38.5756136, -2.6331952],
+                {"bubblingMouseEvents": true, "color": "#fed571ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed571ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.02695, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_09ed68a5fadd409134a9a1e77a20e8f4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_70cb648c03112ccf1c84163745412a6a = $(`<div id="html_70cb648c03112ccf1c84163745412a6a" style="width: 100.0%; height: 100.0%;">     <b>Villapalacios</b><br>     Población: 539<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 5917<br>     Distancia Albacete: 81.6 km<br>     Opportunity score: 986.2     </div>`)[0];
+                popup_09ed68a5fadd409134a9a1e77a20e8f4.setContent(html_70cb648c03112ccf1c84163745412a6a);
+            
+        
+
+        circle_marker_f3f8b3ff44036c93e4c397c605a362e5.bindPopup(popup_09ed68a5fadd409134a9a1e77a20e8f4)
+        ;
+
+        
+    
+    
+            var circle_marker_73dfdb76d7e36940d7f45c7e60898a3d = L.circleMarker(
+                [39.2683154, -2.6015635],
+                {"bubblingMouseEvents": true, "color": "#fea546ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fea546ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.27, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_ffc6c1ea174886f47b25a554c7c31570 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_303658298c27440db1e3f5a4c80ff5b0 = $(`<div id="html_303658298c27440db1e3f5a4c80ff5b0" style="width: 100.0%; height: 100.0%;">     <b>Villarrobledo</b><br>     Población: 25400<br>     Gimnasios: 20.0<br>     Fitness density: 7.87<br>     Catchment 25km: 26781<br>     Distancia Albacete: 70.8 km<br>     Opportunity score: 1217.3     </div>`)[0];
+                popup_ffc6c1ea174886f47b25a554c7c31570.setContent(html_303658298c27440db1e3f5a4c80ff5b0);
+            
+        
+
+        circle_marker_73dfdb76d7e36940d7f45c7e60898a3d.bindPopup(popup_ffc6c1ea174886f47b25a554c7c31570)
+        ;
+
+        
+    
+    
+            var circle_marker_8d30a8188d347c19965eede5ed7eb06f = L.circleMarker(
+                [39.3330544, -1.3390901],
+                {"bubblingMouseEvents": true, "color": "#fecc67ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fecc67ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0057, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_6b815e6943dc2dd10ab95b3dde6ab474 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_38ec7cd22e6b4a4c0b9cefd61a80c8dd = $(`<div id="html_38ec7cd22e6b4a4c0b9cefd61a80c8dd" style="width: 100.0%; height: 100.0%;">     <b>Villatoya</b><br>     Población: 114<br>     Gimnasios: 1.0<br>     Fitness density: 87.72<br>     Catchment 25km: 14434<br>     Distancia Albacete: 58.6 km<br>     Opportunity score: 1031.0     </div>`)[0];
+                popup_6b815e6943dc2dd10ab95b3dde6ab474.setContent(html_38ec7cd22e6b4a4c0b9cefd61a80c8dd);
+            
+        
+
+        circle_marker_8d30a8188d347c19965eede5ed7eb06f.bindPopup(popup_6b815e6943dc2dd10ab95b3dde6ab474)
+        ;
+
+        
+    
+    
+            var circle_marker_484bf21fbcf7cd9095101eecdb17193e = L.circleMarker(
+                [39.1138831, -1.4724751],
+                {"bubblingMouseEvents": true, "color": "#fec25dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec25dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0095, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_882b23e71dee7d31b4d2c1aa281f9060 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2cb163d504fd57107a37a91532d89add = $(`<div id="html_2cb163d504fd57107a37a91532d89add" style="width: 100.0%; height: 100.0%;">     <b>Villavaliente</b><br>     Población: 190<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 18329<br>     Distancia Albacete: 36.0 km<br>     Opportunity score: 1078.2     </div>`)[0];
+                popup_882b23e71dee7d31b4d2c1aa281f9060.setContent(html_2cb163d504fd57107a37a91532d89add);
+            
+        
+
+        circle_marker_484bf21fbcf7cd9095101eecdb17193e.bindPopup(popup_882b23e71dee7d31b4d2c1aa281f9060)
+        ;
+
+        
+    
+    
+            var circle_marker_7b66b2e070bd25228ac5e7539870c0a5 = L.circleMarker(
+                [38.4563278, -2.5183567],
+                {"bubblingMouseEvents": true, "color": "#ffe690ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe690ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.01625, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_03399bcdf3547b1ff44bf4074f1e6bcb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0a2f60e851e61b2e0d6d55b73f0029c9 = $(`<div id="html_0a2f60e851e61b2e0d6d55b73f0029c9" style="width: 100.0%; height: 100.0%;">     <b>Villaverde de Guadalimar</b><br>     Población: 325<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 8474<br>     Distancia Albacete: 82.7 km<br>     Opportunity score: 847.4     </div>`)[0];
+                popup_03399bcdf3547b1ff44bf4074f1e6bcb.setContent(html_0a2f60e851e61b2e0d6d55b73f0029c9);
+            
+        
+
+        circle_marker_7b66b2e070bd25228ac5e7539870c0a5.bindPopup(popup_03399bcdf3547b1ff44bf4074f1e6bcb)
+        ;
+
+        
+    
+    
+            var circle_marker_7d422041aabc3f9ede132295b6bf1187 = L.circleMarker(
+                [38.7726567, -2.57553],
+                {"bubblingMouseEvents": true, "color": "#fd7034ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd7034ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.01465, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_62650efce35aedee3c34575a0b953332 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_56266b5b7145bd7812d7e4727224989a = $(`<div id="html_56266b5b7145bd7812d7e4727224989a" style="width: 100.0%; height: 100.0%;">     <b>Viveros</b><br>     Población: 293<br>     Gimnasios: 0.0<br>     Fitness density: 0.0<br>     Catchment 25km: 7132<br>     Distancia Albacete: 66.6 km<br>     Opportunity score: 1426.4     </div>`)[0];
+                popup_62650efce35aedee3c34575a0b953332.setContent(html_56266b5b7145bd7812d7e4727224989a);
+            
+        
+
+        circle_marker_7d422041aabc3f9ede132295b6bf1187.bindPopup(popup_62650efce35aedee3c34575a0b953332)
+        ;
+
+        
+    
+    
+            var circle_marker_db5b17dba5c61d2a19f5f93084785199 = L.circleMarker(
+                [38.3654376, -2.321546],
+                {"bubblingMouseEvents": true, "color": "#ffffccff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffccff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.12355, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e277ab94070cb8336008bcb0e530e07d);
+        
+    
+        var popup_b6308fe96dba51b374f6c37ffbf52fd1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8e38a68de8e05b4d498f496ecc1a0335 = $(`<div id="html_8e38a68de8e05b4d498f496ecc1a0335" style="width: 100.0%; height: 100.0%;">     <b>Yeste</b><br>     Población: 2471<br>     Gimnasios: 3.0<br>     Fitness density: 12.14<br>     Catchment 25km: 7064<br>     Distancia Albacete: 80.6 km<br>     Opportunity score: 588.7     </div>`)[0];
+                popup_b6308fe96dba51b374f6c37ffbf52fd1.setContent(html_8e38a68de8e05b4d498f496ecc1a0335);
+            
+        
+
+        circle_marker_db5b17dba5c61d2a19f5f93084785199.bindPopup(popup_b6308fe96dba51b374f6c37ffbf52fd1)
+        ;
+
+        
+    
+    
+            marker_cluster_e277ab94070cb8336008bcb0e530e07d.addTo(map_180b8514e6b18478bc1c118bb5bc8c7c);
+        
+    
+    var color_map_d4cbf880a4576dd3ae18d86ba7aaa205 = {};
+
+    
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.color = d3.scale.threshold()
+              .domain([588.6666666666666, 591.6820084613671, 594.6973502560677, 597.7126920507682, 600.7280338454686, 603.7433756401692, 606.7587174348697, 609.7740592295702, 612.7894010242708, 615.8047428189712, 618.8200846136717, 621.8354264083723, 624.8507682030728, 627.8661099977733, 630.8814517924739, 633.8967935871743, 636.9121353818748, 639.9274771765754, 642.9428189712759, 645.9581607659763, 648.9735025606768, 651.9888443553774, 655.0041861500779, 658.0195279447784, 661.034869739479, 664.0502115341794, 667.0655533288799, 670.0808951235805, 673.096236918281, 676.1115787129814, 679.126920507682, 682.1422623023825, 685.157604097083, 688.1729458917836, 691.188287686484, 694.2036294811845, 697.2189712758851, 700.2343130705856, 703.2496548652861, 706.2649966599865, 709.2803384546871, 712.2956802493876, 715.3110220440881, 718.3263638387887, 721.3417056334891, 724.3570474281896, 727.3723892228902, 730.3877310175907, 733.4030728122912, 736.4184146069917, 739.4337564016922, 742.4490981963927, 745.4644399910933, 748.4797817857938, 751.4951235804942, 754.5104653751948, 757.5258071698953, 760.5411489645958, 763.5564907592964, 766.5718325539968, 769.5871743486973, 772.6025161433979, 775.6178579380984, 778.6331997327989, 781.6485415274994, 784.6638833221999, 787.6792251169004, 790.694566911601, 793.7099087063015, 796.7252505010019, 799.7405922957025, 802.755934090403, 805.7712758851035, 808.7866176798041, 811.8019594745045, 814.817301269205, 817.8326430639056, 820.8479848586061, 823.8633266533066, 826.8786684480071, 829.8940102427076, 832.9093520374081, 835.9246938321087, 838.9400356268092, 841.9553774215096, 844.9707192162102, 847.9860610109106, 851.0014028056112, 854.0167446003118, 857.0320863950121, 860.0474281897127, 863.0627699844133, 866.0781117791137, 869.0934535738143, 872.1087953685147, 875.1241371632152, 878.1394789579158, 881.1548207526164, 884.1701625473169, 887.1855043420173, 890.2008461367179, 893.2161879314183, 896.2315297261189, 899.2468715208195, 902.2622133155198, 905.2775551102204, 908.2928969049209, 911.3082386996214, 914.323580494322, 917.3389222890224, 920.3542640837229, 923.3696058784235, 926.3849476731241, 929.4002894678245, 932.415631262525, 935.4309730572255, 938.446314851926, 941.4616566466266, 944.476998441327, 947.4923402360275, 950.5076820307281, 953.5230238254286, 956.5383656201291, 959.5537074148297, 962.5690492095301, 965.5843910042306, 968.5997327989312, 971.6150745936317, 974.6304163883322, 977.6457581830327, 980.6610999777332, 983.6764417724337, 986.6917835671343, 989.7071253618348, 992.7224671565352, 995.7378089512358, 998.7531507459363, 1001.7684925406368, 1004.7838343353374, 1007.7991761300377, 1010.8145179247383, 1013.8298597194389, 1016.8452015141394, 1019.8605433088399, 1022.8758851035404, 1025.8912268982408, 1028.9065686929414, 1031.921910487642, 1034.9372522823423, 1037.952594077043, 1040.9679358717435, 1043.9832776664439, 1046.9986194611445, 1050.013961255845, 1053.0293030505454, 1056.044644845246, 1059.0599866399466, 1062.075328434647, 1065.0906702293476, 1068.1060120240481, 1071.1213538187485, 1074.136695613449, 1077.1520374081497, 1080.16737920285, 1083.1827209975506, 1086.1980627922512, 1089.2134045869516, 1092.2287463816522, 1095.2440881763528, 1098.2594299710531, 1101.2747717657537, 1104.2901135604543, 1107.3054553551547, 1110.3207971498553, 1113.3361389445558, 1116.3514807392562, 1119.3668225339568, 1122.3821643286574, 1125.3975061233577, 1128.4128479180583, 1131.428189712759, 1134.4435315074593, 1137.4588733021599, 1140.4742150968605, 1143.4895568915608, 1146.5048986862612, 1149.520240480962, 1152.5355822756624, 1155.5509240703627, 1158.5662658650635, 1161.581607659764, 1164.5969494544643, 1167.612291249165, 1170.6276330438654, 1173.642974838566, 1176.6583166332666, 1179.673658427967, 1182.6890002226676, 1185.7043420173682, 1188.7196838120685, 1191.735025606769, 1194.7503674014697, 1197.76570919617, 1200.7810509908707, 1203.7963927855712, 1206.8117345802716, 1209.8270763749722, 1212.8424181696728, 1215.8577599643731, 1218.8731017590735, 1221.8884435537743, 1224.9037853484747, 1227.919127143175, 1230.9344689378759, 1233.9498107325762, 1236.9651525272766, 1239.9804943219772, 1242.9958361166778, 1246.0111779113781, 1249.0265197060787, 1252.0418615007793, 1255.0572032954797, 1258.0725450901803, 1261.0878868848808, 1264.1032286795814, 1267.118570474282, 1270.1339122689824, 1273.149254063683, 1276.1645958583836, 1279.179937653084, 1282.1952794477843, 1285.210621242485, 1288.2259630371855, 1291.2413048318858, 1294.2566466265866, 1297.271988421287, 1300.2873302159874, 1303.3026720106882, 1306.3180138053885, 1309.333355600089, 1312.3486973947895, 1315.36403918949, 1318.3793809841904, 1321.394722778891, 1324.4100645735916, 1327.425406368292, 1330.4407481629926, 1333.4560899576932, 1336.4714317523935, 1339.4867735470941, 1342.5021153417947, 1345.517457136495, 1348.5327989311957, 1351.5481407258962, 1354.5634825205966, 1357.5788243152974, 1360.5941661099978, 1363.6095079046981, 1366.624849699399, 1369.6401914940993, 1372.6555332887997, 1375.6708750835003, 1378.6862168782009, 1381.7015586729012, 1384.7169004676018, 1387.7322422623024, 1390.7475840570028, 1393.7629258517034, 1396.778267646404, 1399.7936094411043, 1402.808951235805, 1405.8242930305055, 1408.8396348252058, 1411.8549766199064, 1414.870318414607, 1417.8856602093074, 1420.901002004008, 1423.9163437987086, 1426.931685593409, 1429.9470273881095, 1432.96236918281, 1435.9777109775105, 1438.993052772211, 1442.0083945669116, 1445.023736361612, 1448.0390781563126, 1451.0544199510132, 1454.0697617457135, 1457.0851035404141, 1460.1004453351147, 1463.115787129815, 1466.1311289245157, 1469.1464707192163, 1472.1618125139166, 1475.1771543086172, 1478.1924961033178, 1481.2078378980182, 1484.2231796927188, 1487.2385214874193, 1490.2538632821197, 1493.2692050768203, 1496.284546871521, 1499.2998886662212, 1502.3152304609218, 1505.3305722556224, 1508.3459140503228, 1511.3612558450232, 1514.376597639724, 1517.3919394344243, 1520.4072812291247, 1523.4226230238255, 1526.4379648185259, 1529.4533066132262, 1532.4686484079268, 1535.4839902026274, 1538.499331997328, 1541.5146737920286, 1544.530015586729, 1547.5453573814295, 1550.5606991761301, 1553.5760409708305, 1556.591382765531, 1559.6067245602317, 1562.622066354932, 1565.6374081496326, 1568.6527499443332, 1571.6680917390336, 1574.6834335337342, 1577.6987753284347, 1580.714117123135, 1583.7294589178355, 1586.7448007125363, 1589.7601425072367, 1592.775484301937, 1595.7908260966378, 1598.8061678913382, 1601.8215096860386, 1604.8368514807391, 1607.8521932754397, 1610.86753507014, 1613.882876864841, 1616.8982186595413, 1619.9135604542416, 1622.9289022489424, 1625.9442440436428, 1628.9595858383432, 1631.974927633044, 1634.9902694277444, 1638.0056112224447, 1641.0209530171455, 1644.036294811846, 1647.0516366065463, 1650.066978401247, 1653.0823201959474, 1656.0976619906478, 1659.1130037853486, 1662.128345580049, 1665.1436873747493, 1668.1590291694502, 1671.1743709641505, 1674.1897127588509, 1677.2050545535517, 1680.220396348252, 1683.2357381429524, 1686.2510799376532, 1689.2664217323536, 1692.281763527054, 1695.2971053217548, 1698.3124471164551, 1701.3277889111555, 1704.3431307058559, 1707.3584725005567, 1710.373814295257, 1713.3891560899574, 1716.4044978846582, 1719.4198396793586, 1722.435181474059, 1725.4505232687598, 1728.4658650634601, 1731.4812068581605, 1734.4965486528613, 1737.5118904475617, 1740.527232242262, 1743.5425740369628, 1746.5579158316632, 1749.5732576263636, 1752.5885994210644, 1755.6039412157647, 1758.6192830104656, 1761.634624805166, 1764.6499665998663, 1767.665308394567, 1770.6806501892675, 1773.6959919839678, 1776.7113337786686, 1779.726675573369, 1782.7420173680694, 1785.7573591627702, 1788.7727009574705, 1791.788042752171, 1794.8033845468717, 1797.818726341572, 1800.8340681362724, 1803.8494099309733, 1806.8647517256736, 1809.880093520374, 1812.8954353150748, 1815.9107771097752, 1818.9261189044755, 1821.9414606991763, 1824.9568024938767, 1827.972144288577, 1830.9874860832779, 1834.0028278779782, 1837.0181696726786, 1840.033511467379, 1843.0488532620798, 1846.0641950567801, 1849.0795368514805, 1852.0948786461813, 1855.1102204408817, 1858.125562235582, 1861.1409040302829, 1864.1562458249832, 1867.1715876196836, 1870.1869294143844, 1873.2022712090848, 1876.2176130037851, 1879.232954798486, 1882.2482965931863, 1885.2636383878867, 1888.2789801825875, 1891.2943219772878, 1894.3096637719882, 1897.325005566689, 1900.3403473613894, 1903.3556891560897, 1906.3710309507906, 1909.386372745491, 1912.4017145401913, 1915.417056334892, 1918.4323981295925, 1921.4477399242928, 1924.4630817189936, 1927.478423513694, 1930.4937653083944, 1933.5091071030947, 1936.5244488977955, 1939.5397906924964, 1942.5551324871967, 1945.570474281897, 1948.585816076598, 1951.6011578712983, 1954.6164996659986, 1957.6318414606994, 1960.6471832553998, 1963.6625250501002, 1966.677866844801, 1969.6932086395013, 1972.7085504342017, 1975.723892228902, 1978.7392340236029, 1981.7545758183032, 1984.7699176130036, 1987.7852594077044, 1990.8006012024048, 1993.8159429971051, 1996.831284791806, 1999.8466265865063, 2002.8619683812067, 2005.8773101759075, 2008.8926519706079, 2011.9079937653082, 2014.923335560009, 2017.9386773547094, 2020.9540191494098, 2023.9693609441106, 2026.984702738811, 2030.0000445335113, 2033.0153863282121, 2036.0307281229125, 2039.0460699176128, 2042.0614117123137, 2045.076753507014, 2048.0920953017144, 2051.107437096415, 2054.1227788911156, 2057.138120685816, 2060.1534624805167, 2063.168804275217, 2066.1841460699175, 2069.199487864618, 2072.2148296593186, 2075.230171454019, 2078.2455132487194, 2081.26085504342, 2084.2761968381205, 2087.291538632821, 2090.3068804275217, 2093.322222222222])
+              .range(['#ffffccff', '#ffffccff', '#ffffcbff', '#ffffcaff', '#fffec9ff', '#fffec9ff', '#fffec8ff', '#fffdc7ff', '#fffdc7ff', '#fffdc6ff', '#fffdc5ff', '#fffcc5ff', '#fffcc4ff', '#fffcc3ff', '#fffbc2ff', '#fffbc2ff', '#fffbc1ff', '#fffbc0ff', '#fffac0ff', '#fffabfff', '#fffabeff', '#fff9bdff', '#fff9bdff', '#fff9bcff', '#fff9bbff', '#fff8bbff', '#fff8baff', '#fff8b9ff', '#fff7b8ff', '#fff7b8ff', '#fff7b7ff', '#fff7b6ff', '#fff6b6ff', '#fff6b5ff', '#fff6b4ff', '#fff5b4ff', '#fff5b3ff', '#fff5b2ff', '#fff4b1ff', '#fff4b1ff', '#fff4b0ff', '#fff4afff', '#fff3afff', '#fff3aeff', '#fff3adff', '#fff2acff', '#fff2acff', '#fff2abff', '#fff2aaff', '#fff1aaff', '#fff1a9ff', '#fff1a8ff', '#fff0a7ff', '#fff0a7ff', '#fff0a6ff', '#fff0a5ff', '#ffefa5ff', '#ffefa4ff', '#ffefa3ff', '#ffeea3ff', '#ffeea2ff', '#ffeea1ff', '#ffeea0ff', '#ffeda0ff', '#ffed9fff', '#ffed9eff', '#ffec9eff', '#ffec9dff', '#ffec9cff', '#ffeb9cff', '#ffeb9bff', '#ffeb9aff', '#ffea9aff', '#ffea99ff', '#ffea98ff', '#ffe998ff', '#ffe997ff', '#ffe996ff', '#ffe896ff', '#ffe895ff', '#ffe894ff', '#ffe794ff', '#ffe793ff', '#ffe792ff', '#ffe692ff', '#ffe691ff', '#ffe690ff', '#ffe68fff', '#ffe58fff', '#ffe58eff', '#ffe58dff', '#ffe48dff', '#ffe48cff', '#ffe48bff', '#ffe38bff', '#ffe38aff', '#ffe389ff', '#ffe289ff', '#ffe288ff', '#ffe287ff', '#ffe187ff', '#ffe186ff', '#ffe185ff', '#ffe085ff', '#ffe084ff', '#ffe083ff', '#ffdf83ff', '#ffdf82ff', '#ffdf81ff', '#ffde81ff', '#ffde80ff', '#ffde7fff', '#ffdd7fff', '#ffdd7eff', '#ffdd7dff', '#ffdc7dff', '#ffdc7cff', '#ffdc7bff', '#ffdc7bff', '#ffdb7aff', '#ffdb79ff', '#ffdb78ff', '#ffda78ff', '#ffda77ff', '#ffda76ff', '#fed976ff', '#fed975ff', '#fed874ff', '#fed774ff', '#fed773ff', '#fed672ff', '#fed572ff', '#fed571ff', '#fed470ff', '#fed470ff', '#fed36fff', '#fed26eff', '#fed26eff', '#fed16dff', '#fed06cff', '#fed06cff', '#fecf6bff', '#fecf6aff', '#fece6aff', '#fecd69ff', '#fecd68ff', '#fecc68ff', '#fecb67ff', '#fecb66ff', '#feca66ff', '#feca65ff', '#fec964ff', '#fec864ff', '#fec863ff', '#fec762ff', '#fec662ff', '#fec661ff', '#fec560ff', '#fec45fff', '#fec45fff', '#fec35eff', '#fec35dff', '#fec25dff', '#fec15cff', '#fec15bff', '#fec05bff', '#febf5aff', '#febf59ff', '#febe59ff', '#febe58ff', '#febd57ff', '#febc57ff', '#febc56ff', '#febb55ff', '#feba55ff', '#feba54ff', '#feb953ff', '#feb953ff', '#feb852ff', '#feb751ff', '#feb751ff', '#feb650ff', '#feb54fff', '#feb54fff', '#feb44eff', '#feb44dff', '#feb34dff', '#feb24cff', '#feb24cff', '#feb14bff', '#feb04bff', '#feb04bff', '#feaf4bff', '#feaf4aff', '#feae4aff', '#feae4aff', '#fead4aff', '#feac49ff', '#feac49ff', '#feab49ff', '#feab48ff', '#feaa48ff', '#fea948ff', '#fea948ff', '#fea847ff', '#fea847ff', '#fea747ff', '#fea647ff', '#fea646ff', '#fea546ff', '#fea546ff', '#fea446ff', '#fea345ff', '#fea345ff', '#fea245ff', '#fea245ff', '#fea144ff', '#fea044ff', '#fea044ff', '#fe9f44ff', '#fe9f43ff', '#fe9e43ff', '#fe9d43ff', '#fe9d43ff', '#fe9c42ff', '#fe9c42ff', '#fe9b42ff', '#fe9a42ff', '#fe9a41ff', '#fe9941ff', '#fe9941ff', '#fe9840ff', '#fe9740ff', '#fe9740ff', '#fe9640ff', '#fe963fff', '#fe953fff', '#fe943fff', '#fe943fff', '#fe933eff', '#fe933eff', '#fe923eff', '#fe923eff', '#fe913dff', '#fe903dff', '#fe903dff', '#fe8f3dff', '#fe8f3cff', '#fe8e3cff', '#fe8d3cff', '#fd8d3cff', '#fd8c3bff', '#fd8b3bff', '#fd8a3bff', '#fd883aff', '#fd873aff', '#fd863aff', '#fd853aff', '#fd8439ff', '#fd8339ff', '#fd8239ff', '#fd8138ff', '#fd8038ff', '#fd7f38ff', '#fd7e38ff', '#fd7d37ff', '#fd7c37ff', '#fd7b37ff', '#fd7a36ff', '#fd7936ff', '#fd7836ff', '#fd7736ff', '#fd7635ff', '#fd7535ff', '#fd7435ff', '#fd7334ff', '#fd7234ff', '#fd7134ff', '#fd7033ff', '#fd6f33ff', '#fd6e33ff', '#fd6d33ff', '#fd6c32ff', '#fd6b32ff', '#fd6a32ff', '#fd6931ff', '#fd6831ff', '#fd6731ff', '#fd6631ff', '#fd6530ff', '#fd6430ff', '#fd6330ff', '#fd622fff', '#fd612fff', '#fd602fff', '#fd5f2fff', '#fd5e2eff', '#fd5d2eff', '#fd5c2eff', '#fd5b2dff', '#fd5a2dff', '#fd592dff', '#fd582dff', '#fd572cff', '#fd562cff', '#fd552cff', '#fd542bff', '#fd532bff', '#fd522bff', '#fd512aff', '#fd502aff', '#fd4f2aff', '#fc4e2aff', '#fc4d29ff', '#fc4c29ff', '#fb4b29ff', '#fb4a29ff', '#fa4a29ff', '#fa4928ff', '#fa4828ff', '#f94728ff', '#f94628ff', '#f84527ff', '#f84427ff', '#f84427ff', '#f74327ff', '#f74226ff', '#f64126ff', '#f64026ff', '#f63f26ff', '#f53f26ff', '#f53e25ff', '#f43d25ff', '#f43c25ff', '#f43b25ff', '#f33a24ff', '#f33a24ff', '#f23924ff', '#f23824ff', '#f23724ff', '#f13623ff', '#f13523ff', '#f03523ff', '#f03423ff', '#f03322ff', '#ef3222ff', '#ef3122ff', '#ee3022ff', '#ee3022ff', '#ee2f21ff', '#ed2e21ff', '#ed2d21ff', '#ec2c21ff', '#ec2b20ff', '#ec2b20ff', '#eb2a20ff', '#eb2920ff', '#ea281fff', '#ea271fff', '#ea261fff', '#e9261fff', '#e9251fff', '#e8241eff', '#e8231eff', '#e8221eff', '#e7211eff', '#e7211dff', '#e6201dff', '#e61f1dff', '#e61e1dff', '#e51d1dff', '#e51c1cff', '#e41b1cff', '#e41b1cff', '#e31a1cff', '#e3191cff', '#e2191cff', '#e2181cff', '#e1181cff', '#e0181cff', '#e0171dff', '#df171dff', '#df161dff', '#de161dff', '#dd161dff', '#dd151dff', '#dc151eff', '#dc141eff', '#db141eff', '#da131eff', '#da131eff', '#d9131eff', '#d9121eff', '#d8121fff', '#d7111fff', '#d7111fff', '#d6111fff', '#d5101fff', '#d5101fff', '#d40f20ff', '#d40f20ff', '#d30e20ff', '#d20e20ff', '#d20e20ff', '#d10d20ff', '#d10d21ff', '#d00c21ff', '#cf0c21ff', '#cf0b21ff', '#ce0b21ff', '#ce0b21ff', '#cd0a22ff', '#cc0a22ff', '#cc0922ff', '#cb0922ff', '#ca0922ff', '#ca0822ff', '#c90822ff', '#c90723ff', '#c80723ff', '#c70623ff', '#c70623ff', '#c60623ff', '#c60523ff', '#c50524ff', '#c40424ff', '#c40424ff', '#c30424ff', '#c30324ff', '#c20324ff', '#c10225ff', '#c10225ff', '#c00125ff', '#bf0125ff', '#bf0125ff', '#be0025ff', '#be0026ff', '#bd0026ff', '#bc0026ff', '#bb0026ff', '#ba0026ff', '#b90026ff', '#b80026ff', '#b70026ff', '#b60026ff', '#b50026ff', '#b40026ff', '#b30026ff', '#b20026ff', '#b10026ff', '#b00026ff', '#af0026ff', '#ae0026ff', '#ad0026ff', '#ac0026ff', '#ab0026ff', '#aa0026ff', '#a90026ff', '#a80026ff', '#a70026ff', '#a60026ff', '#a50026ff', '#a40026ff', '#a30026ff', '#a20026ff', '#a10026ff', '#a00026ff', '#9f0026ff', '#9e0026ff', '#9d0026ff', '#9c0026ff', '#9b0026ff', '#9b0026ff', '#9a0026ff', '#990026ff', '#980026ff', '#970026ff', '#960026ff', '#950026ff', '#940026ff', '#930026ff', '#920026ff', '#910026ff', '#900026ff', '#8f0026ff', '#8e0026ff', '#8d0026ff', '#8c0026ff', '#8b0026ff', '#8a0026ff', '#890026ff', '#880026ff', '#870026ff', '#860026ff', '#850026ff', '#840026ff', '#830026ff', '#820026ff', '#810026ff', '#800026ff']);
+    
+
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.x = d3.scale.linear()
+              .domain([588.6666666666666, 2093.322222222222])
+              .range([0, 450 - 50]);
+
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.legend = L.control({position: 'topright'});
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.legend.addTo(map_180b8514e6b18478bc1c118bb5bc8c7c);
+
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.xAxis = d3.svg.axis()
+        .scale(color_map_d4cbf880a4576dd3ae18d86ba7aaa205.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([588.6666666666666, 776.7486111111111, 964.8305555555555, 1152.9125, 1340.9944444444445, 1529.0763888888887, 1717.1583333333333, 1905.240277777778, 2093.322222222222]);
+
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.g = color_map_d4cbf880a4576dd3ae18d86ba7aaa205.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.g.selectAll("rect")
+        .data(color_map_d4cbf880a4576dd3ae18d86ba7aaa205.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_d4cbf880a4576dd3ae18d86ba7aaa205.x(color_map_d4cbf880a4576dd3ae18d86ba7aaa205.color.domain()[i - 1]) : color_map_d4cbf880a4576dd3ae18d86ba7aaa205.x.range()[0],
+            x1: i < color_map_d4cbf880a4576dd3ae18d86ba7aaa205.color.domain().length ? color_map_d4cbf880a4576dd3ae18d86ba7aaa205.x(color_map_d4cbf880a4576dd3ae18d86ba7aaa205.color.domain()[i]) : color_map_d4cbf880a4576dd3ae18d86ba7aaa205.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_d4cbf880a4576dd3ae18d86ba7aaa205.g.call(color_map_d4cbf880a4576dd3ae18d86ba7aaa205.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Fitness Market Opportunity Score");
+</script>
+</html>

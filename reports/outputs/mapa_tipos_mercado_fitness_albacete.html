@@ -1,0 +1,3020 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4931cc2ece98aedd9de47d132540936e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+position: fixed;
+bottom: 40px;
+left: 40px;
+width: 220px;
+height: 130px;
+background-color: white;
+border: 2px solid grey;
+z-index: 9999;
+font-size: 14px;
+padding: 10px;
+">
+<b>Tipos de mercado</b><br><br>
+<span style="color:green;">●</span> Mercado emergente<br>
+<span style="color:blue;">●</span> Mercado competitivo<br>
+<span style="color:orange;">●</span> Oportunidad latente<br>
+<span style="color:gray;">●</span> Mercado débil
+</div>
+    
+            <div class="folium-map" id="map_4931cc2ece98aedd9de47d132540936e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4931cc2ece98aedd9de47d132540936e = L.map(
+                "map_4931cc2ece98aedd9de47d132540936e",
+                {
+                    center: [38.88717632873563, -1.9113567195402297],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_db5e9d8c70ff46912ca088bd6591fb93 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_db5e9d8c70ff46912ca088bd6591fb93.addTo(map_4931cc2ece98aedd9de47d132540936e);
+        
+    
+            var feature_group_dc3291548aeedf89f807a2c16e24ff2b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_1b9b392f657c80ad7b1357f4ba71d5ad = L.circleMarker(
+                [39.2105049, -1.5414436],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_6f96141b2f95688928298fa007292c8c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b5f800435f44e98ad3ef3769df2c97a2 = $(`<div id="html_b5f800435f44e98ad3ef3769df2c97a2" style="width: 100.0%; height: 100.0%;">     <b>Abengibre</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 753<br>     Growth 5y: -1.05%<br>     Opportunity score v2: 1159.9     </div>`)[0];
+                popup_6f96141b2f95688928298fa007292c8c.setContent(html_b5f800435f44e98ad3ef3769df2c97a2);
+            
+        
+
+        circle_marker_1b9b392f657c80ad7b1357f4ba71d5ad.bindPopup(popup_6f96141b2f95688928298fa007292c8c)
+        ;
+
+        
+    
+    
+            circle_marker_1b9b392f657c80ad7b1357f4ba71d5ad.bindTooltip(
+                `<div>
+                     Abengibre | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4e834bf3d892d54dc47c6810b724b5a = L.circleMarker(
+                [39.0950499, -1.3619952],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_099e5bc2d1721750d412e4dfe1f3699c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1607edcce6606f989665318e3fd934e9 = $(`<div id="html_1607edcce6606f989665318e3fd934e9" style="width: 100.0%; height: 100.0%;">     <b>Alatoz</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 504<br>     Growth 5y: -0.4%<br>     Opportunity score v2: 1168.6     </div>`)[0];
+                popup_099e5bc2d1721750d412e4dfe1f3699c.setContent(html_1607edcce6606f989665318e3fd934e9);
+            
+        
+
+        circle_marker_e4e834bf3d892d54dc47c6810b724b5a.bindPopup(popup_099e5bc2d1721750d412e4dfe1f3699c)
+        ;
+
+        
+    
+    
+            circle_marker_e4e834bf3d892d54dc47c6810b724b5a.bindTooltip(
+                `<div>
+                     Alatoz | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14de0d9d4de289f6856902988df64589 = L.circleMarker(
+                [38.9943983, -1.860173],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_512c220ec94a3bc885ab802ead7ed5e0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_dd87aa47072c7cca489ead9378d33b7e = $(`<div id="html_dd87aa47072c7cca489ead9378d33b7e" style="width: 100.0%; height: 100.0%;">     <b>Albacete</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 175400<br>     Growth 5y: 0.61%<br>     Opportunity score v2: 2093.3     </div>`)[0];
+                popup_512c220ec94a3bc885ab802ead7ed5e0.setContent(html_dd87aa47072c7cca489ead9378d33b7e);
+            
+        
+
+        circle_marker_14de0d9d4de289f6856902988df64589.bindPopup(popup_512c220ec94a3bc885ab802ead7ed5e0)
+        ;
+
+        
+    
+    
+            circle_marker_14de0d9d4de289f6856902988df64589.bindTooltip(
+                `<div>
+                     Albacete | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dddf8f00f95471a6e46a6223cf2a6847 = L.circleMarker(
+                [38.5719998, -1.5205598],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_1f6ae0d80193d0218135d45a7f8c4774 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4f55f8f07bd9d24b0772ab87b3a67c6b = $(`<div id="html_4f55f8f07bd9d24b0772ab87b3a67c6b" style="width: 100.0%; height: 100.0%;">     <b>Albatana</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 644<br>     Growth 5y: -5.15%<br>     Opportunity score v2: 1752.1     </div>`)[0];
+                popup_1f6ae0d80193d0218135d45a7f8c4774.setContent(html_4f55f8f07bd9d24b0772ab87b3a67c6b);
+            
+        
+
+        circle_marker_dddf8f00f95471a6e46a6223cf2a6847.bindPopup(popup_1f6ae0d80193d0218135d45a7f8c4774)
+        ;
+
+        
+    
+    
+            circle_marker_dddf8f00f95471a6e46a6223cf2a6847.bindTooltip(
+                `<div>
+                     Albatana | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e201c28b9020182638fdd8d43b5d5572 = L.circleMarker(
+                [39.279205, -1.3957728],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_3e4156626dae7e8f2724360eb6fe5917 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_02385784467b992436cef252487705a2 = $(`<div id="html_02385784467b992436cef252487705a2" style="width: 100.0%; height: 100.0%;">     <b>Alborea</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 672<br>     Growth 5y: 1.2%<br>     Opportunity score v2: 1036.7     </div>`)[0];
+                popup_3e4156626dae7e8f2724360eb6fe5917.setContent(html_02385784467b992436cef252487705a2);
+            
+        
+
+        circle_marker_e201c28b9020182638fdd8d43b5d5572.bindPopup(popup_3e4156626dae7e8f2724360eb6fe5917)
+        ;
+
+        
+    
+    
+            circle_marker_e201c28b9020182638fdd8d43b5d5572.bindTooltip(
+                `<div>
+                     Alborea | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_984b3dea8c583b6cb4dd7e1ffd0a76e3 = L.circleMarker(
+                [38.6490183, -1.9807161],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_44a3556686f52e3c108afdb05786634a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1954de077854ce8b15abdaa7137a9fcd = $(`<div id="html_1954de077854ce8b15abdaa7137a9fcd" style="width: 100.0%; height: 100.0%;">     <b>Alcadozo</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 635<br>     Growth 5y: -1.85%<br>     Opportunity score v2: 936.3     </div>`)[0];
+                popup_44a3556686f52e3c108afdb05786634a.setContent(html_1954de077854ce8b15abdaa7137a9fcd);
+            
+        
+
+        circle_marker_984b3dea8c583b6cb4dd7e1ffd0a76e3.bindPopup(popup_44a3556686f52e3c108afdb05786634a)
+        ;
+
+        
+    
+    
+            circle_marker_984b3dea8c583b6cb4dd7e1ffd0a76e3.bindTooltip(
+                `<div>
+                     Alcadozo | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d9a579ac58a615a898345e1cc6e93bb = L.circleMarker(
+                [39.1917781, -1.4295714],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_47f4321a201ee4fc5923f57abee7fbd3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_37bdd4425cfbf4c2023ecf87af40e702 = $(`<div id="html_37bdd4425cfbf4c2023ecf87af40e702" style="width: 100.0%; height: 100.0%;">     <b>Alcalá del Júcar</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 1130<br>     Growth 5y: -5.36%<br>     Opportunity score v2: 1031.5     </div>`)[0];
+                popup_47f4321a201ee4fc5923f57abee7fbd3.setContent(html_37bdd4425cfbf4c2023ecf87af40e702);
+            
+        
+
+        circle_marker_8d9a579ac58a615a898345e1cc6e93bb.bindPopup(popup_47f4321a201ee4fc5923f57abee7fbd3)
+        ;
+
+        
+    
+    
+            circle_marker_8d9a579ac58a615a898345e1cc6e93bb.bindTooltip(
+                `<div>
+                     Alcalá del Júcar | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba12babea410aa7b137506a0da6aed0a = L.circleMarker(
+                [38.6665292, -2.4907128],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_27f9f7fb032187e290e3af6fa3e263be = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d910df5f0291ebea98e1f0a57531b8c2 = $(`<div id="html_d910df5f0291ebea98e1f0a57531b8c2" style="width: 100.0%; height: 100.0%;">     <b>Alcaraz</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 1283<br>     Growth 5y: -3.1%<br>     Opportunity score v2: 1221.7     </div>`)[0];
+                popup_27f9f7fb032187e290e3af6fa3e263be.setContent(html_d910df5f0291ebea98e1f0a57531b8c2);
+            
+        
+
+        circle_marker_ba12babea410aa7b137506a0da6aed0a.bindPopup(popup_27f9f7fb032187e290e3af6fa3e263be)
+        ;
+
+        
+    
+    
+            circle_marker_ba12babea410aa7b137506a0da6aed0a.bindTooltip(
+                `<div>
+                     Alcaraz | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2f18148553548b164e8e6b4efb73e748 = L.circleMarker(
+                [38.8702789, -1.0993366],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_4a086ae81ae266e53ccea3033c7259ff = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c35eebe88be6b4afdd58f4cf93b25992 = $(`<div id="html_c35eebe88be6b4afdd58f4cf93b25992" style="width: 100.0%; height: 100.0%;">     <b>Almansa</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 24615<br>     Growth 5y: 0.42%<br>     Opportunity score v2: 1152.4     </div>`)[0];
+                popup_4a086ae81ae266e53ccea3033c7259ff.setContent(html_c35eebe88be6b4afdd58f4cf93b25992);
+            
+        
+
+        circle_marker_2f18148553548b164e8e6b4efb73e748.bindPopup(popup_4a086ae81ae266e53ccea3033c7259ff)
+        ;
+
+        
+    
+    
+            circle_marker_2f18148553548b164e8e6b4efb73e748.bindTooltip(
+                `<div>
+                     Almansa | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_381df6783cd48c08a11b9ca98192620b = L.circleMarker(
+                [38.95904489999999, -1.2301597],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_7792ad95559c4b19e643b089286565e7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8b3a2c8be89eb3e6fbec0d73c5fc571e = $(`<div id="html_8b3a2c8be89eb3e6fbec0d73c5fc571e" style="width: 100.0%; height: 100.0%;">     <b>Alpera</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 2278<br>     Growth 5y: 0.75%<br>     Opportunity score v2: 1077.2     </div>`)[0];
+                popup_7792ad95559c4b19e643b089286565e7.setContent(html_8b3a2c8be89eb3e6fbec0d73c5fc571e);
+            
+        
+
+        circle_marker_381df6783cd48c08a11b9ca98192620b.bindPopup(popup_7792ad95559c4b19e643b089286565e7)
+        ;
+
+        
+    
+    
+            circle_marker_381df6783cd48c08a11b9ca98192620b.bindTooltip(
+                `<div>
+                     Alpera | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e06f6e40e461c9851efdaab2cc18fbb4 = L.circleMarker(
+                [38.5537339, -2.0717287],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_643442e29ecc996a1866f7bee3b65c75 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_202c38cbc372b76ead92f10b9f1204a1 = $(`<div id="html_202c38cbc372b76ead92f10b9f1204a1" style="width: 100.0%; height: 100.0%;">     <b>Ayna</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 577<br>     Growth 5y: -2.37%<br>     Opportunity score v2: 814.9     </div>`)[0];
+                popup_643442e29ecc996a1866f7bee3b65c75.setContent(html_202c38cbc372b76ead92f10b9f1204a1);
+            
+        
+
+        circle_marker_e06f6e40e461c9851efdaab2cc18fbb4.bindPopup(popup_643442e29ecc996a1866f7bee3b65c75)
+        ;
+
+        
+    
+    
+            circle_marker_e06f6e40e461c9851efdaab2cc18fbb4.bindTooltip(
+                `<div>
+                     Ayna | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_749c56f33c95eb693b4be26c8d6e6295 = L.circleMarker(
+                [38.884867, -2.1522868],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_416bd37ff2956afd4e744fe64c400588 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bd3077cd2a416f38b898bb5b2b95300a = $(`<div id="html_bd3077cd2a416f38b898bb5b2b95300a" style="width: 100.0%; height: 100.0%;">     <b>Balazote</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 2356<br>     Growth 5y: 1.25%<br>     Opportunity score v2: 1032.9     </div>`)[0];
+                popup_416bd37ff2956afd4e744fe64c400588.setContent(html_bd3077cd2a416f38b898bb5b2b95300a);
+            
+        
+
+        circle_marker_749c56f33c95eb693b4be26c8d6e6295.bindPopup(popup_416bd37ff2956afd4e744fe64c400588)
+        ;
+
+        
+    
+    
+            circle_marker_749c56f33c95eb693b4be26c8d6e6295.bindTooltip(
+                `<div>
+                     Balazote | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5e62eb053777b79b3c76b8191b95c0e = L.circleMarker(
+                [38.8412412, -2.4548517],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_f25b7144772576c409441417eb5761a2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c1bfb6892d6b3ba61c6fb2604e678c05 = $(`<div id="html_c1bfb6892d6b3ba61c6fb2604e678c05" style="width: 100.0%; height: 100.0%;">     <b>Ballestero, El</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 411<br>     Growth 5y: 3.79%<br>     Opportunity score v2: 1345.5     </div>`)[0];
+                popup_f25b7144772576c409441417eb5761a2.setContent(html_c1bfb6892d6b3ba61c6fb2604e678c05);
+            
+        
+
+        circle_marker_e5e62eb053777b79b3c76b8191b95c0e.bindPopup(popup_f25b7144772576c409441417eb5761a2)
+        ;
+
+        
+    
+    
+            circle_marker_e5e62eb053777b79b3c76b8191b95c0e.bindTooltip(
+                `<div>
+                     Ballestero, El | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4caad8439a708bba33e925d32e43614c = L.circleMarker(
+                [39.2645443, -1.1961571],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_071aec9595c1cfa78eb4123f427b06df = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1c03899328d7c2f35e6102bff67e47f4 = $(`<div id="html_1c03899328d7c2f35e6102bff67e47f4" style="width: 100.0%; height: 100.0%;">     <b>Balsa de Ves</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 121<br>     Growth 5y: -7.63%<br>     Opportunity score v2: 1026.2     </div>`)[0];
+                popup_071aec9595c1cfa78eb4123f427b06df.setContent(html_1c03899328d7c2f35e6102bff67e47f4);
+            
+        
+
+        circle_marker_4caad8439a708bba33e925d32e43614c.bindPopup(popup_071aec9595c1cfa78eb4123f427b06df)
+        ;
+
+        
+    
+    
+            circle_marker_4caad8439a708bba33e925d32e43614c.bindTooltip(
+                `<div>
+                     Balsa de Ves | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_352e6cdebcbca7f5eef9ed1820196822 = L.circleMarker(
+                [39.0445824, -2.2014625],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_b82ed85d9887827f1686c88f571dbb1c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8293476101beca7a9791cc464536a986 = $(`<div id="html_8293476101beca7a9791cc464536a986" style="width: 100.0%; height: 100.0%;">     <b>Barrax</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 1838<br>     Growth 5y: 2.17%<br>     Opportunity score v2: 1018.8     </div>`)[0];
+                popup_b82ed85d9887827f1686c88f571dbb1c.setContent(html_8293476101beca7a9791cc464536a986);
+            
+        
+
+        circle_marker_352e6cdebcbca7f5eef9ed1820196822.bindPopup(popup_b82ed85d9887827f1686c88f571dbb1c)
+        ;
+
+        
+    
+    
+            circle_marker_352e6cdebcbca7f5eef9ed1820196822.bindTooltip(
+                `<div>
+                     Barrax | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df2c1cabee50a66c2621b34d956f6bac = L.circleMarker(
+                [38.517072, -2.6108647],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_fe353584d10c9e68787ec121811652f0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ccc5079489e7385c71f0a57c7ebd1226 = $(`<div id="html_ccc5079489e7385c71f0a57c7ebd1226" style="width: 100.0%; height: 100.0%;">     <b>Bienservida</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 548<br>     Growth 5y: -5.35%<br>     Opportunity score v2: 992.0     </div>`)[0];
+                popup_fe353584d10c9e68787ec121811652f0.setContent(html_ccc5079489e7385c71f0a57c7ebd1226);
+            
+        
+
+        circle_marker_df2c1cabee50a66c2621b34d956f6bac.bindPopup(popup_fe353584d10c9e68787ec121811652f0)
+        ;
+
+        
+    
+    
+            circle_marker_df2c1cabee50a66c2621b34d956f6bac.bindTooltip(
+                `<div>
+                     Bienservida | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d04d5b15c0b15e6f26e612763014bede = L.circleMarker(
+                [38.5816548, -2.2132142],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_e2b446bb10aa3c4e9392f6dfa38bb948 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ad07de426501e8fc8b338acb18d6886b = $(`<div id="html_ad07de426501e8fc8b338acb18d6886b" style="width: 100.0%; height: 100.0%;">     <b>Bogarra</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 727<br>     Growth 5y: -9.91%<br>     Opportunity score v2: 827.1     </div>`)[0];
+                popup_e2b446bb10aa3c4e9392f6dfa38bb948.setContent(html_ad07de426501e8fc8b338acb18d6886b);
+            
+        
+
+        circle_marker_d04d5b15c0b15e6f26e612763014bede.bindPopup(popup_e2b446bb10aa3c4e9392f6dfa38bb948)
+        ;
+
+        
+    
+    
+            circle_marker_d04d5b15c0b15e6f26e612763014bede.bindTooltip(
+                `<div>
+                     Bogarra | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_265b8ba4d6fdef491eb0c407d04fca17 = L.circleMarker(
+                [38.87160069999999, -1.3481301],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_439204c8311e8a5b9b8025bce0ea7237 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fb9e5b53f896b3b7ffbe81409967d640 = $(`<div id="html_fb9e5b53f896b3b7ffbe81409967d640" style="width: 100.0%; height: 100.0%;">     <b>Bonete</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 950<br>     Growth 5y: -7.68%<br>     Opportunity score v2: 1044.1     </div>`)[0];
+                popup_439204c8311e8a5b9b8025bce0ea7237.setContent(html_fb9e5b53f896b3b7ffbe81409967d640);
+            
+        
+
+        circle_marker_265b8ba4d6fdef491eb0c407d04fca17.bindPopup(popup_439204c8311e8a5b9b8025bce0ea7237)
+        ;
+
+        
+    
+    
+            circle_marker_265b8ba4d6fdef491eb0c407d04fca17.bindTooltip(
+                `<div>
+                     Bonete | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c4759f85770c19e8dd71e7ff829eaba5 = L.circleMarker(
+                [38.9510438, -2.5383647],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_10c667398ab2552607ab7892b4b9795b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_04b15ffc8868b547d5ee7b40ed9adb97 = $(`<div id="html_04b15ffc8868b547d5ee7b40ed9adb97" style="width: 100.0%; height: 100.0%;">     <b>Bonillo, El</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 2645<br>     Growth 5y: -2.86%<br>     Opportunity score v2: 963.3     </div>`)[0];
+                popup_10c667398ab2552607ab7892b4b9795b.setContent(html_04b15ffc8868b547d5ee7b40ed9adb97);
+            
+        
+
+        circle_marker_c4759f85770c19e8dd71e7ff829eaba5.bindPopup(popup_10c667398ab2552607ab7892b4b9795b)
+        ;
+
+        
+    
+    
+            circle_marker_c4759f85770c19e8dd71e7ff829eaba5.bindTooltip(
+                `<div>
+                     Bonillo, El | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b20b436a8f4d7e9bd5fdc70ca2adb17 = L.circleMarker(
+                [39.1021624, -1.3089706],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_9a9fa358842eaaa43161222ca2322e65 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f77ba63c3caabca2753b1f1c93c4868f = $(`<div id="html_f77ba63c3caabca2753b1f1c93c4868f" style="width: 100.0%; height: 100.0%;">     <b>Carcelén</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 483<br>     Growth 5y: -2.42%<br>     Opportunity score v2: 1348.0     </div>`)[0];
+                popup_9a9fa358842eaaa43161222ca2322e65.setContent(html_f77ba63c3caabca2753b1f1c93c4868f);
+            
+        
+
+        circle_marker_1b20b436a8f4d7e9bd5fdc70ca2adb17.bindPopup(popup_9a9fa358842eaaa43161222ca2322e65)
+        ;
+
+        
+    
+    
+            circle_marker_1b20b436a8f4d7e9bd5fdc70ca2adb17.bindTooltip(
+                `<div>
+                     Carcelén | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b110700107c501f347a62824d6986936 = L.circleMarker(
+                [39.100201, -1.5578697],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_b4a2bebb5e39cba770f005a06574ae17 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_18ee3dade44b5e87f41dd8f475d1982a = $(`<div id="html_18ee3dade44b5e87f41dd8f475d1982a" style="width: 100.0%; height: 100.0%;">     <b>Casas de Juan Núñez</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 1409<br>     Growth 5y: 6.26%<br>     Opportunity score v2: 1075.2     </div>`)[0];
+                popup_b4a2bebb5e39cba770f005a06574ae17.setContent(html_18ee3dade44b5e87f41dd8f475d1982a);
+            
+        
+
+        circle_marker_b110700107c501f347a62824d6986936.bindPopup(popup_b4a2bebb5e39cba770f005a06574ae17)
+        ;
+
+        
+    
+    
+            circle_marker_b110700107c501f347a62824d6986936.bindTooltip(
+                `<div>
+                     Casas de Juan Núñez | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f29962c11d67c3cc1e66797c55c4b24 = L.circleMarker(
+                [38.7710402, -2.2402728],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_f5d9671e279cad50cb9b4068937c680c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d3dd9687adbe85448e14120b130f60b2 = $(`<div id="html_d3dd9687adbe85448e14120b130f60b2" style="width: 100.0%; height: 100.0%;">     <b>Casas de Lázaro</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 298<br>     Growth 5y: -14.37%<br>     Opportunity score v2: 1213.1     </div>`)[0];
+                popup_f5d9671e279cad50cb9b4068937c680c.setContent(html_d3dd9687adbe85448e14120b130f60b2);
+            
+        
+
+        circle_marker_0f29962c11d67c3cc1e66797c55c4b24.bindPopup(popup_f5d9671e279cad50cb9b4068937c680c)
+        ;
+
+        
+    
+    
+            circle_marker_0f29962c11d67c3cc1e66797c55c4b24.bindTooltip(
+                `<div>
+                     Casas de Lázaro | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ebff25dcd7b97b3a49cedace4a1d5484 = L.circleMarker(
+                [39.2578708, -1.3330645],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_89ce9decfc9bc9b1fa3ca3b3c3aa3fb6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fe4f03a95bd51e88acb5eef2bf5c2616 = $(`<div id="html_fe4f03a95bd51e88acb5eef2bf5c2616" style="width: 100.0%; height: 100.0%;">     <b>Casas de Ves</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 519<br>     Growth 5y: -7.82%<br>     Opportunity score v2: 1048.0     </div>`)[0];
+                popup_89ce9decfc9bc9b1fa3ca3b3c3aa3fb6.setContent(html_fe4f03a95bd51e88acb5eef2bf5c2616);
+            
+        
+
+        circle_marker_ebff25dcd7b97b3a49cedace4a1d5484.bindPopup(popup_89ce9decfc9bc9b1fa3ca3b3c3aa3fb6)
+        ;
+
+        
+    
+    
+            circle_marker_ebff25dcd7b97b3a49cedace4a1d5484.bindTooltip(
+                `<div>
+                     Casas de Ves | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c181145bb7648c492048ec2b916928ec = L.circleMarker(
+                [39.286714, -1.4712661],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_4b4e863b912b85126d0843e71e5c6080 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fb815b4b751748f356896284dbdcbb45 = $(`<div id="html_fb815b4b751748f356896284dbdcbb45" style="width: 100.0%; height: 100.0%;">     <b>Casas-Ibáñez</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 4616<br>     Growth 5y: 1.58%<br>     Opportunity score v2: 1130.8     </div>`)[0];
+                popup_4b4e863b912b85126d0843e71e5c6080.setContent(html_fb815b4b751748f356896284dbdcbb45);
+            
+        
+
+        circle_marker_c181145bb7648c492048ec2b916928ec.bindPopup(popup_4b4e863b912b85126d0843e71e5c6080)
+        ;
+
+        
+    
+    
+            circle_marker_c181145bb7648c492048ec2b916928ec.bindTooltip(
+                `<div>
+                     Casas-Ibáñez | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7492c29ae9811c21bf0e75ed5b77f713 = L.circleMarker(
+                [38.7046615, -0.9870381],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_0aea49ea515230b226b638b5d8d76b5d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_69d01c266f84ac46b9477b726032ced5 = $(`<div id="html_69d01c266f84ac46b9477b726032ced5" style="width: 100.0%; height: 100.0%;">     <b>Caudete</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 10439<br>     Growth 5y: 4.34%<br>     Opportunity score v2: 1208.8     </div>`)[0];
+                popup_0aea49ea515230b226b638b5d8d76b5d.setContent(html_69d01c266f84ac46b9477b726032ced5);
+            
+        
+
+        circle_marker_7492c29ae9811c21bf0e75ed5b77f713.bindPopup(popup_0aea49ea515230b226b638b5d8d76b5d)
+        ;
+
+        
+    
+    
+            circle_marker_7492c29ae9811c21bf0e75ed5b77f713.bindTooltip(
+                `<div>
+                     Caudete | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d49df8cbff6399ea5f89b547e409fc0c = L.circleMarker(
+                [39.3023107, -1.6627091],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_a2fe04f890d04e6b9d8c5299b718f325 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_83556a32d948bfc4827c2d625aaa9861 = $(`<div id="html_83556a32d948bfc4827c2d625aaa9861" style="width: 100.0%; height: 100.0%;">     <b>Cenizate</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 1163<br>     Growth 5y: -2.6%<br>     Opportunity score v2: 1021.9     </div>`)[0];
+                popup_a2fe04f890d04e6b9d8c5299b718f325.setContent(html_83556a32d948bfc4827c2d625aaa9861);
+            
+        
+
+        circle_marker_d49df8cbff6399ea5f89b547e409fc0c.bindPopup(popup_a2fe04f890d04e6b9d8c5299b718f325)
+        ;
+
+        
+    
+    
+            circle_marker_d49df8cbff6399ea5f89b547e409fc0c.bindTooltip(
+                `<div>
+                     Cenizate | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8f0351dc47ec5ff480972da390d9f87 = L.circleMarker(
+                [38.9195312, -1.7252937],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_ddb30323b9a6c5bc8c28b8067195db63 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0ca3529d82484f246442bb82e8400be2 = $(`<div id="html_0ca3529d82484f246442bb82e8400be2" style="width: 100.0%; height: 100.0%;">     <b>Chinchilla de Monte-Aragón</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 4614<br>     Growth 5y: 9.73%<br>     Opportunity score v2: 2029.8     </div>`)[0];
+                popup_ddb30323b9a6c5bc8c28b8067195db63.setContent(html_0ca3529d82484f246442bb82e8400be2);
+            
+        
+
+        circle_marker_c8f0351dc47ec5ff480972da390d9f87.bindPopup(popup_ddb30323b9a6c5bc8c28b8067195db63)
+        ;
+
+        
+    
+    
+            circle_marker_c8f0351dc47ec5ff480972da390d9f87.bindTooltip(
+                `<div>
+                     Chinchilla de Monte-Aragón | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7427357ff854bf364d4ce839cc9389f5 = L.circleMarker(
+                [38.8343358, -1.4597825],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_87994b4f86522dabd44624f7cb3507ac = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_848edfedcc3ee2d732fb3e11563766ff = $(`<div id="html_848edfedcc3ee2d732fb3e11563766ff" style="width: 100.0%; height: 100.0%;">     <b>Corral-Rubio</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 303<br>     Growth 5y: -2.57%<br>     Opportunity score v2: 933.0     </div>`)[0];
+                popup_87994b4f86522dabd44624f7cb3507ac.setContent(html_848edfedcc3ee2d732fb3e11563766ff);
+            
+        
+
+        circle_marker_7427357ff854bf364d4ce839cc9389f5.bindPopup(popup_87994b4f86522dabd44624f7cb3507ac)
+        ;
+
+        
+    
+    
+            circle_marker_7427357ff854bf364d4ce839cc9389f5.bindTooltip(
+                `<div>
+                     Corral-Rubio | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe5c7dcc156ba634e562b95c3878c7df = L.circleMarker(
+                [38.4310256, -2.5058695],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_47c38a39996368a7b7e980ac12a01ad3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cf7c3efd7b8cba8b623e7a7b847c3e7c = $(`<div id="html_cf7c3efd7b8cba8b623e7a7b847c3e7c" style="width: 100.0%; height: 100.0%;">     <b>Cotillas</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 123<br>     Growth 5y: 4.24%<br>     Opportunity score v2: 799.0     </div>`)[0];
+                popup_47c38a39996368a7b7e980ac12a01ad3.setContent(html_cf7c3efd7b8cba8b623e7a7b847c3e7c);
+            
+        
+
+        circle_marker_fe5c7dcc156ba634e562b95c3878c7df.bindPopup(popup_47c38a39996368a7b7e980ac12a01ad3)
+        ;
+
+        
+    
+    
+            circle_marker_fe5c7dcc156ba634e562b95c3878c7df.bindTooltip(
+                `<div>
+                     Cotillas | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff3c696324d51322c1f7b45915c4c8df = L.circleMarker(
+                [38.4500743, -2.0481401],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_8a73dd6c6147dfa801af07c7f33cba5b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_26da6aae8ba2aeda10297c0793ad5c67 = $(`<div id="html_26da6aae8ba2aeda10297c0793ad5c67" style="width: 100.0%; height: 100.0%;">     <b>Elche de la Sierra</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 3603<br>     Growth 5y: 2.36%<br>     Opportunity score v2: 808.2     </div>`)[0];
+                popup_8a73dd6c6147dfa801af07c7f33cba5b.setContent(html_26da6aae8ba2aeda10297c0793ad5c67);
+            
+        
+
+        circle_marker_ff3c696324d51322c1f7b45915c4c8df.bindPopup(popup_8a73dd6c6147dfa801af07c7f33cba5b)
+        ;
+
+        
+    
+    
+            circle_marker_ff3c696324d51322c1f7b45915c4c8df.bindTooltip(
+                `<div>
+                     Elche de la Sierra | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aafc0ecc9be48275496492ec535eeba9 = L.circleMarker(
+                [39.2451555, -2.0690225],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_4f30375d5ca28ad57786c75380cdf551 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_535ac09037f1bcd3adbc4d4ae71543c4 = $(`<div id="html_535ac09037f1bcd3adbc4d4ae71543c4" style="width: 100.0%; height: 100.0%;">     <b>Fuensanta</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 282<br>     Growth 5y: -3.09%<br>     Opportunity score v2: 887.9     </div>`)[0];
+                popup_4f30375d5ca28ad57786c75380cdf551.setContent(html_535ac09037f1bcd3adbc4d4ae71543c4);
+            
+        
+
+        circle_marker_aafc0ecc9be48275496492ec535eeba9.bindPopup(popup_4f30375d5ca28ad57786c75380cdf551)
+        ;
+
+        
+    
+    
+            circle_marker_aafc0ecc9be48275496492ec535eeba9.bindTooltip(
+                `<div>
+                     Fuensanta | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_366c323ba02dc6824286b0623c6c0f59 = L.circleMarker(
+                [38.6927241, -1.4325968],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_646350ce9a229b23dafc760dc5f7fff0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8452ac73e6e3b008dff7a12fccdb80d1 = $(`<div id="html_8452ac73e6e3b008dff7a12fccdb80d1" style="width: 100.0%; height: 100.0%;">     <b>Fuente-Álamo</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 2422<br>     Growth 5y: -2.1%<br>     Opportunity score v2: 811.4     </div>`)[0];
+                popup_646350ce9a229b23dafc760dc5f7fff0.setContent(html_8452ac73e6e3b008dff7a12fccdb80d1);
+            
+        
+
+        circle_marker_366c323ba02dc6824286b0623c6c0f59.bindPopup(popup_646350ce9a229b23dafc760dc5f7fff0)
+        ;
+
+        
+    
+    
+            circle_marker_366c323ba02dc6824286b0623c6c0f59.bindTooltip(
+                `<div>
+                     Fuente-Álamo | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05d1e1e4128547517fa909706cedbe97 = L.circleMarker(
+                [39.2675127, -1.5511323],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_5ee5f73facb78643eb9c8388e99dfa07 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ef2b5057ddb4765a2148dcc068233712 = $(`<div id="html_ef2b5057ddb4765a2148dcc068233712" style="width: 100.0%; height: 100.0%;">     <b>Fuentealbilla</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 1804<br>     Growth 5y: -1.47%<br>     Opportunity score v2: 1165.2     </div>`)[0];
+                popup_5ee5f73facb78643eb9c8388e99dfa07.setContent(html_ef2b5057ddb4765a2148dcc068233712);
+            
+        
+
+        circle_marker_05d1e1e4128547517fa909706cedbe97.bindPopup(popup_5ee5f73facb78643eb9c8388e99dfa07)
+        ;
+
+        
+    
+    
+            circle_marker_05d1e1e4128547517fa909706cedbe97.bindTooltip(
+                `<div>
+                     Fuentealbilla | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4967db9af978a96c3ac9beab29894ab6 = L.circleMarker(
+                [38.3555477, -2.0084208],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_486db3f477e5cd737449d9d151b3c61a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_757c6b0d69365dbcffeedba7081a7d4a = $(`<div id="html_757c6b0d69365dbcffeedba7081a7d4a" style="width: 100.0%; height: 100.0%;">     <b>Férez</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 604<br>     Growth 5y: -3.97%<br>     Opportunity score v2: 831.3     </div>`)[0];
+                popup_486db3f477e5cd737449d9d151b3c61a.setContent(html_757c6b0d69365dbcffeedba7081a7d4a);
+            
+        
+
+        circle_marker_4967db9af978a96c3ac9beab29894ab6.bindPopup(popup_486db3f477e5cd737449d9d151b3c61a)
+        ;
+
+        
+    
+    
+            circle_marker_4967db9af978a96c3ac9beab29894ab6.bindTooltip(
+                `<div>
+                     Férez | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6eb86faacfd104df4791ecc55c9b5aaf = L.circleMarker(
+                [39.1132781, -1.9961056],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_aa53fda9a4f1c8a26ee7e6c28932c488 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2beca4dbc5f6df375f24c5afa3593f3e = $(`<div id="html_2beca4dbc5f6df375f24c5afa3593f3e" style="width: 100.0%; height: 100.0%;">     <b>Gineta, La</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 2656<br>     Growth 5y: 4.24%<br>     Opportunity score v2: 1800.0     </div>`)[0];
+                popup_aa53fda9a4f1c8a26ee7e6c28932c488.setContent(html_2beca4dbc5f6df375f24c5afa3593f3e);
+            
+        
+
+        circle_marker_6eb86faacfd104df4791ecc55c9b5aaf.bindPopup(popup_aa53fda9a4f1c8a26ee7e6c28932c488)
+        ;
+
+        
+    
+    
+            circle_marker_6eb86faacfd104df4791ecc55c9b5aaf.bindTooltip(
+                `<div>
+                     Gineta, La | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1380bf0f1bc36cfb9f3b7ce746a4bf59 = L.circleMarker(
+                [39.2394219, -1.635698],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_2ddcdae9013f04839ed08604fdb852ab = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6eb47df9ff6f69570b9f187f20881b72 = $(`<div id="html_6eb47df9ff6f69570b9f187f20881b72" style="width: 100.0%; height: 100.0%;">     <b>Golosalvo</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 79<br>     Growth 5y: -19.39%<br>     Opportunity score v2: 1040.9     </div>`)[0];
+                popup_2ddcdae9013f04839ed08604fdb852ab.setContent(html_6eb47df9ff6f69570b9f187f20881b72);
+            
+        
+
+        circle_marker_1380bf0f1bc36cfb9f3b7ce746a4bf59.bindPopup(popup_2ddcdae9013f04839ed08604fdb852ab)
+        ;
+
+        
+    
+    
+            circle_marker_1380bf0f1bc36cfb9f3b7ce746a4bf59.bindTooltip(
+                `<div>
+                     Golosalvo | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37803199e9df685205ca783a9d310621 = L.circleMarker(
+                [38.5081949, -1.6983239],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_2d5d090b86ab19c55774afc1f27aa2e1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_12a863f2f7da0874bf06b214cc5cc39c = $(`<div id="html_12a863f2f7da0874bf06b214cc5cc39c" style="width: 100.0%; height: 100.0%;">     <b>Hellín</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 30836<br>     Growth 5y: 2.11%<br>     Opportunity score v2: 1697.3     </div>`)[0];
+                popup_2d5d090b86ab19c55774afc1f27aa2e1.setContent(html_12a863f2f7da0874bf06b214cc5cc39c);
+            
+        
+
+        circle_marker_37803199e9df685205ca783a9d310621.bindPopup(popup_2d5d090b86ab19c55774afc1f27aa2e1)
+        ;
+
+        
+    
+    
+            circle_marker_37803199e9df685205ca783a9d310621.bindTooltip(
+                `<div>
+                     Hellín | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be5dbd6def838d3d8a09c3330b460532 = L.circleMarker(
+                [38.9622956, -2.1263536],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_043fb3a565c17ae39e5c6c907295eff5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e006a44eedfc2b8e47b1974a6cfcb87c = $(`<div id="html_e006a44eedfc2b8e47b1974a6cfcb87c" style="width: 100.0%; height: 100.0%;">     <b>Herrera, La</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 308<br>     Growth 5y: -4.35%<br>     Opportunity score v2: 1956.0     </div>`)[0];
+                popup_043fb3a565c17ae39e5c6c907295eff5.setContent(html_e006a44eedfc2b8e47b1974a6cfcb87c);
+            
+        
+
+        circle_marker_be5dbd6def838d3d8a09c3330b460532.bindPopup(popup_043fb3a565c17ae39e5c6c907295eff5)
+        ;
+
+        
+    
+    
+            circle_marker_be5dbd6def838d3d8a09c3330b460532.bindTooltip(
+                `<div>
+                     Herrera, La | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c229940f382cf13b2fe2b0a9a53d6ac = L.circleMarker(
+                [38.9618433, -1.4422609],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_ed4fcbe6da74f476b0359393441905ee = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4bba221912c1e721ad61217f70a77dd4 = $(`<div id="html_4bba221912c1e721ad61217f70a77dd4" style="width: 100.0%; height: 100.0%;">     <b>Higueruela</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 1133<br>     Growth 5y: -0.18%<br>     Opportunity score v2: 848.7     </div>`)[0];
+                popup_ed4fcbe6da74f476b0359393441905ee.setContent(html_4bba221912c1e721ad61217f70a77dd4);
+            
+        
+
+        circle_marker_4c229940f382cf13b2fe2b0a9a53d6ac.bindPopup(popup_ed4fcbe6da74f476b0359393441905ee)
+        ;
+
+        
+    
+    
+            circle_marker_4c229940f382cf13b2fe2b0a9a53d6ac.bindTooltip(
+                `<div>
+                     Higueruela | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4353ae7256213ecee734bb64fbeb221a = L.circleMarker(
+                [38.9584238, -1.5565831],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_f4b3c0799b11fb74f1fc22dda18a7ec3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bed985e714ded0df8d00d6987b97898c = $(`<div id="html_bed985e714ded0df8d00d6987b97898c" style="width: 100.0%; height: 100.0%;">     <b>Hoya-Gonzalo</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 582<br>     Growth 5y: -7.62%<br>     Opportunity score v2: 999.2     </div>`)[0];
+                popup_f4b3c0799b11fb74f1fc22dda18a7ec3.setContent(html_bed985e714ded0df8d00d6987b97898c);
+            
+        
+
+        circle_marker_4353ae7256213ecee734bb64fbeb221a.bindPopup(popup_f4b3c0799b11fb74f1fc22dda18a7ec3)
+        ;
+
+        
+    
+    
+            circle_marker_4353ae7256213ecee734bb64fbeb221a.bindTooltip(
+                `<div>
+                     Hoya-Gonzalo | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a17b1e756fb077f8b6c7138887c8d778 = L.circleMarker(
+                [39.17503019999999, -1.5214676],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_c8d675bc643b723280c0d5bec590963b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9ef18517ddeb83cf76de0a64c58bf124 = $(`<div id="html_9ef18517ddeb83cf76de0a64c58bf124" style="width: 100.0%; height: 100.0%;">     <b>Jorquera</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 356<br>     Growth 5y: 4.09%<br>     Opportunity score v2: 1055.5     </div>`)[0];
+                popup_c8d675bc643b723280c0d5bec590963b.setContent(html_9ef18517ddeb83cf76de0a64c58bf124);
+            
+        
+
+        circle_marker_a17b1e756fb077f8b6c7138887c8d778.bindPopup(popup_c8d675bc643b723280c0d5bec590963b)
+        ;
+
+        
+    
+    
+            circle_marker_a17b1e756fb077f8b6c7138887c8d778.bindTooltip(
+                `<div>
+                     Jorquera | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1514c0e0c341e63cdd8b5ccbbff03a3f = L.circleMarker(
+                [38.3656079, -2.1020248],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_48486809002415900ed7b610a8de7ebb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5e8864f7bd0d3660a1d42e77a16d348d = $(`<div id="html_5e8864f7bd0d3660a1d42e77a16d348d" style="width: 100.0%; height: 100.0%;">     <b>Letur</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 911<br>     Growth 5y: 2.13%<br>     Opportunity score v2: 829.6     </div>`)[0];
+                popup_48486809002415900ed7b610a8de7ebb.setContent(html_5e8864f7bd0d3660a1d42e77a16d348d);
+            
+        
+
+        circle_marker_1514c0e0c341e63cdd8b5ccbbff03a3f.bindPopup(popup_48486809002415900ed7b610a8de7ebb)
+        ;
+
+        
+    
+    
+            circle_marker_1514c0e0c341e63cdd8b5ccbbff03a3f.bindTooltip(
+                `<div>
+                     Letur | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86b68c6a3d04bdb5daf7dcb67efa4f3d = L.circleMarker(
+                [38.9496492, -2.3554527],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_148a1b8faaf0b8bad124e4f2233282b8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7d4dd8aff68f3783eb891bd35c20d09a = $(`<div id="html_7d4dd8aff68f3783eb891bd35c20d09a" style="width: 100.0%; height: 100.0%;">     <b>Lezuza</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 1281<br>     Growth 5y: -3.83%<br>     Opportunity score v2: 1072.5     </div>`)[0];
+                popup_148a1b8faaf0b8bad124e4f2233282b8.setContent(html_7d4dd8aff68f3783eb891bd35c20d09a);
+            
+        
+
+        circle_marker_86b68c6a3d04bdb5daf7dcb67efa4f3d.bindPopup(popup_148a1b8faaf0b8bad124e4f2233282b8)
+        ;
+
+        
+    
+    
+            circle_marker_86b68c6a3d04bdb5daf7dcb67efa4f3d.bindTooltip(
+                `<div>
+                     Lezuza | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a48b43b4fa6a9e24d098af9dd7311176 = L.circleMarker(
+                [38.54165450000001, -1.9532994],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_7c9399f34b0d85b11f9490891516a9d6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f88ee0e1fa9f3a6a2332430079850222 = $(`<div id="html_f88ee0e1fa9f3a6a2332430079850222" style="width: 100.0%; height: 100.0%;">     <b>Liétor</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 1052<br>     Growth 5y: -8.52%<br>     Opportunity score v2: 1475.0     </div>`)[0];
+                popup_7c9399f34b0d85b11f9490891516a9d6.setContent(html_f88ee0e1fa9f3a6a2332430079850222);
+            
+        
+
+        circle_marker_a48b43b4fa6a9e24d098af9dd7311176.bindPopup(popup_7c9399f34b0d85b11f9490891516a9d6)
+        ;
+
+        
+    
+    
+            circle_marker_a48b43b4fa6a9e24d098af9dd7311176.bindTooltip(
+                `<div>
+                     Liétor | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aab8d27ebb11862fd9816d188fc0ff73 = L.circleMarker(
+                [39.23668079999999, -1.8001488],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_79f56cc3f849820cc560c24897f2e2cc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4ca7f5a1ae58dab6b46453c560eeedf1 = $(`<div id="html_4ca7f5a1ae58dab6b46453c560eeedf1" style="width: 100.0%; height: 100.0%;">     <b>Madrigueras</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 4670<br>     Growth 5y: 0.78%<br>     Opportunity score v2: 926.9     </div>`)[0];
+                popup_79f56cc3f849820cc560c24897f2e2cc.setContent(html_4ca7f5a1ae58dab6b46453c560eeedf1);
+            
+        
+
+        circle_marker_aab8d27ebb11862fd9816d188fc0ff73.bindPopup(popup_79f56cc3f849820cc560c24897f2e2cc)
+        ;
+
+        
+    
+    
+            circle_marker_aab8d27ebb11862fd9816d188fc0ff73.bindTooltip(
+                `<div>
+                     Madrigueras | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36b1023ade46050d2819cdd2dbf3d76d = L.circleMarker(
+                [39.2131243, -1.7259018],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_be38496e59d24f5981f102e6cf2829cc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e74aa459601808cbe145a22fab178437 = $(`<div id="html_e74aa459601808cbe145a22fab178437" style="width: 100.0%; height: 100.0%;">     <b>Mahora</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 1465<br>     Growth 5y: 7.56%<br>     Opportunity score v2: 1050.5     </div>`)[0];
+                popup_be38496e59d24f5981f102e6cf2829cc.setContent(html_e74aa459601808cbe145a22fab178437);
+            
+        
+
+        circle_marker_36b1023ade46050d2819cdd2dbf3d76d.bindPopup(popup_be38496e59d24f5981f102e6cf2829cc)
+        ;
+
+        
+    
+    
+            circle_marker_36b1023ade46050d2819cdd2dbf3d76d.bindTooltip(
+                `<div>
+                     Mahora | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_187a9f692963c633407ffda9c93433da = L.circleMarker(
+                [38.7182149, -2.3163081],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_1e3b80cd3aa8a75e538c7c70f1f1eaae = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0734b32759d5a25734fb44f75ca2e05b = $(`<div id="html_0734b32759d5a25734fb44f75ca2e05b" style="width: 100.0%; height: 100.0%;">     <b>Masegoso</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 117<br>     Growth 5y: 12.5%<br>     Opportunity score v2: 1544.5     </div>`)[0];
+                popup_1e3b80cd3aa8a75e538c7c70f1f1eaae.setContent(html_0734b32759d5a25734fb44f75ca2e05b);
+            
+        
+
+        circle_marker_187a9f692963c633407ffda9c93433da.bindPopup(popup_1e3b80cd3aa8a75e538c7c70f1f1eaae)
+        ;
+
+        
+    
+    
+            circle_marker_187a9f692963c633407ffda9c93433da.bindTooltip(
+                `<div>
+                     Masegoso | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d97c16f6c459a2fe1eb57dd59e26e82a = L.circleMarker(
+                [39.2710162, -2.3209341],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_8476cf1ad06b2b338a29e976663e8708 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9ea217392ec680b943b3714a3dff9aec = $(`<div id="html_9ea217392ec680b943b3714a3dff9aec" style="width: 100.0%; height: 100.0%;">     <b>Minaya</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 1381<br>     Growth 5y: -6.37%<br>     Opportunity score v2: 1096.6     </div>`)[0];
+                popup_8476cf1ad06b2b338a29e976663e8708.setContent(html_9ea217392ec680b943b3714a3dff9aec);
+            
+        
+
+        circle_marker_d97c16f6c459a2fe1eb57dd59e26e82a.bindPopup(popup_8476cf1ad06b2b338a29e976663e8708)
+        ;
+
+        
+    
+    
+            circle_marker_d97c16f6c459a2fe1eb57dd59e26e82a.bindTooltip(
+                `<div>
+                     Minaya | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33f511fff24eec163dda80df1f71e9bd = L.circleMarker(
+                [38.4663699, -2.2405913],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_1111d8cd95391cc6b897dacc54de7241 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8454034c3e64ed2341fb416ca5337dc8 = $(`<div id="html_8454034c3e64ed2341fb416ca5337dc8" style="width: 100.0%; height: 100.0%;">     <b>Molinicos</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 754<br>     Growth 5y: -7.26%<br>     Opportunity score v2: 784.5     </div>`)[0];
+                popup_1111d8cd95391cc6b897dacc54de7241.setContent(html_8454034c3e64ed2341fb416ca5337dc8);
+            
+        
+
+        circle_marker_33f511fff24eec163dda80df1f71e9bd.bindPopup(popup_1111d8cd95391cc6b897dacc54de7241)
+        ;
+
+        
+    
+    
+            circle_marker_33f511fff24eec163dda80df1f71e9bd.bindTooltip(
+                `<div>
+                     Molinicos | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7075f7a1c41f661cc0de3941125755c2 = L.circleMarker(
+                [39.1657264, -2.0276251],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_675a8939643c3e36b7777c6547cb5f1e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9c86984fb24bd15ecc3e22b3e92ceca5 = $(`<div id="html_9c86984fb24bd15ecc3e22b3e92ceca5" style="width: 100.0%; height: 100.0%;">     <b>Montalvos</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 74<br>     Growth 5y: -15.91%<br>     Opportunity score v2: 1800.0     </div>`)[0];
+                popup_675a8939643c3e36b7777c6547cb5f1e.setContent(html_9c86984fb24bd15ecc3e22b3e92ceca5);
+            
+        
+
+        circle_marker_7075f7a1c41f661cc0de3941125755c2.bindPopup(popup_675a8939643c3e36b7777c6547cb5f1e)
+        ;
+
+        
+    
+    
+            circle_marker_7075f7a1c41f661cc0de3941125755c2.bindTooltip(
+                `<div>
+                     Montalvos | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3bf92e48711e817d8cc7bfb243934eb6 = L.circleMarker(
+                [38.7888493, -1.3270397],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_be48940504ef8e3a21ea0623dab1ee27 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_80243852e5aa9ab68cf6559698adc44e = $(`<div id="html_80243852e5aa9ab68cf6559698adc44e" style="width: 100.0%; height: 100.0%;">     <b>Montealegre del Castillo</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 2051<br>     Growth 5y: 0.49%<br>     Opportunity score v2: 1100.2     </div>`)[0];
+                popup_be48940504ef8e3a21ea0623dab1ee27.setContent(html_80243852e5aa9ab68cf6559698adc44e);
+            
+        
+
+        circle_marker_3bf92e48711e817d8cc7bfb243934eb6.bindPopup(popup_be48940504ef8e3a21ea0623dab1ee27)
+        ;
+
+        
+    
+    
+            circle_marker_3bf92e48711e817d8cc7bfb243934eb6.bindTooltip(
+                `<div>
+                     Montealegre del Castillo | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee2f210e5f0b6b337435806639373b6c = L.circleMarker(
+                [39.1803118, -1.7910132],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_160ffb5f99f96280bfbc25b457f9a074 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bd44c5f022960557c91a4c4654b5a732 = $(`<div id="html_bd44c5f022960557c91a4c4654b5a732" style="width: 100.0%; height: 100.0%;">     <b>Motilleja</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 673<br>     Growth 5y: 16.44%<br>     Opportunity score v2: 1932.9     </div>`)[0];
+                popup_160ffb5f99f96280bfbc25b457f9a074.setContent(html_bd44c5f022960557c91a4c4654b5a732);
+            
+        
+
+        circle_marker_ee2f210e5f0b6b337435806639373b6c.bindPopup(popup_160ffb5f99f96280bfbc25b457f9a074)
+        ;
+
+        
+    
+    
+            circle_marker_ee2f210e5f0b6b337435806639373b6c.bindTooltip(
+                `<div>
+                     Motilleja | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b99c4e5f7790cdab45d0786480be219d = L.circleMarker(
+                [39.0424927, -2.4783117],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_b9c9ffb6f66bf12ef0f73796ebe08a14 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_045b0f5bf797c815b8006bd39e22f583 = $(`<div id="html_045b0f5bf797c815b8006bd39e22f583" style="width: 100.0%; height: 100.0%;">     <b>Munera</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 3351<br>     Growth 5y: -2.27%<br>     Opportunity score v2: 904.5     </div>`)[0];
+                popup_b9c9ffb6f66bf12ef0f73796ebe08a14.setContent(html_045b0f5bf797c815b8006bd39e22f583);
+            
+        
+
+        circle_marker_b99c4e5f7790cdab45d0786480be219d.bindPopup(popup_b9c9ffb6f66bf12ef0f73796ebe08a14)
+        ;
+
+        
+    
+    
+            circle_marker_b99c4e5f7790cdab45d0786480be219d.bindTooltip(
+                `<div>
+                     Munera | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e26bb52fa335f802df8abf85f97becaf = L.circleMarker(
+                [39.2800859, -1.7192136],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_8147b9ae42998f67e8a449a6e888ecd6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_aa30060f36fa6550ce1902ceb6ce9d4a = $(`<div id="html_aa30060f36fa6550ce1902ceb6ce9d4a" style="width: 100.0%; height: 100.0%;">     <b>Navas de Jorquera</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 521<br>     Growth 5y: 0.0%<br>     Opportunity score v2: 1022.8     </div>`)[0];
+                popup_8147b9ae42998f67e8a449a6e888ecd6.setContent(html_aa30060f36fa6550ce1902ceb6ce9d4a);
+            
+        
+
+        circle_marker_e26bb52fa335f802df8abf85f97becaf.bindPopup(popup_8147b9ae42998f67e8a449a6e888ecd6)
+        ;
+
+        
+    
+    
+            circle_marker_e26bb52fa335f802df8abf85f97becaf.bindTooltip(
+                `<div>
+                     Navas de Jorquera | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f165aa7e127de2b07083f33178fb9d1 = L.circleMarker(
+                [38.1477676, -2.2987502],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_62c7df42368426735521433183c254c1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8c57b8af4d937a5e8dfa1e422616e4f1 = $(`<div id="html_8c57b8af4d937a5e8dfa1e422616e4f1" style="width: 100.0%; height: 100.0%;">     <b>Nerpio</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 1136<br>     Growth 5y: -3.57%<br>     Opportunity score v2: 601.2     </div>`)[0];
+                popup_62c7df42368426735521433183c254c1.setContent(html_8c57b8af4d937a5e8dfa1e422616e4f1);
+            
+        
+
+        circle_marker_7f165aa7e127de2b07083f33178fb9d1.bindPopup(popup_62c7df42368426735521433183c254c1)
+        ;
+
+        
+    
+    
+            circle_marker_7f165aa7e127de2b07083f33178fb9d1.bindTooltip(
+                `<div>
+                     Nerpio | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_392a5f2301c66611905c8704e4cbcb3d = L.circleMarker(
+                [38.6159034, -1.4978716],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_231e6c068d71e0ee494464a4d8e7c0ca = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_81a2e78c9a02df3f00a9c46772416bd8 = $(`<div id="html_81a2e78c9a02df3f00a9c46772416bd8" style="width: 100.0%; height: 100.0%;">     <b>Ontur</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 1895<br>     Growth 5y: -4.1%<br>     Opportunity score v2: 1560.6     </div>`)[0];
+                popup_231e6c068d71e0ee494464a4d8e7c0ca.setContent(html_81a2e78c9a02df3f00a9c46772416bd8);
+            
+        
+
+        circle_marker_392a5f2301c66611905c8704e4cbcb3d.bindPopup(popup_231e6c068d71e0ee494464a4d8e7c0ca)
+        ;
+
+        
+    
+    
+            circle_marker_392a5f2301c66611905c8704e4cbcb3d.bindTooltip(
+                `<div>
+                     Ontur | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05ba033b58dabc878ee562a53bbb9407 = L.circleMarker(
+                [38.9645905, -2.7468737],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_fca48a704b1a1b0a6dd0b3db6688be45 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d3363cc228b608f008f25b3a9bff94f1 = $(`<div id="html_d3363cc228b608f008f25b3a9bff94f1" style="width: 100.0%; height: 100.0%;">     <b>Ossa de Montiel</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 2233<br>     Growth 5y: -1.28%<br>     Opportunity score v2: 748.1     </div>`)[0];
+                popup_fca48a704b1a1b0a6dd0b3db6688be45.setContent(html_d3363cc228b608f008f25b3a9bff94f1);
+            
+        
+
+        circle_marker_05ba033b58dabc878ee562a53bbb9407.bindPopup(popup_fca48a704b1a1b0a6dd0b3db6688be45)
+        ;
+
+        
+    
+    
+            circle_marker_05ba033b58dabc878ee562a53bbb9407.bindTooltip(
+                `<div>
+                     Ossa de Montiel | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd641a00655103a34c107039f671776c = L.circleMarker(
+                [38.5973796, -2.3458767],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_b51871d0c9a5c71bf18ffb09b36fa22f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9c294541c07144a4a1ab264d53326d6e = $(`<div id="html_9c294541c07144a4a1ab264d53326d6e" style="width: 100.0%; height: 100.0%;">     <b>Paterna del Madera</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 328<br>     Growth 5y: -0.3%<br>     Opportunity score v2: 877.1     </div>`)[0];
+                popup_b51871d0c9a5c71bf18ffb09b36fa22f.setContent(html_9c294541c07144a4a1ab264d53326d6e);
+            
+        
+
+        circle_marker_bd641a00655103a34c107039f671776c.bindPopup(popup_b51871d0c9a5c71bf18ffb09b36fa22f)
+        ;
+
+        
+    
+    
+            circle_marker_bd641a00655103a34c107039f671776c.bindTooltip(
+                `<div>
+                     Paterna del Madera | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a71dd04f8357071b2869ad1a9e67b780 = L.circleMarker(
+                [38.7256513, -2.0010004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_680377635d9bc4a557594e4d490164ed = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c7fd53b7202044eb3bbdf170bc932ca4 = $(`<div id="html_c7fd53b7202044eb3bbdf170bc932ca4" style="width: 100.0%; height: 100.0%;">     <b>Peñas de San Pedro</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 1488<br>     Growth 5y: 6.74%<br>     Opportunity score v2: 999.3     </div>`)[0];
+                popup_680377635d9bc4a557594e4d490164ed.setContent(html_c7fd53b7202044eb3bbdf170bc932ca4);
+            
+        
+
+        circle_marker_a71dd04f8357071b2869ad1a9e67b780.bindPopup(popup_680377635d9bc4a557594e4d490164ed)
+        ;
+
+        
+    
+    
+            circle_marker_a71dd04f8357071b2869ad1a9e67b780.bindTooltip(
+                `<div>
+                     Peñas de San Pedro | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd4f09eedd3f8dacaf57ca2f78bb7598 = L.circleMarker(
+                [38.6716596, -2.4104201],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_7793a0149b97c6911f1519353e0911dd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_309274f7ffda2348786695ae9df127da = $(`<div id="html_309274f7ffda2348786695ae9df127da" style="width: 100.0%; height: 100.0%;">     <b>Peñascosa</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 329<br>     Growth 5y: -1.2%<br>     Opportunity score v2: 1110.9     </div>`)[0];
+                popup_7793a0149b97c6911f1519353e0911dd.setContent(html_309274f7ffda2348786695ae9df127da);
+            
+        
+
+        circle_marker_bd4f09eedd3f8dacaf57ca2f78bb7598.bindPopup(popup_7793a0149b97c6911f1519353e0911dd)
+        ;
+
+        
+    
+    
+            circle_marker_bd4f09eedd3f8dacaf57ca2f78bb7598.bindTooltip(
+                `<div>
+                     Peñascosa | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e6ea19a1e35b560557975be6600c6cf4 = L.circleMarker(
+                [38.7007435, -2.6034236],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_87fb2df277703504a55c95a9e6e3f142 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1358f0c7a538e7f1d1667fb97f0a2eef = $(`<div id="html_1358f0c7a538e7f1d1667fb97f0a2eef" style="width: 100.0%; height: 100.0%;">     <b>Povedilla</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 374<br>     Growth 5y: -7.65%<br>     Opportunity score v2: 1678.3     </div>`)[0];
+                popup_87fb2df277703504a55c95a9e6e3f142.setContent(html_1358f0c7a538e7f1d1667fb97f0a2eef);
+            
+        
+
+        circle_marker_e6ea19a1e35b560557975be6600c6cf4.bindPopup(popup_87fb2df277703504a55c95a9e6e3f142)
+        ;
+
+        
+    
+    
+            circle_marker_e6ea19a1e35b560557975be6600c6cf4.bindTooltip(
+                `<div>
+                     Povedilla | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a376640ee0bf9b2d47cdd153e557351d = L.circleMarker(
+                [38.8029833, -1.7322065],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_f508c5af1186269c22b3b6a945276d16 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b2496a4603864e5ce91e75e31372b776 = $(`<div id="html_b2496a4603864e5ce91e75e31372b776" style="width: 100.0%; height: 100.0%;">     <b>Pozo Cañada</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 2704<br>     Growth 5y: -3.12%<br>     Opportunity score v2: 2034.4     </div>`)[0];
+                popup_f508c5af1186269c22b3b6a945276d16.setContent(html_b2496a4603864e5ce91e75e31372b776);
+            
+        
+
+        circle_marker_a376640ee0bf9b2d47cdd153e557351d.bindPopup(popup_f508c5af1186269c22b3b6a945276d16)
+        ;
+
+        
+    
+    
+            circle_marker_a376640ee0bf9b2d47cdd153e557351d.bindTooltip(
+                `<div>
+                     Pozo Cañada | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2dc65e7c705b82b817df113ff435e0d = L.circleMarker(
+                [39.076351, -1.5069455],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_cadc6032c2eac9888181765111d3081b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_94c9775fb7596e9d320476639972b8b3 = $(`<div id="html_94c9775fb7596e9d320476639972b8b3" style="width: 100.0%; height: 100.0%;">     <b>Pozo-Lorente</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 398<br>     Growth 5y: -2.45%<br>     Opportunity score v2: 1109.9     </div>`)[0];
+                popup_cadc6032c2eac9888181765111d3081b.setContent(html_94c9775fb7596e9d320476639972b8b3);
+            
+        
+
+        circle_marker_f2dc65e7c705b82b817df113ff435e0d.bindPopup(popup_cadc6032c2eac9888181765111d3081b)
+        ;
+
+        
+    
+    
+            circle_marker_f2dc65e7c705b82b817df113ff435e0d.bindTooltip(
+                `<div>
+                     Pozo-Lorente | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_226dda906a7d4aac523d97f2d4595fbe = L.circleMarker(
+                [38.7199503, -1.9111451],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_6a793e85a06e57a8708a1e56b5d4b622 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b16b6c5d19964a3ed80f69e0d071c727 = $(`<div id="html_b16b6c5d19964a3ed80f69e0d071c727" style="width: 100.0%; height: 100.0%;">     <b>Pozohondo</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 1544<br>     Growth 5y: -3.08%<br>     Opportunity score v2: 1174.4     </div>`)[0];
+                popup_6a793e85a06e57a8708a1e56b5d4b622.setContent(html_b16b6c5d19964a3ed80f69e0d071c727);
+            
+        
+
+        circle_marker_226dda906a7d4aac523d97f2d4595fbe.bindPopup(popup_6a793e85a06e57a8708a1e56b5d4b622)
+        ;
+
+        
+    
+    
+            circle_marker_226dda906a7d4aac523d97f2d4595fbe.bindTooltip(
+                `<div>
+                     Pozohondo | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6587b5d85f0c8d416d4d5dc4bc19a22a = L.circleMarker(
+                [38.8089093, -2.1014619],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_a66a14b26c6a63a510c491581d542302 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ff56202c62ce36bb1ec05fa7886c82eb = $(`<div id="html_ff56202c62ce36bb1ec05fa7886c82eb" style="width: 100.0%; height: 100.0%;">     <b>Pozuelo</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 455<br>     Growth 5y: -2.99%<br>     Opportunity score v2: 928.4     </div>`)[0];
+                popup_a66a14b26c6a63a510c491581d542302.setContent(html_ff56202c62ce36bb1ec05fa7886c82eb);
+            
+        
+
+        circle_marker_6587b5d85f0c8d416d4d5dc4bc19a22a.bindPopup(popup_a66a14b26c6a63a510c491581d542302)
+        ;
+
+        
+    
+    
+            circle_marker_6587b5d85f0c8d416d4d5dc4bc19a22a.bindTooltip(
+                `<div>
+                     Pozuelo | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c652412869170675937100f8b54c486a = L.circleMarker(
+                [38.8272179, -1.5559775],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_e79a0ed409e4126daf0127686a7b28e5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_739511d599d868fdea1f1b4ff63a486e = $(`<div id="html_739511d599d868fdea1f1b4ff63a486e" style="width: 100.0%; height: 100.0%;">     <b>Pétrola</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 660<br>     Growth 5y: -3.08%<br>     Opportunity score v2: 865.7     </div>`)[0];
+                popup_e79a0ed409e4126daf0127686a7b28e5.setContent(html_739511d599d868fdea1f1b4ff63a486e);
+            
+        
+
+        circle_marker_c652412869170675937100f8b54c486a.bindPopup(popup_e79a0ed409e4126daf0127686a7b28e5)
+        ;
+
+        
+    
+    
+            circle_marker_c652412869170675937100f8b54c486a.bindTooltip(
+                `<div>
+                     Pétrola | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2718b5d78bfc5de540f85323cee94c3f = L.circleMarker(
+                [39.1607676, -1.4676394],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_6c6e3e361683f36e1ceeb34210e3d89c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_388bc00d74de55da97a6a9b8657285ac = $(`<div id="html_388bc00d74de55da97a6a9b8657285ac" style="width: 100.0%; height: 100.0%;">     <b>Recueja, La</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 215<br>     Growth 5y: -6.93%<br>     Opportunity score v2: 980.3     </div>`)[0];
+                popup_6c6e3e361683f36e1ceeb34210e3d89c.setContent(html_388bc00d74de55da97a6a9b8657285ac);
+            
+        
+
+        circle_marker_2718b5d78bfc5de540f85323cee94c3f.bindPopup(popup_6c6e3e361683f36e1ceeb34210e3d89c)
+        ;
+
+        
+    
+    
+            circle_marker_2718b5d78bfc5de540f85323cee94c3f.bindTooltip(
+                `<div>
+                     Recueja, La | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee43df084191619e441cf18335995680 = L.circleMarker(
+                [38.4982409, -2.4171658],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_080522c070bc3e3d88fe0e965a69fb8a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4d29cf641960a9359300ad6e7ed3ecc1 = $(`<div id="html_4d29cf641960a9359300ad6e7ed3ecc1" style="width: 100.0%; height: 100.0%;">     <b>Riópar</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 1344<br>     Growth 5y: 0.22%<br>     Opportunity score v2: 866.4     </div>`)[0];
+                popup_080522c070bc3e3d88fe0e965a69fb8a.setContent(html_4d29cf641960a9359300ad6e7ed3ecc1);
+            
+        
+
+        circle_marker_ee43df084191619e441cf18335995680.bindPopup(popup_080522c070bc3e3d88fe0e965a69fb8a)
+        ;
+
+        
+    
+    
+            circle_marker_ee43df084191619e441cf18335995680.bindTooltip(
+                `<div>
+                     Riópar | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0d3d1b9f895d76f9ece8ca9d4a985a7 = L.circleMarker(
+                [38.774234, -2.4406387],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_a048a019df9b48f8bf85acfb1fa2ced5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5f87593f2e8c551a87dd814c18423847 = $(`<div id="html_5f87593f2e8c551a87dd814c18423847" style="width: 100.0%; height: 100.0%;">     <b>Robledo</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 382<br>     Growth 5y: 1.6%<br>     Opportunity score v2: 1609.2     </div>`)[0];
+                popup_a048a019df9b48f8bf85acfb1fa2ced5.setContent(html_5f87593f2e8c551a87dd814c18423847);
+            
+        
+
+        circle_marker_f0d3d1b9f895d76f9ece8ca9d4a985a7.bindPopup(popup_a048a019df9b48f8bf85acfb1fa2ced5)
+        ;
+
+        
+    
+    
+            circle_marker_f0d3d1b9f895d76f9ece8ca9d4a985a7.bindTooltip(
+                `<div>
+                     Robledo | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2c3fb7fc3c421f3a45d293b58bb324f = L.circleMarker(
+                [39.1755765, -2.1843285],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_837e3e50e010083af93ca41bf73271a3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9ff501a380fecc1539b21b0848f3ea11 = $(`<div id="html_9ff501a380fecc1539b21b0848f3ea11" style="width: 100.0%; height: 100.0%;">     <b>Roda, La</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 15643<br>     Growth 5y: 0.75%<br>     Opportunity score v2: 933.6     </div>`)[0];
+                popup_837e3e50e010083af93ca41bf73271a3.setContent(html_9ff501a380fecc1539b21b0848f3ea11);
+            
+        
+
+        circle_marker_b2c3fb7fc3c421f3a45d293b58bb324f.bindPopup(popup_837e3e50e010083af93ca41bf73271a3)
+        ;
+
+        
+    
+    
+            circle_marker_b2c3fb7fc3c421f3a45d293b58bb324f.bindTooltip(
+                `<div>
+                     Roda, La | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd4d264c6896fe6e2e1a728a8c85b704 = L.circleMarker(
+                [38.5928606, -2.5498208],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_9dc8916299e5bcf465028f080fa9d3b3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7cb54a65eee6d5db137615b9f62f5a17 = $(`<div id="html_7cb54a65eee6d5db137615b9f62f5a17" style="width: 100.0%; height: 100.0%;">     <b>Salobre</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 442<br>     Growth 5y: -5.96%<br>     Opportunity score v2: 1124.0     </div>`)[0];
+                popup_9dc8916299e5bcf465028f080fa9d3b3.setContent(html_7cb54a65eee6d5db137615b9f62f5a17);
+            
+        
+
+        circle_marker_bd4d264c6896fe6e2e1a728a8c85b704.bindPopup(popup_9dc8916299e5bcf465028f080fa9d3b3)
+        ;
+
+        
+    
+    
+            circle_marker_bd4d264c6896fe6e2e1a728a8c85b704.bindTooltip(
+                `<div>
+                     Salobre | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ad937960564db95920491997d3d42bc = L.circleMarker(
+                [38.779652, -2.1646722],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_f796381efdaee72f31727eaa4b7b4cb6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cd8bfc5c57d313d82547f087600e604d = $(`<div id="html_cd8bfc5c57d313d82547f087600e604d" style="width: 100.0%; height: 100.0%;">     <b>San Pedro</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 1155<br>     Growth 5y: -1.37%<br>     Opportunity score v2: 979.4     </div>`)[0];
+                popup_f796381efdaee72f31727eaa4b7b4cb6.setContent(html_cd8bfc5c57d313d82547f087600e604d);
+            
+        
+
+        circle_marker_1ad937960564db95920491997d3d42bc.bindPopup(popup_f796381efdaee72f31727eaa4b7b4cb6)
+        ;
+
+        
+    
+    
+            circle_marker_1ad937960564db95920491997d3d42bc.bindTooltip(
+                `<div>
+                     San Pedro | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6245530b70a70f749ed6cbcebe30d32 = L.circleMarker(
+                [38.3327757, -1.9844827],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_1c5b2820c0f85dde933502e6b893adab = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b4810672c7b768ec69cd4b0978cef9ff = $(`<div id="html_b4810672c7b768ec69cd4b0978cef9ff" style="width: 100.0%; height: 100.0%;">     <b>Socovos</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 1643<br>     Growth 5y: -7.59%<br>     Opportunity score v2: 868.1     </div>`)[0];
+                popup_1c5b2820c0f85dde933502e6b893adab.setContent(html_b4810672c7b768ec69cd4b0978cef9ff);
+            
+        
+
+        circle_marker_d6245530b70a70f749ed6cbcebe30d32.bindPopup(popup_1c5b2820c0f85dde933502e6b893adab)
+        ;
+
+        
+    
+    
+            circle_marker_d6245530b70a70f749ed6cbcebe30d32.bindTooltip(
+                `<div>
+                     Socovos | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6365a4c21e80634b52b32cd8fae81a52 = L.circleMarker(
+                [39.2651188, -1.912995],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_2077f63dc37350356fb82723c2ffb5af = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f272ee6772d9c93a03a7ffba6fb650b3 = $(`<div id="html_f272ee6772d9c93a03a7ffba6fb650b3" style="width: 100.0%; height: 100.0%;">     <b>Tarazona de la Mancha</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 6100<br>     Growth 5y: -1.41%<br>     Opportunity score v2: 904.9     </div>`)[0];
+                popup_2077f63dc37350356fb82723c2ffb5af.setContent(html_f272ee6772d9c93a03a7ffba6fb650b3);
+            
+        
+
+        circle_marker_6365a4c21e80634b52b32cd8fae81a52.bindPopup(popup_2077f63dc37350356fb82723c2ffb5af)
+        ;
+
+        
+    
+    
+            circle_marker_6365a4c21e80634b52b32cd8fae81a52.bindTooltip(
+                `<div>
+                     Tarazona de la Mancha | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d62914fa7c8a1868fab0992f800b6753 = L.circleMarker(
+                [38.5909581, -1.6930787],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_61392c32c44c25e2809653784e62e444 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_25fae558a1a0a5945df331e4c7359171 = $(`<div id="html_25fae558a1a0a5945df331e4c7359171" style="width: 100.0%; height: 100.0%;">     <b>Tobarra</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 8006<br>     Growth 5y: 3.85%<br>     Opportunity score v2: 1728.9     </div>`)[0];
+                popup_61392c32c44c25e2809653784e62e444.setContent(html_25fae558a1a0a5945df331e4c7359171);
+            
+        
+
+        circle_marker_d62914fa7c8a1868fab0992f800b6753.bindPopup(popup_61392c32c44c25e2809653784e62e444)
+        ;
+
+        
+    
+    
+            circle_marker_d62914fa7c8a1868fab0992f800b6753.bindTooltip(
+                `<div>
+                     Tobarra | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d816e69e5ba8fb20dfa7b2673e679af = L.circleMarker(
+                [39.1358432, -1.6772838],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_86b8ac380909f69b56cb564f2ea0a28c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cde04b87ae229bbd48cfd34ddf7ce43a = $(`<div id="html_cde04b87ae229bbd48cfd34ddf7ce43a" style="width: 100.0%; height: 100.0%;">     <b>Valdeganga</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 1970<br>     Growth 5y: -1.01%<br>     Opportunity score v2: 1874.8     </div>`)[0];
+                popup_86b8ac380909f69b56cb564f2ea0a28c.setContent(html_cde04b87ae229bbd48cfd34ddf7ce43a);
+            
+        
+
+        circle_marker_0d816e69e5ba8fb20dfa7b2673e679af.bindPopup(popup_86b8ac380909f69b56cb564f2ea0a28c)
+        ;
+
+        
+    
+    
+            circle_marker_0d816e69e5ba8fb20dfa7b2673e679af.bindTooltip(
+                `<div>
+                     Valdeganga | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a498650f60358269f039b84f734e324 = L.circleMarker(
+                [38.5947041, -2.5098914],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_b9dcb956d13ddd27eabc1d01a46d5e7f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5f7633de18775581abd7b37007d1e93c = $(`<div id="html_5f7633de18775581abd7b37007d1e93c" style="width: 100.0%; height: 100.0%;">     <b>Vianos</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 317<br>     Growth 5y: -3.65%<br>     Opportunity score v2: 1124.0     </div>`)[0];
+                popup_b9dcb956d13ddd27eabc1d01a46d5e7f.setContent(html_5f7633de18775581abd7b37007d1e93c);
+            
+        
+
+        circle_marker_1a498650f60358269f039b84f734e324.bindPopup(popup_b9dcb956d13ddd27eabc1d01a46d5e7f)
+        ;
+
+        
+    
+    
+            circle_marker_1a498650f60358269f039b84f734e324.bindTooltip(
+                `<div>
+                     Vianos | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dd0763d421b6eaae8b5c3af5cfa9fcf6 = L.circleMarker(
+                [39.2226519, -1.2593206],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_6af4d17e9643406e3154c73ab54de27e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a3106656fd04bddff9979f4f1495b190 = $(`<div id="html_a3106656fd04bddff9979f4f1495b190" style="width: 100.0%; height: 100.0%;">     <b>Villa de Ves</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 51<br>     Growth 5y: -16.39%<br>     Opportunity score v2: 1215.5     </div>`)[0];
+                popup_6af4d17e9643406e3154c73ab54de27e.setContent(html_a3106656fd04bddff9979f4f1495b190);
+            
+        
+
+        circle_marker_dd0763d421b6eaae8b5c3af5cfa9fcf6.bindPopup(popup_6af4d17e9643406e3154c73ab54de27e)
+        ;
+
+        
+    
+    
+            circle_marker_dd0763d421b6eaae8b5c3af5cfa9fcf6.bindTooltip(
+                `<div>
+                     Villa de Ves | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_136442e6b34005358371ec3a3681bf58 = L.circleMarker(
+                [39.2964074, -2.0622166],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_bf3147f21fdd283c8ae45c0456fada1d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e04bb7a2ecad3b62d2371eae56474f67 = $(`<div id="html_e04bb7a2ecad3b62d2371eae56474f67" style="width: 100.0%; height: 100.0%;">     <b>Villalgordo del Júcar</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 1159<br>     Growth 5y: 5.17%<br>     Opportunity score v2: 887.9     </div>`)[0];
+                popup_bf3147f21fdd283c8ae45c0456fada1d.setContent(html_e04bb7a2ecad3b62d2371eae56474f67);
+            
+        
+
+        circle_marker_136442e6b34005358371ec3a3681bf58.bindPopup(popup_bf3147f21fdd283c8ae45c0456fada1d)
+        ;
+
+        
+    
+    
+            circle_marker_136442e6b34005358371ec3a3681bf58.bindTooltip(
+                `<div>
+                     Villalgordo del Júcar | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1facec36df29aaa0f25936cde5bdb983 = L.circleMarker(
+                [39.3628674, -1.5971834],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_9222f0955963439491cd0424c108e1f8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e3699571d1da6f454005d3010a3a6002 = $(`<div id="html_e3699571d1da6f454005d3010a3a6002" style="width: 100.0%; height: 100.0%;">     <b>Villamalea</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 4083<br>     Growth 5y: 0.32%<br>     Opportunity score v2: 1127.7     </div>`)[0];
+                popup_9222f0955963439491cd0424c108e1f8.setContent(html_e3699571d1da6f454005d3010a3a6002);
+            
+        
+
+        circle_marker_1facec36df29aaa0f25936cde5bdb983.bindPopup(popup_9222f0955963439491cd0424c108e1f8)
+        ;
+
+        
+    
+    
+            circle_marker_1facec36df29aaa0f25936cde5bdb983.bindTooltip(
+                `<div>
+                     Villamalea | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ae1fba59e13d18b98afdafb790d44af = L.circleMarker(
+                [38.5756136, -2.6331952],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_a888af14e0933a553897df47a4493e33 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6c444db8c5756e773bf5657be15485c3 = $(`<div id="html_6c444db8c5756e773bf5657be15485c3" style="width: 100.0%; height: 100.0%;">     <b>Villapalacios</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 539<br>     Growth 5y: -7.55%<br>     Opportunity score v2: 986.2     </div>`)[0];
+                popup_a888af14e0933a553897df47a4493e33.setContent(html_6c444db8c5756e773bf5657be15485c3);
+            
+        
+
+        circle_marker_1ae1fba59e13d18b98afdafb790d44af.bindPopup(popup_a888af14e0933a553897df47a4493e33)
+        ;
+
+        
+    
+    
+            circle_marker_1ae1fba59e13d18b98afdafb790d44af.bindTooltip(
+                `<div>
+                     Villapalacios | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e0830549ed438871ca28b57d7ef667e6 = L.circleMarker(
+                [39.2683154, -2.6015635],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_a28aa6caf3719ed2f3796a9557de5aee = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_514ad664a60125e817a5d5873d8ccf18 = $(`<div id="html_514ad664a60125e817a5d5873d8ccf18" style="width: 100.0%; height: 100.0%;">     <b>Villarrobledo</b><br>     Tipo de mercado: <b>Mercado emergente</b><br>     Población 2025: 25400<br>     Growth 5y: 1.13%<br>     Opportunity score v2: 1217.3     </div>`)[0];
+                popup_a28aa6caf3719ed2f3796a9557de5aee.setContent(html_514ad664a60125e817a5d5873d8ccf18);
+            
+        
+
+        circle_marker_e0830549ed438871ca28b57d7ef667e6.bindPopup(popup_a28aa6caf3719ed2f3796a9557de5aee)
+        ;
+
+        
+    
+    
+            circle_marker_e0830549ed438871ca28b57d7ef667e6.bindTooltip(
+                `<div>
+                     Villarrobledo | Mercado emergente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d42f729c4e6b41f5a54e9f678560b982 = L.circleMarker(
+                [39.3330544, -1.3390901],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_efd2720f72ca79f5a72809f1a63a01be = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f3a0ae083756a2ab5138fbcf6da5d640 = $(`<div id="html_f3a0ae083756a2ab5138fbcf6da5d640" style="width: 100.0%; height: 100.0%;">     <b>Villatoya</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 114<br>     Growth 5y: 4.59%<br>     Opportunity score v2: 1031.0     </div>`)[0];
+                popup_efd2720f72ca79f5a72809f1a63a01be.setContent(html_f3a0ae083756a2ab5138fbcf6da5d640);
+            
+        
+
+        circle_marker_d42f729c4e6b41f5a54e9f678560b982.bindPopup(popup_efd2720f72ca79f5a72809f1a63a01be)
+        ;
+
+        
+    
+    
+            circle_marker_d42f729c4e6b41f5a54e9f678560b982.bindTooltip(
+                `<div>
+                     Villatoya | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6386b0313a8c9f771dc82baff63597c5 = L.circleMarker(
+                [39.1138831, -1.4724751],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_173bef6d19f02883d1ea7aa03dae5547 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a45eb89c873f2ca3d7383ae45666ece9 = $(`<div id="html_a45eb89c873f2ca3d7383ae45666ece9" style="width: 100.0%; height: 100.0%;">     <b>Villavaliente</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 190<br>     Growth 5y: -13.64%<br>     Opportunity score v2: 1078.2     </div>`)[0];
+                popup_173bef6d19f02883d1ea7aa03dae5547.setContent(html_a45eb89c873f2ca3d7383ae45666ece9);
+            
+        
+
+        circle_marker_6386b0313a8c9f771dc82baff63597c5.bindPopup(popup_173bef6d19f02883d1ea7aa03dae5547)
+        ;
+
+        
+    
+    
+            circle_marker_6386b0313a8c9f771dc82baff63597c5.bindTooltip(
+                `<div>
+                     Villavaliente | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2b607e980e10230ddc0318b524838d1 = L.circleMarker(
+                [38.4563278, -2.5183567],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_3e4bdae08ff8dcac11469fc8eab9a4aa = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9d220bfc44a26995a5c7ea38151ca142 = $(`<div id="html_9d220bfc44a26995a5c7ea38151ca142" style="width: 100.0%; height: 100.0%;">     <b>Villaverde de Guadalimar</b><br>     Tipo de mercado: <b>Mercado competitivo</b><br>     Población 2025: 325<br>     Growth 5y: 0.0%<br>     Opportunity score v2: 847.4     </div>`)[0];
+                popup_3e4bdae08ff8dcac11469fc8eab9a4aa.setContent(html_9d220bfc44a26995a5c7ea38151ca142);
+            
+        
+
+        circle_marker_f2b607e980e10230ddc0318b524838d1.bindPopup(popup_3e4bdae08ff8dcac11469fc8eab9a4aa)
+        ;
+
+        
+    
+    
+            circle_marker_f2b607e980e10230ddc0318b524838d1.bindTooltip(
+                `<div>
+                     Villaverde de Guadalimar | Mercado competitivo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3322e39db8e24a61abbf2c2c0d6e1fe = L.circleMarker(
+                [38.7726567, -2.57553],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_c54ae29fffe9406758ada17a0189cc5d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6739bf4ab37594b9d28843f85d85691e = $(`<div id="html_6739bf4ab37594b9d28843f85d85691e" style="width: 100.0%; height: 100.0%;">     <b>Viveros</b><br>     Tipo de mercado: <b>Oportunidad latente</b><br>     Población 2025: 293<br>     Growth 5y: -10.94%<br>     Opportunity score v2: 1426.4     </div>`)[0];
+                popup_c54ae29fffe9406758ada17a0189cc5d.setContent(html_6739bf4ab37594b9d28843f85d85691e);
+            
+        
+
+        circle_marker_b3322e39db8e24a61abbf2c2c0d6e1fe.bindPopup(popup_c54ae29fffe9406758ada17a0189cc5d)
+        ;
+
+        
+    
+    
+            circle_marker_b3322e39db8e24a61abbf2c2c0d6e1fe.bindTooltip(
+                `<div>
+                     Viveros | Oportunidad latente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_309b3fbf88051a98aa762d580de20c5d = L.circleMarker(
+                [38.3654376, -2.321546],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dc3291548aeedf89f807a2c16e24ff2b);
+        
+    
+        var popup_e25c624fb51da1c0b551206c9810ab3a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cbcd587b0049be2350a7f8d3801aba7d = $(`<div id="html_cbcd587b0049be2350a7f8d3801aba7d" style="width: 100.0%; height: 100.0%;">     <b>Yeste</b><br>     Tipo de mercado: <b>Mercado débil</b><br>     Población 2025: 2471<br>     Growth 5y: -5.47%<br>     Opportunity score v2: 588.7     </div>`)[0];
+                popup_e25c624fb51da1c0b551206c9810ab3a.setContent(html_cbcd587b0049be2350a7f8d3801aba7d);
+            
+        
+
+        circle_marker_309b3fbf88051a98aa762d580de20c5d.bindPopup(popup_e25c624fb51da1c0b551206c9810ab3a)
+        ;
+
+        
+    
+    
+            circle_marker_309b3fbf88051a98aa762d580de20c5d.bindTooltip(
+                `<div>
+                     Yeste | Mercado débil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_dc3291548aeedf89f807a2c16e24ff2b.addTo(map_4931cc2ece98aedd9de47d132540936e);
+        
+    
+            var layer_control_2bee6697d83232a5c4c4739db560dcb4_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_db5e9d8c70ff46912ca088bd6591fb93,
+                },
+                overlays :  {
+                    "Tipos de mercado" : feature_group_dc3291548aeedf89f807a2c16e24ff2b,
+                },
+            };
+            let layer_control_2bee6697d83232a5c4c4739db560dcb4 = L.control.layers(
+                layer_control_2bee6697d83232a5c4c4739db560dcb4_layers.base_layers,
+                layer_control_2bee6697d83232a5c4c4739db560dcb4_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_4931cc2ece98aedd9de47d132540936e);
+
+        
+</script>
+</html>
