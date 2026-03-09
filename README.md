@@ -59,3 +59,12 @@ Actualmente el proyecto incluye:
 - clasificación de mercados
 - visualizaciones
 - mapas interactivos
+## Visualizaciones del análisis
+
+### Oportunidad vs crecimiento demográfico
+
+![Opportunity vs Growth](reports/figures/fitness_opportunity_vs_growth.png)
+
+### Municipios con mayor oportunidad fitness
+
+![Top Opportunities](reports/figures/top_fitness_opportunities.png)
