@@ -109,3 +109,16 @@ Este gráfico muestra la relación entre crecimiento poblacional y oportunidad d
 
 Ranking de municipios con mayor potencial para abrir nuevos gimnasios.
 
+## Mapa interactivo de oportunidades fitness
+
+El proyecto incluye mapas interactivos que permiten explorar la distribución de gimnasios y las oportunidades de mercado en la provincia de Albacete.
+
+Abrir el mapa:
+
+reports/outputs/mapa_final_oportunidades_fitness_albacete.html
+
+Este mapa muestra:
+
+* municipios coloreados según **opportunity score**
+* **top oportunidades de mercado**
+* **gimnasios existentes detectados con Google Places**
