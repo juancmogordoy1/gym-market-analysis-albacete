@@ -1,14 +1,14 @@
-# Gym Market Opportunity Analysis — Albacete
+# Análisis de oportunidades para abrir gimnasios en Albacete
 
 Proyecto de Data Science para identificar oportunidades de abrir gimnasios en la provincia de Albacete utilizando:
 
 - datos demográficos
 - renta municipal
 - oferta real de gimnasios
-- machine learning
+- scoring analítico
+- segmentación exploratoria de municipios
 - análisis geoespacial
-
-# Análisis de oportunidades para abrir gimnasios en Albacete
+- análisis geoespacial
 
 Proyecto de Data Science orientado a identificar municipios con potencial para abrir nuevos gimnasios en la provincia de Albacete.
 
@@ -21,6 +21,16 @@ El análisis combina datos demográficos, renta municipal, oferta actual de gimn
 Identificar municipios donde exista **demanda potencial de gimnasios pero baja oferta actual**, ayudando a detectar oportunidades de negocio en el sector fitness.
 
 ---
+## Lógica del análisis
+
+El proyecto construye un índice de oportunidad combinando:
+- población local
+- población accesible en un radio de 25 km
+- oferta actual de gimnasios
+- crecimiento demográfico
+- clasificación del tipo de mercado
+
+El objetivo no es predecir ventas exactas, sino priorizar municipios con mayor potencial relativo de apertura.
 
 ## Datos utilizados
 
@@ -36,9 +46,12 @@ El proyecto utiliza varias fuentes de datos:
 
 - Análisis exploratorio de datos
 - Feature engineering
-- Machine Learning
+- scoring analítico
+- segmentación exploratoria de municipios
+- análisis geoespacial
 - Análisis geoespacial
 - Visualización de datos
+- machine learning exploratorio (clustering)
 
 ---
 
@@ -69,15 +82,6 @@ Actualmente el proyecto incluye:
 - clasificación de mercados
 - visualizaciones
 - mapas interactivos
-## Visualizaciones del análisis
-
-### Oportunidad vs crecimiento demográfico
-
-![Opportunity vs Growth](reports/figures/fitness_opportunity_vs_growth.png)
-
-### Municipios con mayor oportunidad fitness
-
-![Top Opportunities](reports/figures/top_fitness_opportunities.png)
 
 ## Cómo ejecutar el proyecto
 
@@ -92,6 +96,9 @@ pip install -r requirements.txt
 3. Abrir los notebooks
 
 notebooks/
+
+4. Ejecutar la app
+streamlit run app.py
 
 ## Visualizaciones del análisis
 
