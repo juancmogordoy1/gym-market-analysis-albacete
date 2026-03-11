@@ -3,13 +3,15 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 import numpy as np
+from pathlib import Path
 
 # =========================================================
 # CONFIGURACIÓN GENERAL
 # =========================================================
 st.set_page_config(
     page_title="Análisis del Mercado Fitness — Albacete",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 st.markdown(
@@ -19,36 +21,117 @@ st.markdown(
         background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
         background-attachment: fixed;
     }
+
+    div[data-testid="stMetricValue"] {
+        font-size: 1.6rem;
+    }
+
+    div[data-testid="stMetricLabel"] {
+        font-size: 0.95rem;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
 
 # =========================================================
+# CONSTANTES
+# =========================================================
+DATA_PATH = Path("data/processed/gym_market_opportunity_albacete_growth.csv")
+
+REQUIRED_COLUMNS = [
+    "municipio",
+    "poblacion_2025",
+    "gyms_google_new",
+    "fitness_x10k_new",
+    "catchment_pop_25km",
+    "real_market_potential",
+    "opportunity_score_v2",
+    "growth_5y",
+    "growth_10y",
+    "market_type",
+    "lat",
+    "lon"
+]
+
+MARKET_COLORS = {
+    "Mercado emergente": [0, 200, 0, 160],
+    "Mercado competitivo": [0, 120, 255, 160],
+    "Oportunidad latente": [255, 140, 0, 180],
+    "Mercado débil": [180, 180, 180, 160]
+}
+
+# =========================================================
 # FUNCIONES AUXILIARES
 # =========================================================
 def format_int(value):
+    if pd.isna(value):
+        return "0"
     return f"{int(value):,}".replace(",", ".")
 
+def format_float(value, decimals=2):
+    if pd.isna(value):
+        return "-"
+    return f"{value:.{decimals}f}"
+
 def get_market_color(tipo):
-    colors = {
-        "Mercado emergente": [0, 200, 0, 160],
-        "Mercado competitivo": [0, 120, 255, 160],
-        "Oportunidad latente": [255, 140, 0, 180],
-        "Mercado débil": [180, 180, 180, 160]
-    }
-    return colors.get(tipo, [180, 180, 180, 160])
+    return MARKET_COLORS.get(tipo, [180, 180, 180, 160])
 
 @st.cache_data
 def load_data():
-    return pd.read_csv("data/processed/gym_market_opportunity_albacete_growth.csv")
+    if not DATA_PATH.exists():
+        raise FileNotFoundError(f"No se encontró el archivo: {DATA_PATH}")
+
+    df = pd.read_csv(DATA_PATH)
+
+    missing = [col for col in REQUIRED_COLUMNS if col not in df.columns]
+    if missing:
+        raise ValueError(f"Faltan columnas obligatorias en el CSV: {missing}")
+
+    # Normalización básica
+    df["municipio"] = df["municipio"].astype(str).str.strip()
+
+    numeric_cols = [
+        "poblacion_2025",
+        "gyms_google_new",
+        "fitness_x10k_new",
+        "catchment_pop_25km",
+        "real_market_potential",
+        "opportunity_score_v2",
+        "growth_5y",
+        "growth_10y",
+        "lat",
+        "lon"
+    ]
+
+    for col in numeric_cols:
+        df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    return df
+
+def filter_data(df, market_type, min_population, min_score):
+    filtered = df.copy()
+
+    if market_type != "Todos":
+        filtered = filtered[filtered["market_type"] == market_type]
+
+    filtered = filtered[
+        (filtered["poblacion_2025"] >= min_population) &
+        (filtered["opportunity_score_v2"] >= min_score)
+    ]
+
+    return filtered
 
 def render_market_summary(df):
     st.subheader("Resumen del mercado")
 
-    col1, col2, col3, col4 = st.columns(4)
+    if df.empty:
+        st.warning("No hay datos para mostrar con los filtros actuales.")
+        return
+
     top_city = df.sort_values("opportunity_score_v2", ascending=False).iloc[0]
 
+    col1, col2, col3, col4 = st.columns(4)
     col1.metric("Municipios analizados", len(df))
     col2.metric("Población total", format_int(df["poblacion_2025"].sum()))
     col3.metric("Gimnasios detectados", format_int(df["gyms_google_new"].sum()))
@@ -63,7 +146,6 @@ def render_variable_dictionary():
         st.markdown("""
 **municipio**: nombre del municipio.  
 **poblacion_2025**: población actual estimada del municipio.  
-**gyms_google**: gimnasios detectados inicialmente con Google Places.  
 **gyms_google_new**: gimnasios detectados tras limpieza/mejora de búsqueda.  
 **fitness_x10k_new**: gimnasios por cada 10.000 habitantes.  
 **catchment_pop_25km**: población accesible en un radio de 25 km.  
@@ -77,7 +159,11 @@ def render_variable_dictionary():
 def render_main_table(df):
     st.subheader("Tabla principal de municipios")
 
-    columnas_principales = [
+    if df.empty:
+        st.info("No hay municipios que cumplan los filtros.")
+        return
+
+    columnas = [
         "municipio",
         "poblacion_2025",
         "gyms_google_new",
@@ -88,11 +174,35 @@ def render_main_table(df):
         "market_type"
     ]
 
-    df_view = df[columnas_principales].sort_values("opportunity_score_v2", ascending=False)
-    st.dataframe(df_view, use_container_width=True, height=300)
+    df_view = df[columnas].sort_values("opportunity_score_v2", ascending=False).copy()
+
+    st.dataframe(
+        df_view.style.format({
+            "poblacion_2025": lambda x: format_int(x),
+            "gyms_google_new": "{:.0f}",
+            "fitness_x10k_new": "{:.2f}",
+            "catchment_pop_25km": lambda x: format_int(x),
+            "real_market_potential": "{:.2f}",
+            "opportunity_score_v2": "{:.2f}",
+        }),
+        use_container_width=True,
+        height=420
+    )
+
+    csv = df_view.to_csv(index=False).encode("utf-8")
+    st.download_button(
+        "Descargar tabla filtrada en CSV",
+        data=csv,
+        file_name="municipios_fitness_filtrados.csv",
+        mime="text/csv"
+    )
 
 def render_municipality_detail(df):
     st.subheader("Detalle de un municipio")
+
+    if df.empty:
+        st.info("No hay municipios disponibles con los filtros actuales.")
+        return
 
     municipio_seleccionado = st.selectbox(
         "Selecciona un municipio",
@@ -103,37 +213,41 @@ def render_municipality_detail(df):
 
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Población", format_int(fila["poblacion_2025"]))
-    c2.metric("Gimnasios detectados", int(fila["gyms_google_new"]))
-    c3.metric("Fitness x 10k", f"{fila['fitness_x10k_new']:.2f}")
-    c4.metric("Opportunity score", f"{fila['opportunity_score_v2']:.2f}")
+    c2.metric("Gimnasios detectados", int(fila["gyms_google_new"]) if not pd.isna(fila["gyms_google_new"]) else 0)
+    c3.metric("Fitness x 10k", format_float(fila["fitness_x10k_new"]))
+    c4.metric("Opportunity score", format_float(fila["opportunity_score_v2"]))
 
     st.markdown("### Perspectiva del mercado")
 
     st.info(
         f"""
 **{fila['municipio']}** presenta una oportunidad de mercado con **{format_int(fila['poblacion_2025'])} habitantes**
-y **{int(fila['gyms_google_new'])} gimnasios detectados**.
+y **{int(fila['gyms_google_new']) if not pd.isna(fila['gyms_google_new']) else 0} gimnasios detectados**.
 
-La densidad fitness es de **{fila['fitness_x10k_new']:.2f} gimnasios por cada 10.000 habitantes**,
+La densidad fitness es de **{format_float(fila['fitness_x10k_new'])} gimnasios por cada 10.000 habitantes**,
 con una **población accesible de {format_int(fila['catchment_pop_25km'])} personas** en un radio de 25 km.
 
 El municipio está clasificado como **{fila['market_type']}**
-con un **opportunity score de {fila['opportunity_score_v2']:.2f}**.
+con un **opportunity score de {format_float(fila['opportunity_score_v2'])}**.
 """
     )
 
 def render_population_map(map_data):
-    st.subheader("Mapa 1 — Mapa demográfico de municipios")
+    st.subheader("Mapa demográfico de municipios")
     st.write("El tamaño del punto representa la población estimada de cada municipio.")
 
+    if map_data.empty:
+        st.info("No hay datos geográficos para mostrar.")
+        return
+
     map_plot = map_data.copy()
-    map_plot["radius_plot"] = np.sqrt(map_plot["poblacion_2025"]) * 28
+    map_plot["radius_plot"] = np.sqrt(map_plot["poblacion_2025"].clip(lower=0)) * 28
 
     layer = pdk.Layer(
         "ScatterplotLayer",
         data=map_plot,
         get_position='[lon, lat]',
-        get_color='[255, 120, 0, 120]',
+        get_color='[255, 140, 0, 200]',
         get_radius="radius_plot",
         pickable=True,
     )
@@ -146,20 +260,26 @@ def render_population_map(map_data):
 
     st.pydeck_chart(
         pdk.Deck(
+            map_style="dark",
             layers=[layer],
             initial_view_state=view_state,
             tooltip={
-                "text": "{municipio}\nPoblación: {poblacion_2025}\nGimnasios: {gyms_google_new}\nScore: {opportunity_score_v2}"
-            }
+    "html": "<b>{municipio}</b><br/>Score: {opportunity_score_v2}<br/>Tipo: {market_type}<br/>Gimnasios: {gyms_google_new}",
+    "style": {"backgroundColor": "black", "color": "white"}
+}
         )
     )
 
 def render_opportunity_map(map_data):
-    st.subheader("Mapa 2 — Mapa de oportunidades fitness")
+    st.subheader("Mapa de oportunidades fitness")
     st.write("El tamaño del punto representa el índice de oportunidad y el color indica el tipo de mercado fitness.")
 
+    if map_data.empty:
+        st.info("No hay datos geográficos para mostrar.")
+        return
+
     map_plot = map_data.copy()
-    map_plot["radius_opportunity"] = np.sqrt(map_plot["opportunity_score_v2"]) * 120
+    map_plot["radius_opportunity"] = np.sqrt(map_plot["opportunity_score_v2"].clip(lower=0)) * 120
     map_plot["color"] = map_plot["market_type"].apply(get_market_color)
 
     layer = pdk.Layer(
@@ -178,14 +298,15 @@ def render_opportunity_map(map_data):
     )
 
     st.pydeck_chart(
-        pdk.Deck(
-            layers=[layer],
-            initial_view_state=view_state,
-            tooltip={
-                "text": "{municipio}\nScore: {opportunity_score_v2}\nTipo: {market_type}\nGimnasios: {gyms_google_new}"
-            }
-        )
+    pdk.Deck(
+        map_style="dark",
+        layers=[layer],
+        initial_view_state=view_state,
+        tooltip={
+            "text": "{municipio}\nScore: {opportunity_score_v2}\nTipo: {market_type}\nGimnasios: {gyms_google_new}"
+        }
     )
+)
 
 def render_map_legend():
     st.markdown("### Leyenda del mapa")
@@ -213,7 +334,11 @@ def render_map_legend():
 """, unsafe_allow_html=True)
 
 def render_growth_vs_opportunity(df):
-    st.subheader("Gráfico 1 — Oportunidad vs crecimiento demográfico")
+    st.subheader("Oportunidad vs crecimiento demográfico")
+
+    if df.empty:
+        st.info("No hay datos para graficar.")
+        return
 
     fig, ax = plt.subplots(figsize=(10, 6))
     tipos = df["market_type"].dropna().unique()
@@ -223,7 +348,7 @@ def render_growth_vs_opportunity(df):
         ax.scatter(
             temp["growth_5y"],
             temp["opportunity_score_v2"],
-            s=temp["poblacion_2025"] / 220,
+            s=np.maximum(temp["poblacion_2025"] / 220, 20),
             alpha=0.65,
             label=tipo
         )
@@ -238,16 +363,20 @@ def render_growth_vs_opportunity(df):
 
     st.pyplot(fig)
 
-def render_top10_table(df):
-    st.subheader("Top 10 oportunidades de mercado")
+def render_top_table(df, top_n):
+    st.subheader(f"Top {top_n} oportunidades de mercado")
 
-    top10 = df[df["poblacion_2025"] > 2000].sort_values(
+    if df.empty:
+        st.info("No hay datos para mostrar.")
+        return
+
+    top = df[df["poblacion_2025"] > 2000].sort_values(
         "opportunity_score_v2",
         ascending=False
-    ).head(10)
+    ).head(top_n)
 
     st.dataframe(
-        top10[
+        top[
             [
                 "municipio",
                 "poblacion_2025",
@@ -256,40 +385,122 @@ def render_top10_table(df):
                 "opportunity_score_v2",
                 "market_type"
             ]
-        ],
+        ].style.format({
+            "poblacion_2025": lambda x: format_int(x),
+            "gyms_google_new": "{:.0f}",
+            "fitness_x10k_new": "{:.2f}",
+            "opportunity_score_v2": "{:.2f}",
+        }),
         use_container_width=True
     )
 
-def render_top10_bar_chart(df):
-    st.subheader("Gráfico 2 — Top 10 oportunidades para abrir gimnasios")
+def render_top_bar_chart(df, top_n):
+    st.subheader(f"Ranking Top {top_n} de oportunidades")
     st.write(
         "Este ranking muestra los municipios con mayor oportunidad para abrir nuevos gimnasios "
-        "según el opportunity score calculado a partir de demanda potencial, oferta actual "
-        "y crecimiento demográfico."
+        "según el score calculado a partir de demanda potencial, oferta actual y crecimiento demográfico."
     )
 
-    top10 = df.sort_values("opportunity_score_v2", ascending=False).head(10)
-    top10 = top10.sort_values("opportunity_score_v2")
+    if df.empty:
+        st.info("No hay datos para graficar.")
+        return
 
-    fig, ax = plt.subplots(figsize=(7, 4))
-    ax.barh(top10["municipio"], top10["opportunity_score_v2"])
+    top = df.sort_values("opportunity_score_v2", ascending=False).head(top_n)
+    top = top.sort_values("opportunity_score_v2")
+
+    fig, ax = plt.subplots(figsize=(8, 5))
+    ax.barh(top["municipio"], top["opportunity_score_v2"])
 
     ax.set_xlabel("Índice de oportunidad")
     ax.set_ylabel("Municipio")
     ax.set_title("Municipios con mayor oportunidad fitness")
     ax.grid(axis="x", alpha=0.2)
-    ax.invert_yaxis()
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
     st.pyplot(fig)
+
+def render_insights(df):
+    st.subheader("Insights rápidos")
+
+    if df.empty:
+        st.info("No hay insights disponibles con los filtros actuales.")
+        return
+
+    top_city = df.sort_values("opportunity_score_v2", ascending=False).iloc[0]
+    low_supply = df.sort_values("fitness_x10k_new").iloc[0]
+    biggest_market = df.sort_values("catchment_pop_25km", ascending=False).iloc[0]
+
+    c1, c2, c3 = st.columns(3)
+
+    with c1:
+        st.success(
+            f"**Mayor oportunidad:** {top_city['municipio']} "
+            f"con score {top_city['opportunity_score_v2']:.2f}"
+        )
+
+    with c2:
+        st.warning(
+            f"**Menor densidad fitness:** {low_supply['municipio']} "
+            f"con {low_supply['fitness_x10k_new']:.2f} gimnasios por 10.000 hab."
+        )
+
+    with c3:
+        st.info(
+            f"**Mayor mercado accesible:** {biggest_market['municipio']} "
+            f"con {format_int(biggest_market['catchment_pop_25km'])} personas a 25 km"
+        )
 
 # =========================================================
 # CARGA DE DATOS
 # =========================================================
-df = load_data()
+try:
+    df = load_data()
+except Exception as e:
+    st.error(f"Error al cargar los datos: {e}")
+    st.stop()
+
 map_data = df.dropna(subset=["lat", "lon"]).copy()
 
 # =========================================================
-# TÍTULO Y PRESENTACIÓN
+# SIDEBAR
+# =========================================================
+st.sidebar.title("Filtros")
+
+market_type_filter = st.sidebar.selectbox(
+    "Tipo de mercado",
+    ["Todos"] + sorted(df["market_type"].dropna().unique())
+)
+
+min_population = st.sidebar.slider(
+    "Población mínima",
+    min_value=0,
+    max_value=int(df["poblacion_2025"].max()),
+    value=2000,
+    step=500
+)
+
+min_score = st.sidebar.slider(
+    "Opportunity score mínimo",
+    min_value=0.0,
+    max_value=float(df["opportunity_score_v2"].max()),
+    value=0.0,
+    step=0.1
+)
+
+top_n = st.sidebar.slider(
+    "Número de municipios en ranking",
+    min_value=5,
+    max_value=20,
+    value=10,
+    step=1
+)
+
+df_filtered = filter_data(df, market_type_filter, min_population, min_score)
+map_data_filtered = df_filtered.dropna(subset=["lat", "lon"]).copy()
+
+# =========================================================
+# TÍTULO
 # =========================================================
 st.title("Análisis de Oportunidades del Mercado Fitness — Albacete")
 st.subheader(
@@ -302,85 +513,47 @@ st.caption(
 st.divider()
 
 # =========================================================
-# RESUMEN GENERAL DEL MERCADO
+# RESUMEN
 # =========================================================
-render_market_summary(df)
+render_market_summary(df_filtered)
+render_insights(df_filtered)
 
 st.divider()
-
-# =========================================================
-# DICCIONARIO DE VARIABLES
-# =========================================================
 render_variable_dictionary()
 
 # =========================================================
-# TABLA PRINCIPAL
+# TABS PRINCIPALES
 # =========================================================
-render_main_table(df)
+tab1, tab2, tab3, tab4 = st.tabs([
+    "Vista general",
+    "Municipios",
+    "Mapas",
+    "Ranking y gráficos"
+])
 
-st.divider()
+with tab1:
+    render_main_table(df_filtered)
 
-# =========================================================
-# DETALLE DE MUNICIPIO
-# =========================================================
-render_municipality_detail(df)
+with tab2:
+    render_municipality_detail(df_filtered)
 
-st.divider()
+with tab3:
+    st.subheader("Análisis geográfico del mercado fitness")
+    st.write(
+        "Visualización espacial de la población, la oferta actual de gimnasios y las oportunidades de mercado."
+    )
 
-# =========================================================
-# BLOQUE GEOGRÁFICO
-# =========================================================
-st.subheader("Análisis geográfico del mercado fitness")
-st.write(
-    "Visualización espacial de la población, la oferta actual de gimnasios y las oportunidades de mercado en la provincia de Albacete."
-)
+    render_population_map(map_data_filtered)
+    st.divider()
+    render_opportunity_map(map_data_filtered)
+    render_map_legend()
 
-st.divider()
+with tab4:
+    render_growth_vs_opportunity(df_filtered)
+    st.divider()
+    render_top_table(df_filtered, top_n)
+    st.divider()
+    render_top_bar_chart(df_filtered, top_n)
 
-# =========================================================
-# MAPA 1 — DEMOGRAFÍA MUNICIPAL
-# =========================================================
-render_population_map(map_data)
 
-st.divider()
-
-# =========================================================
-# MAPA 2 — OPORTUNIDAD DE MERCADO
-# =========================================================
-st.markdown("#### Exploración del mercado por tipo")
-
-filtro_mercado = st.selectbox(
-    "Filtrar por tipo de mercado",
-    ["Todos"] + sorted(df["market_type"].dropna().unique())
-)
-
-map_data_filtered = map_data.copy()
-
-if filtro_mercado != "Todos":
-    map_data_filtered = map_data_filtered[
-        map_data_filtered["market_type"] == filtro_mercado
-    ]
-
-render_opportunity_map(map_data_filtered)
-
-# =========================================================
-# LEYENDA DEL MAPA 2
-# =========================================================
-render_map_legend()
-
-st.divider()
-
-# =========================================================
-# GRÁFICO 1 — CRECIMIENTO VS OPORTUNIDAD
-# =========================================================
-render_growth_vs_opportunity(df)
-
-# =========================================================
-# TABLA — TOP 10 OPORTUNIDADES
-# =========================================================
-render_top10_table(df)
-
-# =========================================================
-# GRÁFICO 2 — RANKING DE OPORTUNIDADES
-# =========================================================
-render_top10_bar_chart(df)
+    
