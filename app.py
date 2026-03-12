@@ -51,7 +51,9 @@ REQUIRED_COLUMNS = [
     "growth_10y",
     "market_type",
     "lat",
-    "lon"
+    "lon",
+    "fitness_population",
+    "fitness_ratio"
 ]
 
 MARKET_COLORS = {
@@ -92,24 +94,26 @@ def load_data():
     df["municipio"] = df["municipio"].astype(str).str.strip()
 
     numeric_cols = [
-        "poblacion_2025",
-        "gyms_google_new",
-        "fitness_x10k_new",
-        "catchment_pop_25km",
-        "real_market_potential",
-        "opportunity_score_v2",
-        "growth_5y",
-        "growth_10y",
-        "lat",
-        "lon"
-    ]
+    "poblacion_2025",
+    "gyms_google_new",
+    "fitness_x10k_new",
+    "catchment_pop_25km",
+    "real_market_potential",
+    "opportunity_score_v2",
+    "growth_5y",
+    "growth_10y",
+    "lat",
+    "lon",
+    "fitness_population",
+    "fitness_ratio"
+]
 
     for col in numeric_cols:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
     return df
 
-def filter_data(df, market_type, min_population, min_score):
+def filter_data(df, market_type, min_population, min_score, min_fitness_population):
     filtered = df.copy()
 
     if market_type != "Todos":
@@ -117,11 +121,14 @@ def filter_data(df, market_type, min_population, min_score):
 
     filtered = filtered[
         (filtered["poblacion_2025"] >= min_population) &
-        (filtered["opportunity_score_v2"] >= min_score)
+        (filtered["opportunity_score_v2"] >= min_score) &
+        (filtered["fitness_population"] >= min_fitness_population)
     ]
 
     return filtered
 
+    return filtered
+        
 def render_market_summary(df):
     st.subheader("Resumen del mercado")
 
@@ -164,20 +171,23 @@ def render_main_table(df):
         return
 
     columnas = [
-        "municipio",
-        "poblacion_2025",
-        "gyms_google_new",
-        "fitness_x10k_new",
-        "catchment_pop_25km",
-        "real_market_potential",
-        "opportunity_score_v2",
-        "market_type"
-    ]
+    "municipio",
+    "poblacion_2025",
+    "fitness_population",
+    "fitness_ratio",
+    "gyms_google_new",
+    "fitness_x10k_new",
+    "catchment_pop_25km",
+    "opportunity_score_v2",
+    "market_type"
+]
 
     df_view = df[columnas].sort_values("opportunity_score_v2", ascending=False).copy()
 
     st.dataframe(
         df_view.style.format({
+            "fitness_population": lambda x: format_int(x),
+            "fitness_ratio": "{:.2f}",
             "poblacion_2025": lambda x: format_int(x),
             "gyms_google_new": "{:.0f}",
             "fitness_x10k_new": "{:.2f}",
@@ -211,11 +221,23 @@ def render_municipality_detail(df):
 
     fila = df[df["municipio"] == municipio_seleccionado].iloc[0]
 
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c2, c3, c4, c5, c6 = st.columns(6)
+
     c1.metric("Población", format_int(fila["poblacion_2025"]))
-    c2.metric("Gimnasios detectados", int(fila["gyms_google_new"]) if not pd.isna(fila["gyms_google_new"]) else 0)
+    c2.metric(
+        "Gimnasios detectados",
+        int(fila["gyms_google_new"]) if not pd.isna(fila["gyms_google_new"]) else 0
+    )
     c3.metric("Fitness x 10k", format_float(fila["fitness_x10k_new"]))
     c4.metric("Opportunity score", format_float(fila["opportunity_score_v2"]))
+    c5.metric("Población fitness", format_int(fila["fitness_population"]))
+
+    if not pd.isna(fila["fitness_ratio"]):
+        ratio_fitness = f"{fila['fitness_ratio']:.1%}"
+    else:
+        ratio_fitness = "-"
+
+    c6.metric("Ratio fitness", ratio_fitness)
 
     st.markdown("### Perspectiva del mercado")
 
@@ -455,7 +477,7 @@ def render_insights(df):
 # CARGA DE DATOS
 # =========================================================
 try:
-    df = load_data()
+    df = load_data()    
 except Exception as e:
     st.error(f"Error al cargar los datos: {e}")
     st.stop()
@@ -487,6 +509,13 @@ min_score = st.sidebar.slider(
     value=0.0,
     step=0.1
 )
+min_fitness_population = st.sidebar.slider(
+    "Fitness population mínima",
+    min_value=0,
+    max_value=int(df["fitness_population"].fillna(0).max()),
+    value=0,
+    step=500
+)
 
 top_n = st.sidebar.slider(
     "Número de municipios en ranking",
@@ -496,7 +525,13 @@ top_n = st.sidebar.slider(
     step=1
 )
 
-df_filtered = filter_data(df, market_type_filter, min_population, min_score)
+df_filtered = filter_data(
+    df,
+    market_type_filter,
+    min_population,
+    min_score,
+    min_fitness_population
+)
 map_data_filtered = df_filtered.dropna(subset=["lat", "lon"]).copy()
 
 # =========================================================
@@ -534,7 +569,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
 with tab1:
     render_main_table(df_filtered)
 
-with tab2:
+with tab2:    
     render_municipality_detail(df_filtered)
 
 with tab3:

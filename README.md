@@ -1,122 +1,127 @@
-# Análisis de oportunidades para abrir gimnasios en Albacete
+🏋️ ANALISIS DE OPORTUNIDADES DE ABRIR UN GYMNASIO EN ALBACETE
 
-Proyecto de Data Science para identificar oportunidades de abrir gimnasios en la provincia de Albacete utilizando:
+Proyecto de Data Science aplicado al análisis de mercado fitness, cuyo objetivo es identificar municipios con potencial para abrir nuevos gimnasios en la provincia de Albacete.
 
-- datos demográficos
-- renta municipal
-- oferta real de gimnasios
-- scoring analítico
-- segmentación exploratoria de municipios
-- análisis geoespacial
-- análisis geoespacial
+El análisis combina datos demográficos, oferta real de gimnasios, crecimiento poblacional y accesibilidad regional para construir un índice de oportunidad de mercado fitness.
 
-Proyecto de Data Science orientado a identificar municipios con potencial para abrir nuevos gimnasios en la provincia de Albacete.
+El proyecto incluye análisis exploratorio, ingeniería de variables, visualización geoespacial y una aplicación interactiva desarrollada en Streamlit para explorar oportunidades de mercado.
 
-El análisis combina datos demográficos, renta municipal, oferta actual de gimnasios, machine learning y visualización geoespacial.
+🎯 OBJETIVO
 
----
+Identificar municipios donde exista demanda potencial de gimnasios pero baja oferta actual, ayudando a detectar oportunidades de negocio en el sector fitness.
 
-## Objetivo
+El objetivo no es predecir ventas exactas, sino priorizar municipios con mayor potencial relativo para la apertura de nuevos gimnasios.
 
-Identificar municipios donde exista **demanda potencial de gimnasios pero baja oferta actual**, ayudando a detectar oportunidades de negocio en el sector fitness.
+🧠 LOGICA DEL ANALISIS
 
----
-## Lógica del análisis
+El proyecto construye un índice de oportunidad fitness combinando diferentes variables del mercado:
 
-El proyecto construye un índice de oportunidad combinando:
-- población local
-- población accesible en un radio de 25 km
-- oferta actual de gimnasios
-- crecimiento demográfico
-- clasificación del tipo de mercado
+• población del municipio
+• población accesible en un radio de 25 km
+• número de gimnasios existentes
+• densidad de gimnasios por habitante
+• crecimiento demográfico
+• estimación de población potencialmente interesada en fitness (fitness_population)
+• ratio de penetración fitness (fitness_ratio)
 
-El objetivo no es predecir ventas exactas, sino priorizar municipios con mayor potencial relativo de apertura.
+Esta combinación permite identificar municipios donde existe demanda potencial no cubierta por la oferta actual.
 
-## Datos utilizados
+📊 DATOS UTILIZADOS
 
-El proyecto utiliza varias fuentes de datos:
+El proyecto integra diferentes fuentes de datos.
 
-- Datos de población por municipio (INE)
-- Datos de renta municipal (IRPF)
-- Datos de gimnasios obtenidos mediante Google Places API
+Datos demográficos
 
----
+población por municipio (INE)
 
-## Técnicas utilizadas
+crecimiento demográfico
 
-- Análisis exploratorio de datos
-- Feature engineering
-- scoring analítico
-- segmentación exploratoria de municipios
-- análisis geoespacial
-- Análisis geoespacial
-- Visualización de datos
-- machine learning exploratorio (clustering)
+Datos económicos
 
----
+renta media municipal (IRPF)
 
-## Estructura del proyecto
-data/ → datos del proyecto
-data/raw/ → datos originales
-data/processed/ → datos procesados
+Datos de mercado fitness
 
-notebooks/ → análisis exploratorio y modelado
+gimnasios detectados mediante Google Places API
 
-src/ → scripts reutilizables
+Estos datos se combinan para construir variables analíticas que permitan evaluar el potencial de mercado fitness en cada municipio.
 
-reports/ → visualizaciones y mapas
+🛠 Técnicas utilizadas
 
-models/ → modelos entrenados
+Análisis exploratorio de datos (EDA)
 
+Integración de datos de múltiples fuentes
 
----
+Feature engineering
 
-## Estado del proyecto
+Construcción de índices analíticos (scoring)
+
+Segmentación exploratoria de municipios
+
+Análisis geoespacial
+
+Visualización de datos
+
+📂 ESTRUCTURA DEL PROYECTO
+data/
+ ├─ raw/            # datos originales
+ └─ processed/      # datos procesados
+
+notebooks/          # análisis exploratorio y desarrollo
+
+src/                # scripts reutilizables
+
+reports/
+ ├─ figures/        # gráficos generados
+ └─ outputs/        # mapas interactivos
+
+models/             # resultados analíticos
+🖥 APLICACION INTERACTIVA
+El proyecto incluye una aplicación desarrollada en Streamlit que permite:
+
+explorar municipios con mayor oportunidad de mercado
+
+filtrar por tamaño de población
+
+filtrar por score de oportunidad
+
+analizar la masa crítica de población interesada en fitness
+
+visualizar oportunidades en mapas interactivos
+
+La aplicación convierte el análisis en una herramienta interactiva para explorar oportunidades de negocio.
+
+🚀 ESTADO DEL PROYECTO
 
 Actualmente el proyecto incluye:
 
-- dataset integrado
-- feature engineering
-- modelo predictivo
-- análisis demográfico
-- clasificación de mercados
-- visualizaciones
-- mapas interactivos
+✔ dataset integrado a nivel municipal
+✔ integración de datos demográficos y oferta fitness
+✔ cálculo de variables de mercado fitness
+✔ índice de oportunidad de mercado
+✔ análisis geoespacial
+✔ visualizaciones analíticas
+✔ aplicación interactiva en Streamlit
+✔ mapas interactivos de oportunidades
 
-## Cómo ejecutar el proyecto
-
-1. Clonar el repositorio
-
+▶️ Cómo ejecutar el proyecto
+1️⃣ Clonar el repositorio
 git clone https://github.com/juancmogordoy1/gym-market-analysis-albacete.git
-
-2. Instalar dependencias
-
+2️⃣ Instalar dependencias
 pip install -r requirements.txt
-
-3. Abrir los notebooks
-
-notebooks/
-
-4. Ejecutar la app
+3️⃣ Ejecutar la aplicación
 streamlit run app.py
 
-## Visualizaciones del análisis
+📈 VISUALIZACIONES DEL ANALISIS
+Oportunidad fitness vs crecimiento demográfico
 
-### Oportunidad fitness vs crecimiento demográfico
+Este gráfico muestra la relación entre el crecimiento poblacional y la oportunidad de mercado fitness.
 
-![Opportunity vs Growth](reports/figures/fitness_opportunity_vs_growth.png)
-
-Este gráfico muestra la relación entre crecimiento poblacional y oportunidad de mercado fitness.
-
----
-
-### Municipios con mayor oportunidad
-
-![Top Opportunities](reports/figures/top_fitness_opportunities.png)
+Municipios con mayor oportunidad
 
 Ranking de municipios con mayor potencial para abrir nuevos gimnasios.
 
-## Mapa interactivo de oportunidades fitness
+🗺 Mapa interactivo de oportunidades fitness
 
 El proyecto incluye mapas interactivos que permiten explorar la distribución de gimnasios y las oportunidades de mercado en la provincia de Albacete.
 
@@ -124,8 +129,41 @@ Abrir el mapa:
 
 reports/outputs/mapa_final_oportunidades_fitness_albacete.html
 
-Este mapa muestra:
+El mapa muestra:
 
-* municipios coloreados según **opportunity score**
-* **top oportunidades de mercado**
-* **gimnasios existentes detectados con Google Places**
+municipios coloreados según opportunity score
+
+top oportunidades de mercado
+
+gimnasios existentes detectados con Google Places
+
+💡 CASO DE USO
+
+El análisis permite detectar municipios donde existe:
+
+suficiente población potencial interesada en fitness
+
+baja oferta actual de gimnasios
+
+crecimiento demográfico positivo
+
+mercado regional accesible
+
+Esto permite identificar ubicaciones con mayor probabilidad de éxito para la apertura de nuevos gimnasios.
+
+🔮 POSIBLES MEJORAS FUTURAS
+
+incorporar estructura de edades
+
+incorporar datos de movilidad o commuting
+
+utilizar datos reales de uso de gimnasios
+
+validar el modelo con aperturas reales de gimnasios
+
+integrar más fuentes de datos económicas
+
+👤 AUTOR
+
+Juan Cruz Mogordoy
+Proyecto de Data Science – Análisis de mercado fitness
