@@ -1,5 +1,12 @@
 🏋️ ANALISIS DE OPORTUNIDADES DE ABRIR UN GYMNASIO EN ALBACETE
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![Data Science](https://img.shields.io/badge/Data%20Science-Project-orange)
+![Geospatial Analysis](https://img.shields.io/badge/Geospatial-Analysis-green)
+
+Análisis de mercado fitness basado en datos demográficos, oferta real de gimnasios y accesibilidad regional.
+
 Proyecto de Data Science aplicado al análisis de mercado fitness, cuyo objetivo es identificar municipios con potencial para abrir nuevos gimnasios en la provincia de Albacete.
 
 El análisis combina datos demográficos, oferta real de gimnasios, crecimiento poblacional y accesibilidad regional para construir un índice de oportunidad de mercado fitness.
@@ -46,7 +53,7 @@ gimnasios detectados mediante Google Places API
 
 Estos datos se combinan para construir variables analíticas que permitan evaluar el potencial de mercado fitness en cada municipio.
 
-🛠 Técnicas utilizadas
+🛠 TECNICAS UTILIZADAS
 
 Análisis exploratorio de datos (EDA)
 
@@ -76,6 +83,7 @@ reports/
  └─ outputs/        # mapas interactivos
 
 models/             # resultados analíticos
+
 🖥 APLICACION INTERACTIVA
 El proyecto incluye una aplicación desarrollada en Streamlit que permite:
 
@@ -91,8 +99,24 @@ visualizar oportunidades en mapas interactivos
 
 La aplicación convierte el análisis en una herramienta interactiva para explorar oportunidades de negocio.
 
-🚀 ESTADO DEL PROYECTO
+📸 CAPTURA DE LA APLICACION
+Dashboard de análisis
+- reports\figures\reportsfiguresapp_dashboard.png
+Mapa de oportunidades
+- reports\figures\reportsfiguresapp_map.png
 
+🔄 Pipeline del proyecto
+El análisis sigue las siguientes etapas:
+
+1. recopilación de datos demográficos
+2. recopilación de gimnasios mediante Google Places API
+3. integración de datasets
+4. ingeniería de variables de mercado fitness
+5. cálculo de índice de oportunidad
+6. visualización analítica
+7. exploración interactiva mediante Streamlit
+
+🚀 ESTADO DEL PROYECTO
 Actualmente el proyecto incluye:
 
 ✔ dataset integrado a nivel municipal
@@ -121,8 +145,7 @@ Municipios con mayor oportunidad
 
 Ranking de municipios con mayor potencial para abrir nuevos gimnasios.
 
-🗺 Mapa interactivo de oportunidades fitness
-
+🗺 MAPA INTERACTIVO DE OPORTUNIDADES FITNESS
 El proyecto incluye mapas interactivos que permiten explorar la distribución de gimnasios y las oportunidades de mercado en la provincia de Albacete.
 
 Abrir el mapa:
@@ -138,7 +161,6 @@ top oportunidades de mercado
 gimnasios existentes detectados con Google Places
 
 💡 CASO DE USO
-
 El análisis permite detectar municipios donde existe:
 
 suficiente población potencial interesada en fitness
@@ -152,7 +174,6 @@ mercado regional accesible
 Esto permite identificar ubicaciones con mayor probabilidad de éxito para la apertura de nuevos gimnasios.
 
 🔮 POSIBLES MEJORAS FUTURAS
-
 incorporar estructura de edades
 
 incorporar datos de movilidad o commuting
@@ -164,6 +185,5 @@ validar el modelo con aperturas reales de gimnasios
 integrar más fuentes de datos económicas
 
 👤 AUTOR
-
 Juan Cruz Mogordoy
 Proyecto de Data Science – Análisis de mercado fitness
